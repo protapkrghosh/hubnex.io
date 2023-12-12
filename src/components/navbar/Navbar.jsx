@@ -126,7 +126,7 @@ const Navbar = () => {
 
             <div ref={industrydropdownRef} className=' flex items-center relative justify-center'>
 
-              <NavLink to='/industries' onMouseOver={() => setIndustryMenuDropDownOpen(true)} onClick={handleIndustries} className={({ isActive }) => isActive ? 'decoration-white underline decoration-2 underline-offset-4  ' : 'hover-underline-animation'}>Industries</NavLink>
+              <span onMouseOver={() => setIndustryMenuDropDownOpen(true)} onClick={handleIndustries} className={({ isActive }) => isActive ? 'decoration-white underline decoration-2 underline-offset-4  ' : 'hover-underline-animation'}>Industries</span>
 
               <span onMouseOver={() => setIndustryMenuDropDownOpen(true)} className=' cursor-pointer' onClick={handleIndustries}>{isIndustryMenuDropDownOpen ? <KeyboardArrowUpIcon /> : <KeyboardArrowDown />}</span>
               {
