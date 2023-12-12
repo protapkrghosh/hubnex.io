@@ -83,8 +83,8 @@ const Navbar = () => {
 
   return (
 
-    <div className={`w-full h-14 lg:h-[80px] fixed z-40 transition-all duration-300 ease-in-out `}>
-      <div className={`w-full h-14 lg:h-[80px] fixed z-40 `}>
+    <div className={`w-full h-14 lg:h-[80px] fixed z-40 transition-all duration-300 ease-in-out bg-white`}>
+      <div className={`w-full h-14 lg:h-[80px] fixed z-40 bg-white`}>
 
         {searchToggle && <Search toggler={searchToggle} />}
 
