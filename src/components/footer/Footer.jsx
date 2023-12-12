@@ -185,18 +185,18 @@ const Footer = () => {
       <div className='flex flex-col w-full h-40 justify-center xl:mt-8 items-center gap-4 text-white sm:h-80 text-lg'>
         <span className='font-gilroy-semi-bold text-[28px] md:text-[24px]'>Connect with us</span>
         <div className='flex flex-wrap gap-5 items-center'>
-          {/* Note: in this page have not current informations */}
-
-          <Link to='/about'>{isMobile() ? <TwitterIcon fontSize='medium' /> : <TwitterIcon fontSize='large' />}</Link>
-          <Link to='/about'>{isMobile() ? <LinkedInIcon fontSize='medium' /> : <LinkedInIcon fontSize='large' />}</Link>
-          <Link to='/about'>{isMobile() ? <InstagramIcon fontSize='medium' /> : <InstagramIcon fontSize='large' />}</Link>
-          <Link to='/about'>{isMobile() ? <FacebookIcon fontSize='medium' /> : <FacebookIcon fontSize='large' />}</Link>
+          {/* Note: Added social media links and they will open in new tab */}
+          <a href='https://twitter.com' target="_blank">{isMobile() ? <TwitterIcon fontSize='medium' /> : <TwitterIcon fontSize='large' />}</a>
+          <a href='https://linkedin.com' target="_blank">{isMobile() ? <LinkedInIcon fontSize='medium' /> : <LinkedInIcon fontSize='large' />}</a>
+          <a href='https://instagram.com' target="_blank">{isMobile() ? <InstagramIcon fontSize='medium' /> : <InstagramIcon fontSize='large' />}</a>
+          <a href='https://facebook.com' target="_blank">{isMobile() ? <FacebookIcon fontSize='medium' /> : <FacebookIcon fontSize='large' />}</a>
         </div>
       </div>
       <div className='w-full h-fit py-3 px-4 md:px-20 lg:px-40 flex flex-col gap-y-4 lg:flex-row justify-between items-center border-t border-gray-400'>
         <div>
+          {/* Note: The copyright year will be added dynamically */}
           <p className='text-sm text-white font-gilroy-regular'>
-            Copyright <CopyrightIcon fontSize='small' /> 2023 Hubnex. All Rights Reserved
+            Copyright <CopyrightIcon fontSize='small' /> {new Date().getFullYear()} Hubnex. All Rights Reserved
           </p>
         </div>
         <div className='flex flex-wrap items-center justify-center gap-y-4'>
