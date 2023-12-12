@@ -62,7 +62,7 @@ const Home = () => {
             <Services />
           </section>
 
-          <section id='section-4' className='h-full w-full snap-start lg:bg-balloon bg-balloonMob bg-blue-200 relative bg-center bg-cover bg-[length:100%_100%] bg-no-repeat '>
+          <section id='section-4' className='h-full w-full snap-start lg:bg-balloon bg-balloonMob relative bg-blue-300 bg-[right_top_1rem] bg-cover bg-[length:100%_110%] bg-no-repeat'>
             <Testimonial />
           </section>
 
