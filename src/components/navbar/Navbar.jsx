@@ -2,7 +2,6 @@ import React from 'react'
 import { useRef, useState, useEffect } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import logo from '../../assets/hubnex white.png'
-import searchIcon from '../../assets/search_icon.png'
 import Search from '../searchbar/Search'
 import MobileNavbar from './MobileNavbar'
 import './navbar.css'
@@ -69,7 +68,7 @@ const Navbar = () => {
   const [fix, setFix] = useState(false)
   useEffect(() => {
     const setFixed = () => {
-      if (window.pageYOffset > 20) {
+      if (window.scrollY > 200) {
         setFix(true)
       } else {
         setFix(false)
@@ -84,8 +83,8 @@ const Navbar = () => {
 
   return (
 
-    <div className= "w-full h-14 lg:h-[80px] fixed z-40   bg-black  bg-opacity-60 text-white" >
-      <div className=' w-full h-14 lg:h-[80px] fixed bg-black bg-opacity-70 lg:bg-none lg:bg-opacity-0  z-40'>
+    <div className={`w-full h-14 lg:h-[80px] fixed z-40 transition-all duration-300 ease-in-out `}>
+      <div className={`w-full h-14 lg:h-[80px] fixed z-40 `}>
 
         {searchToggle && <Search toggler={searchToggle} />}
 
