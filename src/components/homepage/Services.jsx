@@ -96,6 +96,7 @@ const Services = () => {
 
 
         <div className='hidden md:static lg:flex lg:h-full flex-col md:gap-10  justify-center items-end w-full md:w-[80%]'>
+          {/* Note: Fixed mobile image position and slider size */}
           <div className='flex md:w-[300px] lg:w-[240px] xl:w-[65%] h-[400px] md:h-[80%] relative overflow-hidden mt-20'>
             <Link to='service' className=' z-10 w-full h-full'>
               <img src={iphone} className='h-full' />

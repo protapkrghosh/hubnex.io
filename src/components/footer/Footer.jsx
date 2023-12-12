@@ -24,16 +24,23 @@ const Footer = () => {
   };
 
   const [credentials, setCredentials] = useState(emptyCredentials);
-
+  const [inputValue, setInputValue] = useState('');
   const handleChange = (event) => {
     const { name, value } = event.target;
-    setCredentials({ ...credentials, [name]: value });
 
-    if (credentials.firstName) setErrFirstname(false);
-    if (credentials.lastName) setErrLastname(false);
-    if (credentials.email) setErrEmail(false);
-    if (credentials.phoneNo) setErrPhone(false);
-
+    if (name === 'firstName' || name === 'lastName') {
+      setCredentials({ ...credentials, [name]: value.replace(/[^a-zA-Z]/g, '') });
+    } else if (name === 'phoneNo') {
+      setCredentials({ ...credentials, [name]: value.replace(/[^0-9]/g, '') });
+    } else {
+      setCredentials({ ...credentials, [name]: value });
+    }
+  
+    // Reset corresponding error flags
+    if (name === 'firstName') setErrFirstname(false);
+    if (name === 'lastName') setErrLastname(false);
+    if (name === 'email') setErrEmail(false);
+    if (name === 'phoneNo') setErrPhone(false);
   };
 
   const [err, setErr] = useState(false)
@@ -139,7 +146,9 @@ const Footer = () => {
           <div className='text-4xl lg:text-[70px] 2xl:text-[70px] md:py-0 font-gilroy-extrabold text-white'>
             <h1 className='text-center lg:text-start'>let's talk</h1>
           </div>
-          <div className='w-[90%] mx-auto md:mx-0 md:w-[358px] lg:h-[310px] text-1xl lg:text-[48px] font-gilroy-light'>
+
+          {/* Note: Adjustment div width */}
+          <div className='w-[90%] mx-auto md:mx-0 md:w-[450px] lg:h-[310px] text-1xl lg:text-[48px] font-gilroy-light'>
             <p className='text-center leading-tight lg:text-start'>have some great idea or brand to develop?</p>
             <p className='text-center leading-tight lg:text-start'>Let's build it together</p>
           </div>
@@ -147,18 +156,19 @@ const Footer = () => {
             <p className='text-center md:text-start leading-6'>our team will reach out to you as soon as possible</p>
           </div>
         </div>
+        
         <form className='flex flex-col gap-4 m-auto text-[16px] w-[80%] md:w-auto md:m-0 mt-10 md:py-1 md:mt-0' onSubmit={handleSubmit}>
           <label className='text-gray-200' htmlFor='first_name'>FIRST NAME {errFirstname ? <span className='text-red-500 pl-3'>Firstname is mandatory</span> : <span className='text-red-500'>*</span>}</label>
-          <input className='outline-none bg-transparent border-b-[1px] border-b-gray-300 w-full md:w-96' type='text' id='first_name' maxLength={25} name='firstName' value={credentials.firstName} onChange={handleChange} />
+          <input className='outline-none bg-transparent border-b-[1px] border-b-gray-300 w-full md:w-96' type='text' id='first_name' maxLength={25} name='firstName' value={credentials.firstName} onChange={handleChange}   />
 
           <label className='text-gray-200' htmlFor='last_name'>LAST NAME {errLastname ? <span className='text-red-500 pl-3'>Lastname is mandatory</span> : <span className='text-red-500'>*</span>}</label>
           <input className='outline-none bg-transparent border-b-[1px] border-b-gray-300 w-full md:w-96' type='text' id='last_name' maxLength={25} name='lastName' value={credentials.lastName} onChange={handleChange} />
 
           <label className='text-gray-200' htmlFor='email'>EMAIL {errEmail ? <span className='text-red-500 pl-3'>Email is mandatory</span> : <span className='text-red-500'>*</span>}{validEmail && <span className='text-red-500 pl-3'> Please provide valid email address </span>}</label>
-          <input className='outline-none bg-transparent border-b-[1px] border-b-gray-300 w-full md:w-96' type='text' id='email' name='email' value={credentials.email} onChange={handleChange} />
+          <input className='outline-none bg-transparent border-b-[1px] border-b-gray-300 w-full md:w-96' type='email' id='email' name='email' value={credentials.email} onChange={handleChange} />
 
           <label className='text-gray-200' htmlFor='mobile_no'>PHONE NUMBER {errPhone ? <span className='text-red-500 pl-3'>Phone No is mandatory</span> : <span className='text-red-500'>*</span>}{validPhone && <span className='pl-3 text-red-500'> Please provide valid Phone Number </span>}</label>
-          {/* Note: fixed the phone numbar default behaviours */}
+          {/* Note: fixed the phone number default behaviors */}
           <input className='outline-none bg-transparent border-b-[1px] border-b-gray-300 w-full md:w-96' type='tel' id='mobile_no' maxLength={12} name='phoneNo' value={credentials.phoneNo} onChange={handleChange} />
 
           <label className='text-gray-200' htmlFor='message'>MESSAGE</label>
@@ -182,18 +192,18 @@ const Footer = () => {
       <div className='flex flex-col w-full h-40 justify-center xl:mt-8 items-center gap-4 text-white sm:h-80 text-lg'>
         <span className='font-gilroy-semi-bold text-[28px] md:text-[24px]'>Connect with us</span>
         <div className='flex flex-wrap gap-5 items-center'>
-          {/* Note: in this page have not current informations */}
-
-          <Link to='/about'>{isMobile() ? <TwitterIcon fontSize='medium' /> : <TwitterIcon fontSize='large' />}</Link>
-          <Link to='/about'>{isMobile() ? <LinkedInIcon fontSize='medium' /> : <LinkedInIcon fontSize='large' />}</Link>
-          <Link to='/about'>{isMobile() ? <InstagramIcon fontSize='medium' /> : <InstagramIcon fontSize='large' />}</Link>
-          <Link to='/about'>{isMobile() ? <FacebookIcon fontSize='medium' /> : <FacebookIcon fontSize='large' />}</Link>
+          {/* Note: Added social media links and they will open in new tab */}
+          <a href='https://twitter.com' target="_blank">{isMobile() ? <TwitterIcon fontSize='medium' /> : <TwitterIcon fontSize='large' />}</a>
+          <a href='https://linkedin.com' target="_blank">{isMobile() ? <LinkedInIcon fontSize='medium' /> : <LinkedInIcon fontSize='large' />}</a>
+          <a href='https://instagram.com' target="_blank">{isMobile() ? <InstagramIcon fontSize='medium' /> : <InstagramIcon fontSize='large' />}</a>
+          <a href='https://facebook.com' target="_blank">{isMobile() ? <FacebookIcon fontSize='medium' /> : <FacebookIcon fontSize='large' />}</a>
         </div>
       </div>
       <div className='w-full h-fit py-3 px-4 md:px-20 lg:px-40 flex flex-col gap-y-4 lg:flex-row justify-between items-center border-t border-gray-400'>
         <div>
+          {/* Note: The copyright year will be added dynamically */}
           <p className='text-sm text-white font-gilroy-regular'>
-            Copyright <CopyrightIcon fontSize='small' /> 2023 Hubnex. All Rights Reserved
+            Copyright <CopyrightIcon fontSize='small' /> {new Date().getFullYear()} Hubnex. All Rights Reserved
           </p>
         </div>
         <div className='flex flex-wrap items-center justify-center gap-y-4'>
