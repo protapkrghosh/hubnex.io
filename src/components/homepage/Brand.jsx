@@ -9,7 +9,7 @@ const Brand = () => {
         <div className=' h-full w-full text-white flex justify-center'>
             <div className=' flex flex-col md:justify-start sm:gap-0 w-[300px] mt-24 xs:mt-36 gap-5 sm:mt-52 md:mt-56 lg:mt-14 xl:mt-36 2xl:mt-16 h-full sm:w-full items-center'>
           {/* Note: added mt-2 for the heading brand heading section, text and button capitalize */}
-                <h1 className='md:mt-2 text-[28px] sm:text-[50px] lg:text-[60px] xl:text-[55px]  font-gilroy-bold text-center'>Helping you build products</h1>
+                <h1 className='md:mt-2 text-[28px] sm:text-[50px] lg:text-[60px] xl:text-[55px]  font-gilroy-bold text-center'>helping you build products</h1>
                 <span className=' text-black sm:text-[50px] font-gilroy-bold text-[32px] lg:text-[60px] xl:text-[55px]'>that shine</span>
             </div>
         </div>
@@ -19,7 +19,7 @@ const Brand = () => {
                     <span>your have an idea?</span>
                     <span>we have a team</span>
                 </div>
-                <Link to='/contact'><button className=' border-none bg-white py-1 lg:py-[10px] md:text-[20px] px-5 rounded-full text-black text-[13px] font-gilroy-semi-bold'>Get started </button></Link>
+                <Link to='/contact'><button className=' border-none bg-white py-1 lg:py-[10px] md:text-[20px] px-5 rounded-full text-black text-[13px] font-gilroy-semi-bold'>get started </button></Link>
             </div>
         </div>
     </div>
