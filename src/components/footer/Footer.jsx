@@ -10,9 +10,9 @@ import { CircularProgress } from '@mui/material';
 
 const Footer = () => {
 
-  const isMobile=()=> {
-    const match=window.matchMedia("(max-width:912px)");
-    return(match && match.matches); 
+  const isMobile = () => {
+    const match = window.matchMedia("(max-width:912px)");
+    return (match && match.matches);
   };
 
   const emptyCredentials = {
@@ -27,16 +27,16 @@ const Footer = () => {
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-    setCredentials({...credentials, [name]: value});
+    setCredentials({ ...credentials, [name]: value });
 
-    if(credentials.firstName) setErrFirstname(false);
-    if(credentials.lastName) setErrLastname(false);
-    if(credentials.email) setErrEmail(false);
-    if(credentials.phoneNo) setErrPhone(false);
+    if (credentials.firstName) setErrFirstname(false);
+    if (credentials.lastName) setErrLastname(false);
+    if (credentials.email) setErrEmail(false);
+    if (credentials.phoneNo) setErrPhone(false);
 
   };
 
-  const [err, setErr]= useState(false)
+  const [err, setErr] = useState(false)
   const [errFirstname, setErrFirstname] = useState(false)
   const [errLastname, setErrLastname] = useState(false)
   const [errEmail, setErrEmail] = useState(false)
@@ -49,11 +49,11 @@ const Footer = () => {
   const [loading, setLoading] = useState(false)
 
   const [errCredentials, setErrCredentials] = useState(false)
-  
+
   const userData = {
-    method : 'POST',
-    headers : { 'Content-Type': 'application/json' },
-    body : JSON.stringify({
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
       firstname: credentials.firstName,
       lastname: credentials.lastName,
       email: credentials.email,
@@ -66,10 +66,10 @@ const Footer = () => {
     return /\S+@\S+\.\S+/.test(email);
   };
 
-  function isValidPhone(phone){
+  function isValidPhone(phone) {
     return /(0|1|2|3|4|5|6|7|8|9)\d{9}/.test(phone)
   };
-  
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -81,23 +81,23 @@ const Footer = () => {
     };
     if (!credentials.email) {
       return setErrEmail(true);
-    } else if(!isValidEmail(credentials.email)) {
+    } else if (!isValidEmail(credentials.email)) {
       return setValidEmail(true);
     };
     if (!credentials.phoneNo) {
       return setErrPhone(true);
-    } else if(!isValidPhone(credentials.phoneNo)) {
+    } else if (!isValidPhone(credentials.phoneNo)) {
       return setValidPhone(true);
     };
-    
+
     setLoading(true);
 
     try {
       const res = await fetch(`https://${import.meta.env.VITE_API_URL}/api/v1/user`, userData);
       const data = await res.json();
-      if(!res.ok){
+      if (!res.ok) {
         setLoading(false)
-        if(data.error == "user already exists"){
+        if (data.error == "user already exists") {
           setErrCredentials(true);
           setCredentials(emptyCredentials);
           setLoading(false);
@@ -132,7 +132,7 @@ const Footer = () => {
   };
 
   return (
-    //Whatdo: added some pading both phone and computer veiw
+    //Note: added some pading both phone and computer veiw
     <div className='flex flex-col justify-center items-center w-full bg-black md:pt-36 pt-20'>
       <div className='lg:w-[90%] xl:w-[70%] h-full lg:flex sm:justify-between items-center text-white py-5 lg:py-0'>
         <div className='flex flex-col gap-[36px] md:gap-14 xl:gap-16'>
@@ -158,8 +158,8 @@ const Footer = () => {
           <input className='outline-none bg-transparent border-b-[1px] border-b-gray-300 w-full md:w-96' type='text' id='email' name='email' value={credentials.email} onChange={handleChange} />
 
           <label className='text-gray-200' htmlFor='mobile_no'>PHONE NUMBER {errPhone ? <span className='text-red-500 pl-3'>Phone No is mandatory</span> : <span className='text-red-500'>*</span>}{validPhone && <span className='pl-3 text-red-500'> Please provide valid Phone Number </span>}</label>
-          {/* Whatdo: fixed the phone numbar default behaviours */}
-          <input  className='outline-none bg-transparent border-b-[1px] border-b-gray-300 w-full md:w-96' type='tel' id='mobile_no' maxLength={12} name='phoneNo' value={credentials.phoneNo} onChange={handleChange} />
+          {/* Note: fixed the phone numbar default behaviours */}
+          <input className='outline-none bg-transparent border-b-[1px] border-b-gray-300 w-full md:w-96' type='tel' id='mobile_no' maxLength={12} name='phoneNo' value={credentials.phoneNo} onChange={handleChange} />
 
           <label className='text-gray-200' htmlFor='message'>MESSAGE</label>
           <input className='pt-5 outline-none bg-transparent border-b-[1px] border-b-gray-300 w-full md:w-96' type='text' id='message' name='message' value={credentials.message} onChange={handleChange} />
@@ -182,8 +182,8 @@ const Footer = () => {
       <div className='flex flex-col w-full h-40 justify-center xl:mt-8 items-center gap-4 text-white sm:h-80 text-lg'>
         <span className='font-gilroy-semi-bold text-[28px] md:text-[24px]'>Connect with us</span>
         <div className='flex flex-wrap gap-5 items-center'>
-          {/* Whatdo: in this page have not current informations */}
-          
+          {/* Note: in this page have not current informations */}
+
           <Link to='/about'>{isMobile() ? <TwitterIcon fontSize='medium' /> : <TwitterIcon fontSize='large' />}</Link>
           <Link to='/about'>{isMobile() ? <LinkedInIcon fontSize='medium' /> : <LinkedInIcon fontSize='large' />}</Link>
           <Link to='/about'>{isMobile() ? <InstagramIcon fontSize='medium' /> : <InstagramIcon fontSize='large' />}</Link>
