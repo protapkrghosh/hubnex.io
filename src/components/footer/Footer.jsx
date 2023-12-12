@@ -24,16 +24,23 @@ const Footer = () => {
   };
 
   const [credentials, setCredentials] = useState(emptyCredentials);
-
+  const [inputValue, setInputValue] = useState('');
   const handleChange = (event) => {
     const { name, value } = event.target;
-    setCredentials({...credentials, [name]: value});
 
-    if(credentials.firstName) setErrFirstname(false);
-    if(credentials.lastName) setErrLastname(false);
-    if(credentials.email) setErrEmail(false);
-    if(credentials.phoneNo) setErrPhone(false);
-
+    if (name === 'firstName' || name === 'lastName') {
+      setCredentials({ ...credentials, [name]: value.replace(/[^a-zA-Z]/g, '') });
+    } else if (name === 'phoneNo') {
+      setCredentials({ ...credentials, [name]: value.replace(/[^0-9]/g, '') });
+    } else {
+      setCredentials({ ...credentials, [name]: value });
+    }
+  
+    // Reset corresponding error flags
+    if (name === 'firstName') setErrFirstname(false);
+    if (name === 'lastName') setErrLastname(false);
+    if (name === 'email') setErrEmail(false);
+    if (name === 'phoneNo') setErrPhone(false);
   };
 
   const [err, setErr]= useState(false)
@@ -149,7 +156,7 @@ const Footer = () => {
         </div>
         <form className='flex flex-col gap-4 m-auto text-[16px] w-[80%] md:w-auto md:m-0 mt-10 md:py-1 md:mt-0' onSubmit={handleSubmit}>
           <label className='text-gray-200' htmlFor='first_name'>FIRST NAME {errFirstname ? <span className='text-red-500 pl-3'>Firstname is mandatory</span> : <span className='text-red-500'>*</span>}</label>
-          <input className='outline-none bg-transparent border-b-[1px] border-b-gray-300 w-full md:w-96' type='text' id='first_name' maxLength={25} name='firstName' value={credentials.firstName} onChange={handleChange} />
+          <input className='outline-none bg-transparent border-b-[1px] border-b-gray-300 w-full md:w-96' type='text' id='first_name' maxLength={25} name='firstName' value={credentials.firstName} onChange={handleChange}   />
 
           <label className='text-gray-200' htmlFor='last_name'>LAST NAME {errLastname ? <span className='text-red-500 pl-3'>Lastname is mandatory</span> : <span className='text-red-500'>*</span>}</label>
           <input className='outline-none bg-transparent border-b-[1px] border-b-gray-300 w-full md:w-96' type='text' id='last_name' maxLength={25} name='lastName' value={credentials.lastName} onChange={handleChange} />
