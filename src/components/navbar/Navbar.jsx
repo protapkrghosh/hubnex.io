@@ -1,7 +1,7 @@
 import React from 'react'
 import { useRef, useState, useEffect } from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import logo from '../../assets/hubnex white.png'
+import logo from '../../assets/hubnex_logo.png'
 import searchIcon from '../../assets/search_icon.png'
 import Search from '../searchbar/Search'
 import MobileNavbar from './MobileNavbar'
@@ -91,9 +91,10 @@ const Navbar = () => {
 
         <div className=' h-full xl:max-w-[95%] xl:min-w-[90%] w-[90%] m-auto items-center flex justify-between'>
 
+          {/* Note: Change hubnex project logo and logo resize in navbar */}
           <div className='cursor-pointer z-50'>
             <Link to='/' className=' flex gap-2 items-center'>
-              <img src={logo} alt='Logo' className=' md:w-[140px] w-[90px] ' />
+              <img src={logo} alt='Logo' className='md:w-[120px] w-[90px]' />
             </Link>
           </div>
 
