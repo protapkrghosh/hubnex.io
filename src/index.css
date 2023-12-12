@@ -1,0 +1,60 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@font-face {
+    font-family: 'GilroyLight';
+    src: url(./assets/Gilroy-Light.otf);
+}
+@font-face {
+    font-family: 'GilroyExtraBold';
+    src: url(./assets/Gilroy-ExtraBold.otf);
+}
+@font-face {
+    font-family: 'GilroyBold';
+    src: url(./assets/Gilroy-Bold.ttf);
+}
+@font-face {
+    font-family: 'GilroySemiBold';
+    src: url(./assets/Gilroy-SemiBold.ttf);
+}
+@font-face {
+    font-family: 'GilroyThin';
+    src: url(./assets/Gilroy-Thin.ttf);
+}
+@font-face {
+    font-family: 'GilroyRegular';
+    src: url(./assets/Gilroy-Regular.ttf);
+}
+@font-face {
+    font-family: 'GilroyBlack';
+    src: url(./assets/Gilroy-Black.ttf);
+}
+@font-face {
+    font-family: 'GilroyUltraLight';
+    src: url(./assets/Gilroy-UltraLight.ttf);
+}
+@font-face {
+    font-family: 'GilroyHeavy';
+    src: url(./assets/Gilroy-Heavy.ttf);
+}
+@font-face {
+    font-family: 'GilroyMedium';
+    src: url(./assets/Gilroy-Medium.ttf);
+}
+
+.btn-primary {
+    @apply w-max border-white font-gilroy-semi-bold text-[16px] md:text-[20px] border-2 md:border-none bg-transparent md:bg-white text-white md:text-black rounded-full py-2 lg:py-[10px] px-5;
+}
+.btn-secendary {
+    @apply w-max bg-black text-xs md:text-[20px] text-white py-2 md:py-[15px] px-5 rounded-full;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px rgb(2, 2, 2) inset !important;
+  -webkit-text-fill-color: aliceblue;
+}
