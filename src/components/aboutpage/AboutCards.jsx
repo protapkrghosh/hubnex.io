@@ -1,8 +1,5 @@
 import React from 'react';
-import mission from '@assets/Our-Mission.png.png';
-import philosophy from '@assets/Our-Philosophy.png.png';
-import strategy from '@assets/Our-Strategy.png.png';
-import vision from '@assets/Our-Vision.png.png';
+import { cardsData } from '../../data/data';
 
 
 const Aboutsection3 = () => {
@@ -16,38 +13,17 @@ const Aboutsection3 = () => {
             <p>At our IT consultancy firm, we prioritize certain values and approaches that have helped us build a reputation for excellence in the industry. First and foremost, we prioritize customer satisfaction, and we always go the extra mile to ensure our clients' needs are met.</p>
           </div>
 
-        <div className='flex flex-wrap gap-10 md:gap-0 justify-center'>
-          
-          <div className=" flex flex-col justify-evenly md:justify-center md:gap-5 w-[180px] h-[198px] md:w-[292px] md:h-[320px] lg:w-[300px] xl:w-[260px] 2xl:w-[300px] rounded-lg md:m-6 md:p-5 lg:p-8 bg-white items-center font-gilroy-bold  overflow-hidden">
-            <div className=' w-[43.31px] h-[43.31px] md:w-[70px] md:h-[70px] shadow-xl flex justify-center items-center  md:p-5 bg-orange rounded-full'>
-              <img src={mission} alt="mission" className='  w-[19.18px] h-[19.18px] rounded-full md:w-[31px] md:h-[31px]'/>
-            </div>
-            <h1 className='text-center   text-grey text-[14.85px] md:text-[24px]  font-poppins-semibold'>Our Mission</h1>
-            <p className='text-center  text-grey text-[9.9px] md:text-[16px] px-2 md:px-0 font-poppins-regular'>Use the power of technology and our deep understanding of the industry to solve engineering challenges of any nature</p>
-
-          </div>
-
-          <div className=" flex flex-col justify-evenly md:justify-center md:gap-5 w-[180px] h-[198px] md:w-[292px] md:h-[320px] lg:w-[300px] xl:w-[260px] 2xl:w-[300px] rounded-lg md:m-6 md:p-5 lg:p-8 bg-white items-center font-gilroy-bold  overflow-hidden">
-            <div className=' w-[43.31px] h-[43.31px] md:w-[70px] md:h-[70px] shadow-xl flex justify-center items-center  md:p-5 bg-orange  rounded-full '>
-              <img src={philosophy} alt="mission" className='w-[19.18px] rounded-full h-[19.18px] md:w-[31px] md:h-[31px]'/></div>
-            <h1 className='text-center  text-grey text-[14.85px] md:text-[24px] font-poppins-semibold '>Our Philosophy</h1>
-            <p className='text-center  text-grey text-[9.9px] md:text-[16px] px-2 md:px-0 font-poppins-regular'>Go above and beyond to bring in new perspectives, relentless energy, and utmost dedication to driving client success details</p>
-
-          </div>
-          <div className=" flex flex-col justify-evenly md:justify-center md:gap-5 w-[180px] h-[198px] md:w-[292px] md:h-[320px] lg:w-[300px] xl:w-[260px] 2xl:w-[300px] rounded-lg md:m-6 md:p-5 lg:p-8 bg-white items-center font-gilroy-bold  overflow-hidden">
-            <div className='  w-[43.31px] h-[43.31px] md:w-[70px] md:h-[70px] shadow-xl flex justify-center items-center  md:p-5 bg-orange  rounded-full '>
-              <img src={vision} alt="mission" className='w-[19.18px] h-[19.18px] md:w-[31px] rounded-full md:h-[31px]'></img></div>
-            <h1 className='text-center  text-grey text-[14.85px] md:text-[24px] font-poppins-semibold'>Our Vision</h1>
-            <p className='text-center  text-grey text-[9.9px] md:text-[16px] px-2 md:px-0 font-poppins-regular'>Harness innovation to accelerate digital transformation and drive change & client success embracing new technologies </p>
-
-          </div>
-          <div className=" flex flex-col justify-evenly md:justify-center md:gap-5 w-[180px] h-[198px] md:w-[292px] md:h-[320px] lg:w-[300px] rounded-lg xl:w-[260px] 2xl:w-[300px] md:m-6 md:p-5 lg:p-8 bg-white items-center font-gilroy-bold  overflow-hidden">
-            <div className='  w-[43.31px] h-[43.31px] md:w-[70px] md:h-[70px] shadow-xl flex justify-center items-center  md:p-5 bg-orange  rounded-full '>
-              <img src={strategy} alt="mission" className='w-[19.18px] h-[19.18px] rounded-full md:w-[31px] md:h-[31px]'></img></div>
-            <h1 className='text-center  text-grey text-[14.85px] md:text-[24px] font-poppins-semibold'>Our Strategy</h1>
-            <p className='text-center  text-grey text-[9.9px] md:text-[16px] px-2 md:px-0 font-poppins-regular'>Leverage next-gen technologies, robust internal frameworks, and defined processes to provide best-in-class services within timelines</p>
-          </div>     
-        </div>
+          <div className='flex flex-wrap gap-10 md:gap-0 justify-center'>
+  {cardsData.map((cards, index) => (
+    <div key={index} className="about-us-crds-text-div">
+      <div className='about-us-crds-imge-div'>
+        <img src={cards.imge} alt="mission" className='w-[19.18px] h-[19.18px] rounded-full md:w-[31px] md:h-[31px]' />
+      </div>
+      <h1 className='about-us-crds-h1 font-poppins-semibold'>{cards.title}</h1>
+      <p className='about-us-crds-p font-poppins-regular'>{cards.discriptions}</p>
+    </div>
+  ))}
+</div>
       </div>
     </>
   )

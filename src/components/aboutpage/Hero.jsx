@@ -18,8 +18,8 @@ const Hero = () => {
           </div>
           <div>
 
-            {/* Note: Button text capitalize */}
-            <Link to='/contact' className='  h-full px-5 md:py-[10px] py-2 rounded-full flex justify-center items-center  font-gilroy-semi-bold text-[16px] md:text-[20px] text-black bg-white w-max'>Know More</Link>
+            {/* Whatdo: make button reusable */}
+            <Link to='/contact' className='btn-primary'>Know More</Link>
 
           </div>
         </div>

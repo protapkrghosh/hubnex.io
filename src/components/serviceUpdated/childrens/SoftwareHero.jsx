@@ -11,8 +11,8 @@ const Hero = () => {
             <div className=' text-white w-[85%] flex justify-start h-full  items-center'>
                 <div className=' w-90 flex flex-col gap-8 xl:gap-14 lg:mb-[180px] xl:mb-48'>
                     <span className=' text-[28px] md:text-[50px] lg:text-[70px] xl:text-[60px] 2xl:text-[60px] font-gilroy-bold leading-tight lg:w-[720px]'>Ensuring High-Quality Software Delivery</span>
-                    <p className=' text-[16px] md:text-[24px] font-gilroy-semi-bold'>"Maximizing Your Software Potential with Advanced Testing Solutions"</p>
-                    <Link to='/contact' className='h-full rounded-full flex justify-center items-center  font-gilroy-semi-bold text-[12px] md:text-[20px] bg-white text-black py-2 w-max md:py-[10px] px-5'>Get in touch</Link>
+                    <p className=' text-peragrap'>"Maximizing Your Software Potential with Advanced Testing Solutions"</p>
+                    <Link to='/contact' className='btn-primary'>Get in touch</Link>
 
                 </div>  
             </div>

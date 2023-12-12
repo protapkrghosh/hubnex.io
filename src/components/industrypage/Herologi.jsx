@@ -9,10 +9,10 @@ const Hero = () => {
         <Navbar />
         <div className=' h-screen w-full flex items-center justify-center'>
         <div className=' w-[80%] flex items-center'>
-            <div className=' text-white flex flex-col justify-center items-center lg:items-start gap-10 w-90 max-[820px]:text-center'>
+            <div className=' text-white flex-things lg:items-start gap-10 w-90 max-[820px]:text-center'>
                 <div className='  text-[28px] md:text-[50px] lg:text-[60px] font-gilroy-bold leading-tight lg:w-[700px]'>Retail and Customer Goods</div>
-                <p className=' text-[16px] md:text-[24px] font-gilroy-semi-bold lg:w-[600px]'>Delivering with Care Sustainable Solutions for a Healthier Planet</p>
-                <Link to='/contact' className=' h-full rounded-full flex justify-center items-center  font-gilroy-semi-bold text-[12px] md:text-[20px] bg-white text-black py-2 w-max md:py-[10px] px-5'>Let's talk</Link>
+                <p className=' text-peragrap'>Delivering with Care Sustainable Solutions for a Healthier Planet</p>
+                <Link to='/contact' className='btn-primary'>Let's talk</Link>
 
               </div>
           </div>

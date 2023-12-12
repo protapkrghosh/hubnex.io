@@ -14,7 +14,7 @@ const Hero = () => {
         </div>
         <div className=' flex flex-col gap-5 sm:gap-2'>
           <p className=' py-5 text-[16px] lg:text-[22px] font-gilroy-medium md:font-gilroy-regular'>let our team, help you reach your dream</p>
-          {/* Note: added custom class to make this more readable */}
+         
           <Link to='/contact' className='btn-primary'>Get Started</Link>
         </div>
       </div>
