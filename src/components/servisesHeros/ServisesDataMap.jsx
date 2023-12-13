@@ -1,20 +1,9 @@
-import React from 'react'
-import testImg1 from '../../assets/costom devp.png';
-import testImg2 from '../../assets/Communication.png';
-import testImg3 from '../../assets/gg.png';
-import testImg4 from '../../assets/Management.png';
-import testImg5 from '../../assets/Mobile Development.png';
-import testImg6 from '../../assets/Group.png';
-import testImg7 from '../../assets/API Programming.png';
-import testImg8 from '../../assets/Ux Design.png';
-import testImg9 from '../../assets/Address marker.png';
-import './Ourservice.css'
+import React from 'react';
+import SingleServises from './SingleServises';
 
-
-
-const Ourservice = () => {
-  return (
-    <div className=' py-10 w-full bg-black flex justify-center items-center h-auto'>
+const ServisesDataMap = ({datas}) => {
+    return (
+        <div className=' py-10 w-full bg-black flex justify-center items-center h-auto'>
         <div className=' h-full w-full flex justify-center items-center'>
             <div className='w-[90%] flex flex-col gap-10 md:justify-around h-full items-center text-black'>  
                 <div className='w-full gap-5 flex flex-col items-center justify-center'>
@@ -24,11 +13,15 @@ const Ourservice = () => {
                     </div>
                 </div>
                 
-                
+                <div className='flex flex-wrap w-full justify-center gap-[35px] '>
+            {
+                datas.map(data=><SingleServises key={data.id} data={data} />)
+            }
+        </div>
             </div>
         </div>
     </div>
-  )
-}
+    );
+};
 
-export default Ourservice
+export default ServisesDataMap;
