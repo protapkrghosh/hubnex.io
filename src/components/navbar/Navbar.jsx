@@ -70,6 +70,7 @@ const Navbar = () => {
   useEffect(() => {
     const setFixed = () => {
       if (window.scrollY > 200) {
+        console.log(window.scrollY);
         setFix(true)
       } else {
         setFix(false)
@@ -84,7 +85,7 @@ const Navbar = () => {
 
   return (
 
-    <div className={`w-full h-14 lg:h-[80px] fixed z-40 transition-all duration-300 ease-in-out `}>
+    <div className={`w-full h-14 lg:h-[80px] fixed z-40 transition-all duration-300 ease-in-out ${fix ? 'shadow-md bg-white text-black'  : ''} `}>
       <div className={`w-full h-14 lg:h-[80px] fixed z-40 `}>
 
         {searchToggle && <Search toggler={searchToggle} />}

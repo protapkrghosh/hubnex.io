@@ -85,7 +85,7 @@
 .about-us-who-we-are-hr {
     @apply   md:h-[60%] w-[50%] md:w-0 border-[1px] border-gray-500;
 }
-.flex-things {
+.flex-cols {
     @apply   flex flex-col justify-center items-center ;
 }
 
