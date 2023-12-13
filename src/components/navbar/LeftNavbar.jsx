@@ -14,7 +14,6 @@ const LeftNavbar = ({ bg, scrollRef }) => {
       const currentSection = Array.from(sectionElements).reduce((acc, section) => {
         if (section.offsetTop - 1 <= scrollPosition) {
           acc = section.id;
-          // Note: comment it un usial console logs
           // console.log(acc);
         }
         return acc;
