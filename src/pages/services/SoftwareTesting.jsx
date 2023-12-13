@@ -7,6 +7,7 @@ import Partners from '../../components/aboutpage/Partners'
 import Footer from '../../components/footer/Footer'
 import Ourself from '../../components/Aboutus'
 import Swiperpartners from '../../components/aboutpage/Swiperpartners'
+import ServisesHero from '../../components/servisesHeros/ServisesHero'
 
 const SoftwareTesting = () => {
 
@@ -17,7 +18,7 @@ const SoftwareTesting = () => {
 
   return (
     <div className='overflow-hidden'>
-        <Hero/>
+        <ServisesHero title={"Ensuring High-Quality Software Delivery"  } discriptions={"Maximizing Your Software Potential with Advanced Testing Solutions"} background={"serv3"} />
         <Ourservice/>
         <Choose/>
         <Ourself/> 

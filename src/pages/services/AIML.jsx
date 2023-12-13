@@ -7,6 +7,7 @@ import Partners from '../../components/aboutpage/Partners'
 import Footer from '../../components/footer/Footer'
 import Ourself from '../../components/Aboutus'
 import Swiperpartners from '../../components/aboutpage/Swiperpartners'
+import ServisesHero from '../../components/servisesHeros/ServisesHero'
 
 const AIML = () => {
 
@@ -17,7 +18,7 @@ const AIML = () => {
 
   return (
     <div className='overflow-hidden'>
-        <Hero/>
+        <ServisesHero title={"Smarter Business Decisions with AI/ML"  } discriptions={"Empowering Smarter Business Decisions with this"} background={"serv1"} />
         <Ourservice/>
         <Choose/>
         <Ourself/> 

@@ -2,7 +2,10 @@ import mission from '@assets/Our-Mission.png.png';
 import philosophy from '@assets/Our-Philosophy.png.png';
 import strategy from '@assets/Our-Strategy.png.png';
 import vision from '@assets/Our-Vision.png.png';
-
+import reddit from '../assets/reddit.png'
+import chorus from '../assets/chorus.png'
+import tcs from '../assets/Tata Consultancy Services - png 0.png'
+import pantera from '../assets/pantera.png'
 export const cardsData = [
     {
         title:"Our Mission",
@@ -31,18 +34,22 @@ export const cardsData = [
 
 ]
 
-export const WhoWeAres = [
+export const imgesData = [
     {
-        title:'Your Next-Gen Technology Partner',
-        discriptions:"We provide industry expertise and solution IPs to help customers achieve successful business outcomes."
+        id:1,
+        image:reddit
     },
     {
-        title:'Team-Oriented',
-        discriptions:"We work together to drive change by setting the bar for future technologies and our way of working and build long-term partnerships."
+        id:1,
+        image:chorus
     },
     {
-        title:'Client-Focused',
-        discriptions:"We are, above all else, customer-centric. We are in it for the long run and have an unwavering passion for client success."
+        id:1,
+        image:tcs
     },
-   
+    {
+        id:1,
+        image:pantera
+    }
+
 ]

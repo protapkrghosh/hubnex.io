@@ -11,8 +11,8 @@ const Hero = () => {
             <div className=' text-white w-[85%] flex justify-start h-full  items-center'>
                 <div className=' w-90 flex flex-col gap-8 xl:gap-14 lg:mb-[180px] xl:mb-48'>
                   {/*  Whatdo:make text degain reusable */}
-                    <span className=' survise-text'>Efficient and Effective  Integration Services</span>
-                    <p className=' text-peragrap'>"Tailored IoT Solutions for Your Business Success"</p>
+                    <span className=' survise-text'></span>
+                    <p className=' text-peragrap'>""</p>
                     <Link to='/contact' className=' btn-primary'>Get in touch</Link>
 
                 </div>  

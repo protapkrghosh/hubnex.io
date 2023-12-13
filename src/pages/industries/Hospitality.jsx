@@ -6,6 +6,8 @@ import Aboutus from '../../components/Aboutus';
 import Footer from '../../components/footer/Footer';
 import Innovation from '../../components/industrypage/Innovation';
 import Herohospi from '../../components/industrypage/Herohospi';
+import IndustryHeros from '../../components/industryHeros/IndustryHeros';
+import IndustryOthersPage from '../../components/industryHeros/IndustryOthersPage';
 
 const Hospitality = () => {
 
@@ -16,12 +18,8 @@ const Hospitality = () => {
 
   return (
     <div className='overflow-hidden'>
-      <Herohospi/>
-        <Innovation/>
-        <Work/>
-        <Aboutus/>
-        {isMobile() ? <Swiperpartners/> : <Partners/>}
-        <Footer />
+       <IndustryHeros title={"Efficient Logistics for Your Supply Chain"  } discriptions={"Travel, Transportation, Logistics and Hospitality"} background={"ind2"} />
+        <IndustryOthersPage />
     </div>
   )
 }

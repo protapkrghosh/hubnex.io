@@ -7,6 +7,7 @@ import Partners from '../../components/aboutpage/Partners'
 import Footer from '../../components/footer/Footer'
 import Ourself from '../../components/Aboutus'
 import Swiperpartners from '../../components/aboutpage/Swiperpartners'
+import ServisesHero from '../../components/servisesHeros/ServisesHero'
 
 const DigitalMarketing = () => {
 
@@ -17,7 +18,7 @@ const DigitalMarketing = () => {
 
   return (
     <div className='overflow-hidden'>
-        <Hero/>
+       <ServisesHero title={"Mastering SEO for Digital Marketing Success"  } discriptions={"Tailored IoT Solutions for Your Business Success"} background={"serv6"} />
         <Ourservice/>
         <Choose/>
         <Ourself/> 

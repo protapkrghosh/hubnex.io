@@ -7,6 +7,7 @@ import Partners from '../../components/aboutpage/Partners'
 import Footer from '../../components/footer/Footer'
 import Ourself from '../../components/Aboutus'
 import Swiperpartners from '../../components/aboutpage/Swiperpartners'
+import ServisesHero from '../../components/servisesHeros/ServisesHero'
 
 const IOT = () => {
 
@@ -17,7 +18,7 @@ const IOT = () => {
 
   return (
     <div className='overflow-hidden'>
-        <Hero/>
+        <ServisesHero title={"Efficient and Effective  Integration Services"  } discriptions={"Enhancing Your Site's Performance and User Experience"} background={"serv4"} />
         <Ourservice/>
         <Choose/>
         <Ourself/> 

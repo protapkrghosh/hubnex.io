@@ -10,8 +10,8 @@ const Hero = () => {
         <div className='w-full h-full flex items-center justify-center'>
             <div className=' text-white w-[85%] flex justify-start h-full  items-center'>
                 <div className=' w-90 flex flex-col gap-8 xl:gap-14 lg:mb-[180px] xl:mb-48'>
-                    <span className='text-[28px] md:text-[40px] lg:text-[70px] xl:text-[60px] 2xl:text-[60px] font-gilroy-bold leading-tight lg:w-[700px]'>Mastering SEO for Digital Marketing Success</span>
-                    <p className=' text-peragrap'>"Enhancing Your Site's Performance and User Experience"</p>
+                    <span className='text-[28px] md:text-[40px] lg:text-[70px] xl:text-[60px] 2xl:text-[60px] font-gilroy-bold leading-tight lg:w-[700px]'></span>
+                    <p className=' text-peragrap'>""</p>
                     <Link to='/contact' className='btn-primary'>Get in touch</Link>
 
                 </div>  

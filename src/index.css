@@ -73,6 +73,18 @@
 .about-us-crds-p {
     @apply   text-grey text-[9.9px] md:text-[16px] px-2 md:px-0 ;
 }
+.about-us-who-we-are-p {
+    @apply   text-[14.42px] mt-5 md:text-[20px] font-gilroy-regular leading-6 ;
+}
+.about-us-who-we-are-div {
+    @apply   md:w-[303px] lg:h-[163px] text-center max-[360px]:w-60;
+}
+.about-us-who-we-are-span {
+    @apply   text-[16.22px] md:text-[22px] font-gilroy-semi-bold;
+}
+.about-us-who-we-are-hr {
+    @apply   md:h-[60%] w-[50%] md:w-0 border-[1px] border-gray-500;
+}
 .flex-things {
     @apply   flex flex-col justify-center items-center ;
 }

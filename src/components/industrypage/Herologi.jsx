@@ -10,8 +10,8 @@ const Hero = () => {
         <div className=' h-screen w-full flex items-center justify-center'>
         <div className=' w-[80%] flex items-center'>
             <div className=' text-white flex-things lg:items-start gap-10 w-90 max-[820px]:text-center'>
-                <div className='  text-[28px] md:text-[50px] lg:text-[60px] font-gilroy-bold leading-tight lg:w-[700px]'>Retail and Customer Goods</div>
-                <p className=' text-peragrap'>Delivering with Care Sustainable Solutions for a Healthier Planet</p>
+                <div className='  text-[28px] md:text-[50px] lg:text-[60px] font-gilroy-bold leading-tight lg:w-[700px]'></div>
+                <p className=' text-peragrap'></p>
                 <Link to='/contact' className='btn-primary'>Let's talk</Link>
 
               </div>
