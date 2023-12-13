@@ -45,7 +45,7 @@ const Home = () => {
           <LeftNavbar scrollRef={scrollRef}/>
         </div>
 
-        <div className='h-full w-full overflow-y-scroll' ref={scrollRef} style={{ scrollSnapType: 'y mandatory' }}>
+        <div className='h-full w-full' ref={scrollRef} style={{ scrollSnapType: 'y mandatory' }}>
           <section
             id='section-1'
             className='snap-start  overflow-hidden h-full w-full bg-landerImg md:bg-cover bg-no-repeat bg-[80%] md:bg-center'

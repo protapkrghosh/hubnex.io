@@ -63,28 +63,24 @@ const Navbar = () => {
     setDropIndustries(false);
   }
 
-
-
-
   const [fix, setFix] = useState(false)
   useEffect(() => {
     const setFixed = () => {
-      if (window.scrollY > 200) {
-        setFix(true)
+      if (window.scrollY > 100) {
+        setFix(true);
       } else {
-        setFix(false)
+        setFix(false);
       }
     };
+
     window.addEventListener('scroll', setFixed);
     return () => window.removeEventListener('scroll', setFixed);
-  }, [])
-
-
+  }, []);
 
 
   return (
 
-    <div className={`w-full h-14 lg:h-[80px] fixed z-40 transition-all duration-300 ease-in-out `}>
+    <div className={`w-full h-14 lg:h-[80px] fixed z-40 transition-all duration-300 ease-in-out ${fix ? 'bg-slate-800 opacity-90 shadow-md' : ''}`}>
       <div className={`w-full h-14 lg:h-[80px] fixed z-40 `}>
 
         {searchToggle && <Search toggler={searchToggle} />}
@@ -105,7 +101,7 @@ const Navbar = () => {
             <div ref={servicedropdownRef} className=' flex items-center relative'>
 
 
-            <span  activeClassName='your-active-class' onMouseOver={() => setServiceMenuDropDownOpen(true)} className=' cursor-pointer' onClick={handleServices}>Services</span>
+              <span activeClassName='your-active-class' onMouseOver={() => setServiceMenuDropDownOpen(true)} className=' cursor-pointer' onClick={handleServices}>Services</span>
               <span onMouseOver={() => setServiceMenuDropDownOpen(true)} className=' cursor-pointer' onClick={handleServices}>{isServiceMenuDropDownOpen ? <KeyboardArrowUpIcon /> : <KeyboardArrowDown />}</span>
 
               {
