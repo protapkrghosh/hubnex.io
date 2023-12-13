@@ -16,7 +16,7 @@ const Hero = () => {
           </div>
           <div>
 
-            <Link to='/contact' className='btn-primary'>Know More</Link>
+            <Link to='/contact' className='btn-primary'>Know more</Link>
 
           </div>
         </div>

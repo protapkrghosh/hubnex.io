@@ -80,7 +80,7 @@ module.exports = {
         'serv4':"url(@assets/serv4.png)",
         'serv5':"url(@assets/serv5.png)",
         'serv6':"url(@assets/serv6.png)",
-
+        
       }
     },
   },

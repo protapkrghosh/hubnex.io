@@ -19,7 +19,7 @@ const Communication = () => {
 
   return (
     <div className=' overflow-hidden'>
-      <IndustryHeros title={"Revolutionizing the way we connect"  } discriptions={"Digitalizing Communication Empowering Businesses to Thrive in the Future"} background={"ind1"} />
+      <IndustryHeros title={"Revolutionizing the way we connect"  } discriptions={"Digitalizing Communication Empowering Businesses to Thrive in the Future"} background={"ind1"} button={"Get in touch"} />
         <IndustryOthersPage />
     </div>
   )

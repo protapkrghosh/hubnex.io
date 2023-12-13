@@ -11,6 +11,7 @@ import ServisesHero from '../../components/servisesHeros/ServisesHero'
 import ServisesOtherSections from '../../components/servisesHeros/ServisesOtherSections'
 import ServisesDataMap from '../../components/servisesHeros/ServisesDataMap'
 import { iotDatas } from '../../data/data'
+import IndustryHeros from '../../components/industryHeros/IndustryHeros'
 
 const IOT = () => {
 
@@ -21,7 +22,7 @@ const IOT = () => {
 
   return (
     <div className='overflow-hidden'>
-        <ServisesHero title={"Efficient and Effective  Integration Services"  } discriptions={`"Enhancing Your Site's Performance and User Experience"`} background={"serv4"} />
+        <IndustryHeros title={"Efficient and Effective  Integration Services"  } discriptions={`"Enhancing Your Site's Performance and User Experience"`} background={"serv4"} button={"Get in touch"}/>
         <ServisesDataMap datas={iotDatas} />
         <ServisesOtherSections />
     </div>

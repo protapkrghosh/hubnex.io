@@ -18,7 +18,7 @@ const PublicSector = () => {
 
   return (
     <div className='overflow-hidden'>
-       <IndustryHeros title={"Empowering Your Financial Future"  } discriptions={"Banking, Financial Services, and Insurance Solutions for Every Stage of Life"} background={"ind4"} />
+       <IndustryHeros title={"Empowering Your Financial Future"  } discriptions={"Banking, Financial Services, and Insurance Solutions for Every Stage of Life"} background={"ind4"}  button={"Let's talk"} />
        <IndustryOthersPage />
     </div>
   )

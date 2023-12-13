@@ -18,7 +18,7 @@ const Hospitality = () => {
 
   return (
     <div className='overflow-hidden'>
-       <IndustryHeros title={"Efficient Logistics for Your Supply Chain"  } discriptions={"Travel, Transportation, Logistics and Hospitality"} background={"ind2"} />
+       <IndustryHeros title={"Efficient Logistics for Your Supply Chain"  } discriptions={"Travel, Transportation, Logistics and Hospitality"} background={"ind2"} button={"Let's talk"} />
         <IndustryOthersPage />
     </div>
   )
