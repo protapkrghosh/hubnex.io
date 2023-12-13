@@ -14,8 +14,7 @@ import close from '@assets/Xmark.png'
 
 
 
-const Navbar = ({navActive }) => {
-
+const Navbar = () => {
   const [searchToggle, setSearchToggle] = useState(false);
 
 
