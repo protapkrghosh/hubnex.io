@@ -18,7 +18,7 @@ const Logistic = () => {
 
   return (
     <div className='overflow-hidden'>
-       <IndustryHeros title={"Retail and Customer Goods"  } discriptions={"Delivering with Care Sustainable Solutions for a Healthier Planet"} background={"ind3"} />
+       <IndustryHeros title={"Retail and Customer Goods"  } discriptions={"Delivering with Care Sustainable Solutions for a Healthier Planet"} background={"ind3"}  button={"Let's talk"} />
         <IndustryOthersPage />
     </div>
   )

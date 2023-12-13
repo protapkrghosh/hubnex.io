@@ -6,7 +6,7 @@ const Retail = () => {
 
   return (
     <div className='overflow-hidden'>
-       <IndustryHeros title={"Revolutionizing the way we connect"  } discriptions={"Digitalizing Communication Empowering Businesses to Thrive in the Future"} background={"ind3"} />
+       <IndustryHeros title={"Revolutionizing the way we connect"  } discriptions={"Digitalizing Communication Empowering Businesses to Thrive in the Future"} background={"ind3"} button={"Let's talk"}  />
        <IndustryOthersPage />
     </div>
   )

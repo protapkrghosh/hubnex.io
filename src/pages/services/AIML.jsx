@@ -11,11 +11,12 @@ import ServisesHero from '../../components/servisesHeros/ServisesHero'
 import ServisesOtherSections from '../../components/servisesHeros/ServisesOtherSections'
 import ServisesDataMap from '../../components/servisesHeros/ServisesDataMap'
 import { aimldatas } from '../../data/data'
+import IndustryHeros from '../../components/industryHeros/IndustryHeros'
 
 const AIML = () => {
   return (
     <div className='overflow-hidden'>
-        <ServisesHero title={"Smarter Business Decisions with AI/ML"  } discriptions={`"Empowering Smarter Business Decisions with this"`} background={"serv1"} />
+        <IndustryHeros title={"Smarter Business Decisions with AI/ML"  } discriptions={`"Empowering Smarter Business Decisions with this"`} background={"serv1"} button={"Get in touch"}/>
         <ServisesDataMap datas={aimldatas} />
         <ServisesOtherSections />
     </div>

@@ -5,13 +5,14 @@ import ServisesHero from '../../components/servisesHeros/ServisesHero'
 import ServisesOtherSections from '../../components/servisesHeros/ServisesOtherSections'
 import ServisesDataMap from '../../components/servisesHeros/ServisesDataMap'
 import { digitalMarketingDatas } from '../../data/data'
+import IndustryHeros from '../../components/industryHeros/IndustryHeros'
 
 const DigitalMarketing = () => {
 
 
   return (
     <div className='overflow-hidden'>
-       <ServisesHero title={"Mastering SEO for Digital Marketing Success"  } discriptions={`"Tailored IoT Solutions for Your Business Success"`} background={"serv6"} />
+       <IndustryHeros title={"Mastering SEO for Digital Marketing Success"  } discriptions={`"Tailored IoT Solutions for Your Business Success"`} background={"serv6"} button={"Get in touch"}/>
         <ServisesDataMap datas={digitalMarketingDatas} />
         <ServisesOtherSections />
     </div>

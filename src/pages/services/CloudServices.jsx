@@ -11,17 +11,13 @@ import ServisesHero from '../../components/servisesHeros/ServisesHero'
 import ServisesOtherSections from '../../components/servisesHeros/ServisesOtherSections'
 import ServisesDataMap from '../../components/servisesHeros/ServisesDataMap'
 import { cloudServiseDatas } from '../../data/data'
+import IndustryHeros from '../../components/industryHeros/IndustryHeros'
 
 const CloudServices = () => {
 
-  const isMobile=()=> {
-    const match=window.matchMedia("(max-width:912px)");
-    return(match && match.matches); 
-  }
-
   return (
     <div className='overflow-hidden'>
-        <ServisesHero title={"Secure and Reliable Cloud Services"  } discriptions={`"Powering Your Business with Cloud Confidence"`} background={"serv2"} />
+        <IndustryHeros title={"Secure and Reliable Cloud Services"  } discriptions={`"Powering Your Business with Cloud Confidence"`} background={"serv2"} button={"Get in touch"}/>
         <ServisesDataMap datas={cloudServiseDatas} />
         <ServisesOtherSections />
     </div>

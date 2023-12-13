@@ -11,12 +11,13 @@ import ServisesHero from '../../components/servisesHeros/ServisesHero'
 import ServisesOtherSections from '../../components/servisesHeros/ServisesOtherSections'
 import ServisesDataMap from '../../components/servisesHeros/ServisesDataMap'
 import { softwarTestingDatas } from '../../data/data'
+import IndustryHeros from '../../components/industryHeros/IndustryHeros'
 
 const SoftwareTesting = () => {
 
   return (
     <div className='overflow-hidden'>
-        <ServisesHero title={"Ensuring High-Quality Software Delivery"  } discriptions={`"Maximizing Your Software Potential with Advanced Testing Solutions"`} background={"serv3"} />
+        <IndustryHeros title={"Ensuring High-Quality Software Delivery"  } discriptions={`"Maximizing Your Software Potential with Advanced Testing Solutions"`} background={"serv3"} button={"Get in touch"} />
        <ServisesDataMap datas={softwarTestingDatas} />
        <ServisesOtherSections />
     </div>

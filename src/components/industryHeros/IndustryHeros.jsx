@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from '../navbar/Navbar'
 import { Link } from 'react-router-dom'
 
-const IndustryHeros = ({title,discriptions,background}) => {
+const IndustryHeros = ({title,discriptions,background,button}) => {
     return (
         <div>
         <div className={` xl:h-[838px] h-screen bg-${background} bg-cover bg-center w-full relative`} >
@@ -12,7 +12,7 @@ const IndustryHeros = ({title,discriptions,background}) => {
              <div className=' text-white flex-cols lg:items-start gap-10 w-90 max-[820px]:text-center'>
                  <div className='  text-[28px] md:text-[50px] lg:text-[60px] font-gilroy-bold leading-tight lg:w-[700px]'>{title}</div>
                  <p className=' text-peragrap'>{discriptions}</p>
-                 <Link to='/contact' className='btn-primary'>Let's talk</Link>
+                 <Link to='/contact' className='btn-primary'>{button}</Link>
                </div>
            </div>
          </div>
