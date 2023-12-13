@@ -2,7 +2,6 @@ import React from 'react'
 import { useRef, useState, useEffect } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import logo from '../../assets/hubnex_logo.png'
-import searchIcon from '../../assets/search_icon.png'
 import Search from '../searchbar/Search'
 import MobileNavbar from './MobileNavbar'
 import './navbar.css'
@@ -15,7 +14,7 @@ import close from '@assets/Xmark.png'
 
 
 
-const Navbar = () => {
+const Navbar = ({navActive }) => {
 
   const [searchToggle, setSearchToggle] = useState(false);
 
@@ -63,29 +62,33 @@ const Navbar = () => {
     setDropIndustries(false);
   }
 
-
-
-
-  const [fix, setFix] = useState(false)
+// navbar scrollY effect
   useEffect(() => {
-    const setFixed = () => {
-      if (window.scrollY > 200) {
-        setFix(true)
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const shouldChangeBackground = scrollPosition > 500;
+
+      const navbar = document.querySelector('.nav-fixed');
+      if (shouldChangeBackground) {
+        navbar.style.backgroundColor = 'rgba(0,0,0, 0.5)'
       } else {
-        setFix(false)
+        navbar.style.backgroundColor = ''
       }
     };
-    window.addEventListener('scroll', setFixed);
-    return () => window.removeEventListener('scroll', setFixed);
-  }, [])
 
+    window.addEventListener('scroll', handleScroll);
 
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []); 
 
+  
 
   return (
 
-    <div className={`w-full h-14 lg:h-[80px] fixed z-40 transition-all duration-300 ease-in-out bg-white`}>
-      <div className={`w-full h-14 lg:h-[80px] fixed z-40 bg-white`}>
+    <div className={`nav-fixed w-full h-14 lg:h-[80px] fixed z-40 transition-all duration-300 ease-in-out`}>
+      <div className={`w-full h-14 lg:h-[80px] fixed z-40`}>
 
         {searchToggle && <Search toggler={searchToggle} />}
 
