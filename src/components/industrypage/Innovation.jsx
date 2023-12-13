@@ -5,7 +5,8 @@ const Innovation = () => {
     <div>
       <div className=' py-10 md:py-0 min-h-screen xl:w-full xl:h-[865px] gap-5 bg-bgblack flex items-center flex-col'>
         <div className=' text-white  lg:mt-9 2xl:mt-[83px] 2xl:w-[1188px] xl:h[85px]'>
-          <h1 className='font-gilroy-bold 2xl:text-[70px] lg:text-[60px] xl:text-[60px]  text-3xl font-gilroy  text-center'>Innovating for the Future of Care</h1>
+          {/* Note: Added padding top in heading text */}
+          <h1 className='font-gilroy-bold 2xl:text-[70px] lg:text-[60px] xl:text-[60px]  text-3xl font-gilroy mt-12 text-center'>Innovating for the Future of Care</h1>
 
         </div>
         <div className='text-white 2xl:w-[1188px] 2xl:h-[136px] mt-[50px]  '>

@@ -65,7 +65,7 @@ const Navbar = ({navActive }) => {
   const [fix, setFix] = useState(false)
   useEffect(() => {
     const setFixed = () => {
-      if (window.scrollY > 500) {
+      if (window.scrollY > 300) {
         setFix(true);
       } else {
         setFix(false);
