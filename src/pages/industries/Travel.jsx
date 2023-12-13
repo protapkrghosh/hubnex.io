@@ -6,6 +6,8 @@ import Aboutus from '../../components/Aboutus';
 import Footer from '../../components/footer/Footer';
 import Innovation from '../../components/industrypage/Innovation';
 import HeroTravel from '../../components/industrypage/HeroTravel';
+import IndustryHeros from '../../components/industryHeros/IndustryHeros';
+import IndustryOthersPage from '../../components/industryHeros/IndustryOthersPage';
 
 const Travel = () => {
 
@@ -16,12 +18,8 @@ const Travel = () => {
 
   return (
     <div className='overflow-hidden'>
-      <HeroTravel/>
-        <Innovation/>
-        <Work/>
-        <Aboutus/>
-        {isMobile() ? <Swiperpartners/> : <Partners/>}
-        <Footer />
+       <IndustryHeros title={"Public Sector Solutions"  } discriptions={"Your Voice, Your Government Bridging the Gap for Better Governance"} background={"ind5"} />
+        <IndustryOthersPage />
     </div>
   )
 }

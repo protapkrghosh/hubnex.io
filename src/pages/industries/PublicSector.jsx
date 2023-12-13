@@ -6,6 +6,8 @@ import Aboutus from '../../components/Aboutus';
 import Footer from '../../components/footer/Footer';
 import Innovation from '../../components/industrypage/Innovation';
 import HeroPublic from '../../components/industrypage/HeroPublic';
+import IndustryHeros from '../../components/industryHeros/IndustryHeros';
+import IndustryOthersPage from '../../components/industryHeros/IndustryOthersPage';
 
 const PublicSector = () => {
 
@@ -16,12 +18,8 @@ const PublicSector = () => {
 
   return (
     <div className='overflow-hidden'>
-      <HeroPublic/>
-        <Innovation/>
-        <Work/>
-        <Aboutus/>
-        {isMobile() ? <Swiperpartners/> : <Partners/>}
-        <Footer />
+       <IndustryHeros title={"Empowering Your Financial Future"  } discriptions={"Banking, Financial Services, and Insurance Solutions for Every Stage of Life"} background={"ind4"} />
+       <IndustryOthersPage />
     </div>
   )
 }

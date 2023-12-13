@@ -62,33 +62,26 @@ const Navbar = ({navActive }) => {
     setDropIndustries(false);
   }
 
-// navbar scrollY effect
+  const [fix, setFix] = useState(false)
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      const shouldChangeBackground = scrollPosition > 500;
-
-      const navbar = document.querySelector('.nav-fixed');
-      if (shouldChangeBackground) {
-        navbar.style.backgroundColor = 'rgba(0,0,0, 0.5)'
+    const setFixed = () => {
+      if (window.scrollY > 500) {
+        setFix(true);
       } else {
-        navbar.style.backgroundColor = ''
+        setFix(false);
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []); 
+    window.addEventListener('scroll', setFixed);
+    return () => window.removeEventListener('scroll', setFixed);
+  }, []);
 
   
 
   return (
 
-    <div className={`nav-fixed w-full h-14 lg:h-[80px] fixed z-40 transition-all duration-300 ease-in-out`}>
-      <div className={`w-full h-14 lg:h-[80px] fixed z-40`}>
+    <div className={`w-full h-14 lg:h-[80px] fixed z-40 transition-all duration-300 ease-in-out ${fix ? 'bg-black opacity-75 shadow-md' : ''}`}>
+      <div className={`w-full h-14 lg:h-[80px] fixed z-40 `}>
 
         {searchToggle && <Search toggler={searchToggle} />}
 
@@ -108,7 +101,7 @@ const Navbar = ({navActive }) => {
             <div ref={servicedropdownRef} className=' flex items-center relative'>
 
 
-            <NavLink to='/services' activeClassName='your-active-class' onMouseOver={() => setServiceMenuDropDownOpen(true)} className=' cursor-pointer' onClick={handleServices}>Services</NavLink>
+              <span activeClassName='your-active-class' onMouseOver={() => setServiceMenuDropDownOpen(true)} className=' cursor-pointer' onClick={handleServices}>Services</span>
               <span onMouseOver={() => setServiceMenuDropDownOpen(true)} className=' cursor-pointer' onClick={handleServices}>{isServiceMenuDropDownOpen ? <KeyboardArrowUpIcon /> : <KeyboardArrowDown />}</span>
 
               {

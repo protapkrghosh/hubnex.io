@@ -7,22 +7,18 @@ import Partners from '../../components/aboutpage/Partners'
 import Footer from '../../components/footer/Footer'
 import Ourself from '../../components/Aboutus'
 import Swiperpartners from '../../components/aboutpage/Swiperpartners'
+import ServisesHero from '../../components/servisesHeros/ServisesHero'
+import ServisesOtherSections from '../../components/servisesHeros/ServisesOtherSections'
+import ServisesDataMap from '../../components/servisesHeros/ServisesDataMap'
+import { softwarTestingDatas } from '../../data/data'
 
 const SoftwareTesting = () => {
 
-  const isMobile=()=> {
-    const match=window.matchMedia("(max-width:912px)");
-    return(match && match.matches); 
-  }
-
   return (
     <div className='overflow-hidden'>
-        <Hero/>
-        <Ourservice/>
-        <Choose/>
-        <Ourself/> 
-        {isMobile()? <Swiperpartners/> :<Partners/>}
-        <Footer/>
+        <ServisesHero title={"Ensuring High-Quality Software Delivery"  } discriptions={`"Maximizing Your Software Potential with Advanced Testing Solutions"`} background={"serv3"} />
+       <ServisesDataMap datas={softwarTestingDatas} />
+       <ServisesOtherSections />
     </div>
   )
 }

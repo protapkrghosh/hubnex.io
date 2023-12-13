@@ -24,11 +24,10 @@ const Footer = () => {
   };
 
   const [credentials, setCredentials] = useState(emptyCredentials);
-  const [inputValue, setInputValue] = useState('');
   const handleChange = (event) => {
     const { name, value } = event.target;
-
-    if (name === 'firstName' || name === 'lastName') {
+// Whatdo:set only aplphabet and numbar eatch phone numbar and name field
+    if (name === 'firstName' || name === 'lastName' ||name === 'message') {
       setCredentials({ ...credentials, [name]: value.replace(/[^a-zA-Z]/g, '') });
     } else if (name === 'phoneNo') {
       setCredentials({ ...credentials, [name]: value.replace(/[^0-9]/g, '') });
@@ -36,7 +35,6 @@ const Footer = () => {
       setCredentials({ ...credentials, [name]: value });
     }
   
-    // Reset corresponding error flags
     if (name === 'firstName') setErrFirstname(false);
     if (name === 'lastName') setErrLastname(false);
     if (name === 'email') setErrEmail(false);
@@ -140,7 +138,7 @@ const Footer = () => {
 
   return (
     //Note: added some pading both phone and computer veiw
-    <div className='flex flex-col justify-center items-center w-full bg-black md:pt-36 pt-20'>
+    <div className='flex-things w-full bg-black md:pt-36 pt-20'>
       <div className='lg:w-[90%] xl:w-[70%] h-full lg:flex sm:justify-between items-center text-white py-5 lg:py-0'>
         <div className='flex flex-col gap-[36px] md:gap-14 xl:gap-16'>
           <div className='text-4xl lg:text-[70px] 2xl:text-[70px] md:py-0 font-gilroy-extrabold text-white'>
@@ -168,13 +166,13 @@ const Footer = () => {
           <input className='outline-none bg-transparent border-b-[1px] border-b-gray-300 w-full md:w-96' type='email' id='email' name='email' value={credentials.email} onChange={handleChange} />
 
           <label className='text-gray-200' htmlFor='mobile_no'>PHONE NUMBER {errPhone ? <span className='text-red-500 pl-3'>Phone No is mandatory</span> : <span className='text-red-500'>*</span>}{validPhone && <span className='pl-3 text-red-500'> Please provide valid Phone Number </span>}</label>
-          {/* Note: fixed the phone number default behaviors */}
+          
           <input className='outline-none bg-transparent border-b-[1px] border-b-gray-300 w-full md:w-96' type='tel' id='mobile_no' maxLength={12} name='phoneNo' value={credentials.phoneNo} onChange={handleChange} />
 
           <label className='text-gray-200' htmlFor='message'>MESSAGE</label>
           <input className='pt-5 outline-none bg-transparent border-b-[1px] border-b-gray-300 w-full md:w-96' type='text' id='message' name='message' value={credentials.message} onChange={handleChange} />
 
-          <button className='h-[41px] mt-10 w-[121px] py-1 px-5 border-violet-700 border-[2px] border-t-0 border-l-0 relative bg-transparent rounded-full'>
+          <button className='btn-submit'>
             <label htmlFor='submit' className='flex cursor-pointer gap-3 w-full h-full rounded-full font-gilroy-light items-center justify-center text-[18px] absolute -left-[2px] bottom-[2px] border-white border-2'>
               <input type='submit' placeholder='SUBMIT' className='cursor-pointer' />
               <img src={arrow} alt="arrow" width={15} height={15} className='object-contain' />

@@ -6,6 +6,8 @@ import Aboutus from '../../components/Aboutus';
 import Footer from '../../components/footer/Footer';
 import Innovation from '../../components/industrypage/Innovation';
 import Herologi from '../../components/industrypage/Herologi';
+import IndustryHeros from '../../components/industryHeros/IndustryHeros';
+import IndustryOthersPage from '../../components/industryHeros/IndustryOthersPage';
 
 const Logistic = () => {
 
@@ -16,12 +18,8 @@ const Logistic = () => {
 
   return (
     <div className='overflow-hidden'>
-      <Herologi/>
-        <Innovation/>
-        <Work/>
-        <Aboutus/>
-        {isMobile() ? <Swiperpartners/> : <Partners/>}
-        <Footer />
+       <IndustryHeros title={"Retail and Customer Goods"  } discriptions={"Delivering with Care Sustainable Solutions for a Healthier Planet"} background={"ind3"} />
+        <IndustryOthersPage />
     </div>
   )
 }

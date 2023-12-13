@@ -6,6 +6,8 @@ import Aboutus from '../../components/Aboutus';
 import Footer from '../../components/footer/Footer';
 import Innovation from '../../components/industrypage/Innovation';
 import Herocomm from '../../components/industrypage/Herocomm';
+import IndustryHeros from '../../components/industryHeros/IndustryHeros';
+import IndustryOthersPage from '../../components/industryHeros/IndustryOthersPage';
 
 
 const Communication = () => {
@@ -17,12 +19,8 @@ const Communication = () => {
 
   return (
     <div className=' overflow-hidden'>
-      <Herocomm/>
-        <Innovation/>
-        <Work/>
-        <Aboutus/>
-        {isMobile() ? <Swiperpartners/> : <Partners/>}
-        <Footer />
+      <IndustryHeros title={"Revolutionizing the way we connect"  } discriptions={"Digitalizing Communication Empowering Businesses to Thrive in the Future"} background={"ind1"} />
+        <IndustryOthersPage />
     </div>
   )
 }

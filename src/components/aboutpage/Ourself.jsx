@@ -13,21 +13,19 @@ const Ourself = () => {
                    </div>
 
                    <div className=' w-full flex flex-col gap-10 lg:flex-row  lg:justify-evenly items-center  '>
-                        <div className=' md:w-[303px] lg:h-[163px] text-center  '>
-                            <span className=' text-[16.22px] md:text-[22px] font-gilroy-semi-bold'>Your Next-Gen Technology Partner</span>
-                            <p className='text-[14.42px] mt-5 md:text-[20px] font-gilroy-regular leading-6'>We provide industry expertise and solution IPs to help customers achieve successful business outcomes.</p>  
+                   <div className='about-us-who-we-are-div'>
+                            <span className=' about-us-who-we-are-span '>Your Next-Gen Technology Partner</span>
+                            <p className='about-us-who-we-are-p'>We provide industry expertise and solution IPs to help customers achieve successful business outcomes.</p>
                         </div>
-                        <hr className=' md:h-[60%] w-[50%] md:w-0 border-[1px] border-gray-500'/>
-                          
-                        <div className='md:w-[303px] lg:h-[163px] text-center '>
-                            <span className=' text-[16.22px] md:text-[22px] font-gilroy-semi-bold'>Team-Oriented</span>
-                            <p className='text-[14.42px] mt-5 md:text-[20px] font-gilroy-regular leading-6'>We work together to drive change by setting the bar for future technologies and our way of working and build long-term partnerships.</p>
+                        <hr className=' about-us-who-we-are-hr'/>
+                        <div className='about-us-who-we-are-div'>
+                            <span className=' about-us-who-we-are-span '>Team-Oriented</span>
+                            <p className='about-us-who-we-are-p'>We work together to drive change by setting the bar for future technologies and our way of working and build long-term partnerships. </p>
                         </div>
-                        <hr className=' md:h-[60%] w-[50%] md:w-0 border-[1px] border-gray-500'/>
-
-                        <div className='md:w-[303px] lg:h-[163px] text-center max-[360px]:w-60'>
-                            <span className=' text-[16.22px] md:text-[22px] font-gilroy-semi-bold'>Client-Focused</span>
-                            <p className='text-[14.42px] mt-5 md:text-[20px] font-gilroy-regular leading-6'>We are, above all else, customer-centric. We are in it for the long run and have an unwavering passion for client success. </p>
+                        <hr className=' about-us-who-we-are-hr'/>
+                        <div className='about-us-who-we-are-div'>
+                            <span className=' about-us-who-we-are-span '>Client-Focused</span>
+                            <p className='about-us-who-we-are-p'>We are, above all else, customer-centric. We are in it for the long run and have an unwavering passion for client success. </p>
                         </div>
                    </div>
                 </div>
