@@ -28,7 +28,7 @@ const Home = () => {
     'snap-start  overflow-hidden h-full w-full bg-landerImg md:bg-cover bg-no-repeat bg-[80%] md:bg-center', //class 1
     ' h-full w-full snap-start',//class 2
     'h-auto xs:h-full snap-start w-full bg-vector relative bg-cover bg-no-repeat bg-center',//class 3
-    'h-full w-full snap-start lg:bg-balloon bg-balloonMob relative bg-blue-300 bg-[right_top_1rem] bg-[length:100%_110%] bg-no-repeat',//class 4
+    'h-full w-full snap-start lg:bg-balloon bg-balloonMob relative bg-blue-300 bg-[right_top_-1rem] bg-[length:100%_110%] bg-no-repeat',//class 4
     'h-auto xs:h-full w-full snap-start',//class 5
     'h-auto w-full snap-start' //class 6
   ];

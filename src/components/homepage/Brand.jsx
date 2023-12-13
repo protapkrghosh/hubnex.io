@@ -20,7 +20,7 @@ const Brand = () => {
                     <span>we have a team</span>
                 </div>
                 {/* Whatdo:make buttons reusable */}
-                <Link to='/contact'><button className=' btn-primary'>Get started </button></Link>
+                <Link to='/contact'><button className=' btn-primary'>get started </button></Link>
             </div>
         </div>
     </div>
