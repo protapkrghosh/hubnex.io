@@ -137,7 +137,7 @@ const Footer = () => {
   };
 
   return (
-    //Note: added some pading both phone and computer veiw
+    // Note: added some padding both phone and computer view
     <div className='flex-things w-full bg-black md:pt-36 pt-20'>
       <div className='lg:w-[90%] xl:w-[70%] h-full lg:flex sm:justify-between items-center text-white py-5 lg:py-0'>
         <div className='flex flex-col gap-[36px] md:gap-14 xl:gap-16'>
@@ -145,8 +145,7 @@ const Footer = () => {
             <h1 className='text-center lg:text-start'>let's talk</h1>
           </div>
 
-          {/* Note: Adjustment div width */}
-          <div className='w-[90%] mx-auto md:mx-0 md:w-[450px] lg:h-[310px] text-1xl lg:text-[48px] font-gilroy-light'>
+          <div className='w-[90%] mx-auto md:mx-0 md:w-[310px] lg:h-[310px] text-1xl lg:text-[48px] font-gilroy-light'>
             <p className='text-center leading-tight lg:text-start'>have some great idea or brand to develop?</p>
             <p className='text-center leading-tight lg:text-start'>Let's build it together</p>
           </div>

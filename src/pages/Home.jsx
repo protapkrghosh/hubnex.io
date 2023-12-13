@@ -25,13 +25,13 @@ const Home = () => {
     const totalSections = sectionIds.length;
     const sectionHeight = scrollHeight / totalSections;
     const nextSectionIndex = Math.min(totalSections - 1, Math.floor((scrollTop + windowHeight / 2) / sectionHeight));
-  
+
     if (nextSectionIndex !== currentSectionIndex) {
       setCurrentSectionIndex(nextSectionIndex);
       window.scrollTo({ top: nextSectionIndex * sectionHeight, behavior: "smooth" });
     }
   };
-  
+
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
@@ -42,7 +42,7 @@ const Home = () => {
     <>
       <div className='h-screen w-full'>
         <div className='hidden xl:inline-block absolute left-10 z-50'>
-          <LeftNavbar scrollRef={scrollRef}/>
+          <LeftNavbar scrollRef={scrollRef} />
         </div>
 
         <div className='h-full w-full' ref={scrollRef} style={{ scrollSnapType: 'y mandatory' }}>
