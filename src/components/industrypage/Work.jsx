@@ -5,7 +5,8 @@ import '../serviceUpdated/Ourservice.css'
 const OueWork = () => {
   return (
     <div>
-       <div className='bg-black 2xl:h-[902px] py-3 md:py-0 min-h-screen  flex justify-center items-center flex-col gap-0'>
+      {/* Note: Fixed section padding */}
+       <div className='bg-black 2xl:h-[902px] py-3 md:py-20 min-h-screen  flex justify-center items-center flex-col gap-0'>
        
             <div className='text-white text-[28px] md:text-[60px] font-gilroy-bold '><h1>What We Do</h1></div>
             <div className='text-white text-[20px] text-center md:text-[24px] font-gilroy-regular p-6' ><p>Delivering exponential value throughout the care ecosystem</p></div>
