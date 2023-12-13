@@ -43,7 +43,7 @@ const Home = () => {
           <LeftNavbar scrollRef={scrollRef} />
         </div>
 
-        <div className='h-full w-full' ref={scrollRef} style={{ scrollSnapType: 'y mandatory' }}>
+        <div className='h-full w-full ' ref={scrollRef} style={{ scrollSnapType: 'y mandatory' }}>
           {sectionIds.map((section, index) => (
             <section
               key={section}
