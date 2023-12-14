@@ -66,6 +66,7 @@ const Navbar = () => {
     const setFixed = () => {
       if (window.scrollY > 300) {
         setFix(true);
+        
       } else {
         setFix(false);
       }
