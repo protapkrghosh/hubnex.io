@@ -58,11 +58,12 @@ const Home = () => {
             <Brand />
           </section>
 
-          <section id='section-3' className='h-auto xs:h-full snap-start w-full bg-vector relative bg-cover bg-no-repeat bg-center'>
+          <section id='section-3' className='h-auto xs:h-full snap-start w-full bg-vector relative bg-cover bg-no-repeat bg-center mb-10'>
             <Services />
           </section>
 
-          <section id='section-4' className=' h-full md:h-[1100px] w-full snap-start lg:bg-balloon bg-balloonMob relative bg-blue-300 bg-[right_top_1rem] bg-[length:100%_100%] bg-no-repeat '>
+          {/* <section id='section-4' className=' h-full md:h-[700px] lg:h-[900px] w-full snap-start lg:bg-balloon bg-balloonMob relative bg-blue-300 bg-[right_top_1rem] bg-[length:100%_100%] bg-no-repeat '>  */}
+          <section id='section-4' className='h-full w-full snap-start lg:bg-balloon bg-balloonMob relative bg-center bg-[length:100%_120%] bg-no-repeat'> 
             <Testimonial />
           </section>
 

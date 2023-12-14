@@ -16,10 +16,11 @@ const Testimonial = () => {
                     <span className=' text-5xl md:text-[100px] xl:text-[100px]'>200</span>
                     <p className=" md:text-[30px] lg:text-[36px]">Leading businesses</p>
                 </div>
+                
             </div>
 
             <div className=' w-[90%] flex-2 pt-48 md:w-[420px] mt-10 sm:mt-0 md:pt-0 font-gilroy-semi-bold md:text-[20px] xl:text-[22px] text-blue-800 text-center md:text-start'>
-                <p className=' '>Not only do we help businesses reach their goals, but help build the empire</p>
+                <p>Not only do we help businesses reach their goals, but help build the empire</p>
                 <span>- Sathya Nadela</span>
             </div>
         </div>
