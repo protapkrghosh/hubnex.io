@@ -7,7 +7,7 @@ const About = () => {
   return (
 
     <>
-      <div className="h-[800px] lg:h-full relative bg-rose-500 flex w-full lg:py-0 py-5 justify-center items-center md:overflow-hidden ">
+      <div className="h-full relative bg-rose-500 flex w-full lg:py-0 py-5 justify-center items-center md:overflow-hidden ">
         <div className='flex flex-col h-full lg:ml-36 xl:ml-20 md:translate-x-0 w-[80%] md:w-3/5  gap-5 lg:gap-0 justify-center items-center md:overflow-hidden md:max-[1000px]:w-[50%]'>
 
           <div className='md:text-left text-center text-white md:max-w-[380px] w-full  md:max-[1000px]:text-center'>
