@@ -8,7 +8,11 @@ import service3 from '@assets/service3.png'
 import service4 from '@assets/service4.png'
 import { Link } from 'react-router-dom'
 
+
+
 const Services = () => {
+
+
   const images = [
     {
       'id': 1,
@@ -57,23 +61,23 @@ const Services = () => {
 
 
   return (
+
+
     <div className=' w-full h-full relative py-10 md:py-5 lg:py-0' >
       <div className=' w-full lg:w-[90%] xl:w-[70%] h-full flex-none  md:flex m-auto justify-between items-center py-5 lg:py-0'>
         <div className=' flex flex-col md:gap-5 justify-around lg:justify-center gap-5 sm:py-0 sm:h-full w-full'>
           <h2 className=' md:static top-8 left-14 md:mt-0 text-4xl md:text-[55px] lg:w-full font-gilroy-bold text-center leading-tight lg:text-start'>let us build it for you.</h2>
           <div className=' flex md:h-full lg:hidden flex-col md:gap-10 justify-center items-center w-full'>
-
-            <div className=' flex w-[200px]  h-[400px] lg:h-auto relative overflow-hidden'>
+          <div className=' flex w-[250px]  h-auto lg:h-auto relative overflow-hidden'>
               <Link to='service' className=' z-10 w-full h-full'>
-                <img src={iphone} className='h-full' />
+                <img src={iphone} />
               </Link>
-              <div style={{ transform: `translate3d(${-slide * 100}%, 0, 0)` }} className='h-full w-full whitespace-nowrap absolute transition ease-in-out duration-1000'>
+              <div style={{ transform: `translate3d(${-slide * 100}%, 0, 0)` }} className=' h-full w-full whitespace-nowrap absolute transition ease-in-out duration-1000'>
                 {images.map((image) => (
                   <img key={image.id} src={image.url} alt="services" className={` ${image.bg} w-full h-full inline-block object-contain`} />
                 ))}
               </div>
             </div>
-
             <div className=' h-3 rounded-full w-32 mt-5  bg-gray-300 overflow-hidden'>
               {images.map((image) => (
                 <div key={image.id} style={{ transform: `translate3d(${slide * 132}%, 0, 0)` }} className='h-full rounded-full w-[20%] bg-slate-500 transition ease-linear duration-1000'></div>
@@ -89,23 +93,19 @@ const Services = () => {
 
 
 
-        <div className='hidden md:static lg:flex lg:h-full flex-col md:gap-10  justify-center items-end w-full md:w-[80%]'>
-          
-          <div className='flex md:w-[300px] lg:w-[250px] xl:w-[270px] h-[400px] md:h-[80%] relative overflow-hidden mt-20'>
+        <div className='hidden md:static lg:flex lg:h-full flex-col md:gap-10  justify-center items-end w-full'>
+          <div className=' flex justify-center items-center md:w-[300px] lg:w-[300px] xl:w-[250px] h-[400px] md:h-auto relative overflow-hidden md:mt-20 z-10'>
             <Link to='service' className=' z-10 w-full h-full'>
-              <img src={iphone} className='h-full' />
+              <img src={iphone} />
             </Link>
-            
-            
-            <div style={{ transform: `translate3d(${-slide * 100}%, 0, 0)` }} className='h-full w-full whitespace-nowrap absolute transition ease-in-out duration-1000'>
+            <div style={{ transform: `translate3d(${-slide * 100}%, 0, 0)` }} className=' h-full w-full whitespace-nowrap absolute transition ease-in-out duration-1000'>
               {images.map((image) => (
                 <img src={image.url} alt="services" className={` ${image.bg} w-full h-full inline-block object-contain `} />
               ))}
             </div>
-          </div>
 
-          
-          <div className='h-3 rounded-full w-[240px] lg:w-[180px]  xl:w-[231px] mt-5 md:-mt-5 ml-8 md:ml-0 md:mr-8 bg-gray-300 overflow-hidden'>
+          </div>
+          <div className=' h-3 rounded-full w-[240px] lg:w-[180px]  xl:w-[200px] mt-5 md:-mt-6 ml-8 md:ml-0 md:mr-5 bg-gray-300 overflow-hidden'>
             {images.map((image) => (
               <div style={{ transform: `translate3d(${slide * 132}%, 0, 0)` }} className='h-full rounded-full w-[53px] bg-slate-500 transition ease-linear duration-1000'></div>
             ))}
