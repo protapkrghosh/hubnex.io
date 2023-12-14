@@ -68,7 +68,8 @@ const Services = () => {
         <div className=' flex flex-col md:gap-5 justify-around lg:justify-center gap-5 sm:py-0 sm:h-full w-full'>
           <h2 className=' md:static top-8 left-14 md:mt-0 text-4xl md:text-[55px] lg:w-full font-gilroy-bold text-center leading-tight lg:text-start'>let us build it for you.</h2>
           <div className=' flex md:h-full lg:hidden flex-col md:gap-10 justify-center items-center w-full'>
-          <div className=' flex w-[250px]  h-auto lg:h-auto relative overflow-hidden'>
+
+            <div className=' flex w-[199px]  h-[399px] md:h-[389px] lg:h-auto relative overflow-hidden'>
               <Link to='service' className=' z-10 w-full h-full'>
                 <img src={iphone} />
               </Link>
