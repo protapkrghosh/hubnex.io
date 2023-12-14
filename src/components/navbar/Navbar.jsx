@@ -90,7 +90,7 @@ const Navbar = () => {
           {/* Note: Change hubnex project logo and logo resize in navbar */}
           <div className='cursor-pointer z-50'>
             <Link to='/' className=' flex gap-2 items-center'>
-              <img src={logo} alt='Logo' className='md:w-[120px] w-[90px]' />
+              <img src={logo} alt='Logo' className='md:w-[110px] w-[90px]' />
             </Link>
           </div>
 
