@@ -63,7 +63,7 @@ const Services = () => {
           <h2 className=' md:static top-8 left-14 md:mt-0 text-4xl md:text-[55px] lg:w-full font-gilroy-bold text-center leading-tight lg:text-start'>let us build it for you.</h2>
           <div className=' flex md:h-full lg:hidden flex-col md:gap-10 justify-center items-center w-full'>
 
-            <div className=' flex w-[200px]  h-[400px] lg:h-auto relative overflow-hidden'>
+            <div className=' flex w-[199px]  h-[400px] lg:h-auto relative overflow-hidden'>
               <Link to='service' className=' z-10 w-full h-full'>
                 <img src={iphone} className='h-full' />
               </Link>
@@ -74,7 +74,7 @@ const Services = () => {
               </div>
             </div>
 
-            <div className=' h-3 rounded-full w-32 mt-5  bg-gray-300 overflow-hidden'>
+            <div className='h-3 rounded-full w-32 mt-5  bg-gray-300 overflow-hidden'>
               {images.map((image) => (
                 <div key={image.id} style={{ transform: `translate3d(${slide * 132}%, 0, 0)` }} className='h-full rounded-full w-[20%] bg-slate-500 transition ease-linear duration-1000'></div>
               ))}
