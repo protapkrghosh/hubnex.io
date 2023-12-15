@@ -69,7 +69,7 @@ const Services = () => {
           <h2 className=' md:static top-8 left-14 md:mt-0 text-4xl md:text-[55px] lg:w-full font-gilroy-bold text-center leading-tight lg:text-start'>let us build it for you.</h2>
           <div className=' flex md:h-full lg:hidden flex-col md:gap-10 justify-center items-center w-full mb-10'>
 
-            <div className=' flex w-[199px]  h-[399px] md:h-[389px] lg:h-auto relative overflow-hidden'>
+            <div className=' flex w-[200px]  h-[399px] md:h-[400px] lg:h-auto relative overflow-hidden rounded-[28px]'>
               <Link to='service' className='mb-10 z-10 w-full h-full'>
                 <img src={iphone} />
               </Link>
@@ -94,12 +94,12 @@ const Services = () => {
 
 
 
-        <div className='hidden md:static lg:flex lg:h-full flex-col md:gap-10  justify-center items-end w-full'>
-          <div className=' flex justify-center items-center md:w-[310px] xl:w-[250px] h-[400px] md:h-auto relative overflow-hidden md:mt-20 z-10'>
+        <div className='hidden md:static lg:flex lg:h-full flex-col md:gap-10  justify-center items-end w-full  '>
+          <div className=' flex justify-center items-center md:w-[250px] xl:w-[250px] h-[400px] md:h-auto relative overflow-hidden md:mt-20 z-10 md:rounded-[50px] lg:rounded-[40px]'>
             <Link to='service' className=' z-10 w-full h-full'>
               <img src={iphone} />
             </Link>
-            <div style={{ transform: `translate3d(${-slide * 100}%, 0, 0)` }} className=' h-full md:w-[310px] xl:w-[250px] whitespace-nowrap absolute transition ease-in-out duration-1000'>
+            <div style={{ transform: `translate3d(${-slide * 100}%, 0, 0)` }} className=' h-full md:w-[300px] xl:w-[250px] whitespace-nowrap absolute transition ease-in-out duration-1000'>
               {images.map((image) => (
                 <img src={image.url} alt="services" className={` ${image.bg} w-full h-full inline-block object-contain `} />
               ))}
