@@ -61,13 +61,12 @@ const Home = () => {
           <section id='section-3' className='h-auto xs:h-full snap-start w-full bg-vector relative bg-cover bg-no-repeat bg-center mb-10'>
             <Services />
           </section>
-
-          {/* <section id='section-4' className=' h-full md:h-[700px] lg:h-[900px] w-full snap-start lg:bg-balloon bg-balloonMob relative bg-blue-300 bg-[right_top_1rem] bg-[length:100%_100%] bg-no-repeat '>  */}
-          <section id='section-4' className='h-full w-full snap-start lg:bg-balloon bg-balloonMob relative bg-center bg-[length:100%_120%] bg-no-repeat'> 
+          {/* correction the ballon and text with responsive */}
+          <section id='section-4' className='h-full w-full snap-start lg:bg-balloon bg-balloonMob relative bg-center bg-[length:100%_98%] bg-no-repeat'> 
             <Testimonial />
           </section>
 
-          <section id='section-5' className='h-auto xs:h-full w-full snap-start'>
+          <section id='section-5' className='h-auto xs:h-full w-full snap-start -mt-2'>
             <About />
           </section>
 

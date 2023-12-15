@@ -95,11 +95,11 @@ const Services = () => {
 
 
         <div className='hidden md:static lg:flex lg:h-full flex-col md:gap-10  justify-center items-end w-full'>
-          <div className=' flex justify-center items-center md:w-[300px] lg:w-[300px] xl:w-[250px] h-[400px] md:h-auto relative overflow-hidden md:mt-20 z-10'>
+          <div className=' flex justify-center items-center md:w-[310px] xl:w-[250px] h-[400px] md:h-auto relative overflow-hidden md:mt-20 z-10'>
             <Link to='service' className=' z-10 w-full h-full'>
               <img src={iphone} />
             </Link>
-            <div style={{ transform: `translate3d(${-slide * 100}%, 0, 0)` }} className=' h-full w-full whitespace-nowrap absolute transition ease-in-out duration-1000'>
+            <div style={{ transform: `translate3d(${-slide * 100}%, 0, 0)` }} className=' h-full md:w-[310px] xl:w-[250px] whitespace-nowrap absolute transition ease-in-out duration-1000'>
               {images.map((image) => (
                 <img src={image.url} alt="services" className={` ${image.bg} w-full h-full inline-block object-contain `} />
               ))}

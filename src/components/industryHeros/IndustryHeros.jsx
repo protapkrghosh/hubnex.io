@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 const IndustryHeros = ({title,discriptions,background,button}) => {
     return (
         <div>
-        <div className={` xl:h-[838px] h-screen bg-${background} bg-cover bg-center w-full relative`} >
+        <div className={` h-full bg-${background} bg-cover bg-center w-full relative`} >
          <Navbar />
          <div className=' h-screen w-full flex items-center justify-center'>
          <div className=' w-[80%] flex items-center'>
