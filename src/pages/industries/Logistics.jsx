@@ -1,14 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'
-import Work from '../../components/industrypage/Work'
-import Partners from '../../components/aboutpage/Partners';
-import Swiperpartners from '../../components/aboutpage/Swiperpartners';
-import Aboutus from '../../components/Aboutus';
-import Footer from '../../components/footer/Footer';
-import Innovation from '../../components/industrypage/Innovation';
-import Herologi from '../../components/industrypage/Herologi';
 import IndustryHeros from '../../components/industryHeros/IndustryHeros';
 import IndustryOthersPage from '../../components/industryHeros/IndustryOthersPage';
 const sectionIds = ['section-1', 'section-2'];
+
 const Logistic = () => {
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
   const scrollRef = useRef(null);

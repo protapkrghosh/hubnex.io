@@ -1,11 +1,4 @@
-import React from 'react'
-import Work from '../../components/industrypage/Work'
-import Partners from '../../components/aboutpage/Partners';
-import Swiperpartners from '../../components/aboutpage/Swiperpartners';
-import Aboutus from '../../components/Aboutus';
-import Footer from '../../components/footer/Footer';
-import Innovation from '../../components/industrypage/Innovation';
-import Herohospi from '../../components/industrypage/Herohospi';
+import React, { useEffect, useRef, useState } from 'react'
 import IndustryHeros from '../../components/industryHeros/IndustryHeros';
 import IndustryOthersPage from '../../components/industryHeros/IndustryOthersPage';
 const sectionIds = ['section-1', 'section-2', 'section-3'];
