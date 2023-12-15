@@ -60,11 +60,11 @@ const Home = () => {
             <Services />
           </section>
           {/* correction the ballon and text with responsive */}
-          <section id='section-4' className='h-full w-full snap-start lg:bg-balloon bg-balloonMob relative bg-center lg:bg-[length:100%_90%] xl:bg-[length:100%_96%] bg-no-repeat'> 
+          <section id='section-4' className='h-full w-full snap-start md:bg-balloon bg-balloonMob relative bg-center bg-[#C4D6FF] lg:bg-[length:100%_90%] xl:bg-[length:100%_96%] bg-no-repeat'> 
             <Testimonial />
           </section>
 
-          <section id='section-5' className='h-auto xs:h-full w-full snap-start -mt-8'>
+          <section id='section-5' className='h-auto xs:h-full w-full snap-start'>
             <About />
           </section>
 
