@@ -37,12 +37,10 @@ const IndustryOthersPage = () => {
   }, [currentSectionIndex]);
   return (
     <div className='h-screen w-full'>
-      <div className='h-full w-full' ref={scrollRef} style={{ scrollSnapType: 'y mandatory' }}>
-        <section
-          id='section-1' className='snap-start'
-        >
+      <div className='h-full w-full ' ref={scrollRef} style={{ scrollSnapType: 'y mandatory' }}>
+       
           <Innovation />
-        </section>
+       
 
         <section id='section-2' className='snap-start'>
           <Work />
