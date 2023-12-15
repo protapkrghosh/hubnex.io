@@ -67,10 +67,10 @@ const Services = () => {
       <div className=' w-full lg:w-[90%] xl:w-[70%] h-full flex-none  md:flex m-auto justify-between items-center py-5 lg:py-0'>
         <div className=' flex flex-col md:gap-5 justify-around lg:justify-center gap-5 sm:py-0 sm:h-full w-full'>
           <h2 className=' md:static top-8 left-14 md:mt-0 text-4xl md:text-[55px] lg:w-full font-gilroy-bold text-center leading-tight lg:text-start'>let us build it for you.</h2>
-          <div className=' flex md:h-full lg:hidden flex-col md:gap-10 justify-center items-center w-full'>
+          <div className=' flex md:h-full lg:hidden flex-col md:gap-10 justify-center items-center w-full mb-10'>
 
             <div className=' flex w-[199px]  h-[399px] md:h-[389px] lg:h-auto relative overflow-hidden'>
-              <Link to='service' className=' z-10 w-full h-full'>
+              <Link to='service' className='mb-10 z-10 w-full h-full'>
                 <img src={iphone} />
               </Link>
               <div style={{ transform: `translate3d(${-slide * 100}%, 0, 0)` }} className=' h-full w-full whitespace-nowrap absolute transition ease-in-out duration-1000'>
@@ -95,18 +95,17 @@ const Services = () => {
 
 
         <div className='hidden md:static lg:flex lg:h-full flex-col md:gap-10  justify-center items-end w-full'>
-          <div className=' flex justify-center items-center md:w-[300px] lg:w-[300px] xl:w-[250px] h-[400px] md:h-auto relative overflow-hidden md:mt-20 z-10'>
+          <div className=' flex justify-center items-center md:w-[310px] xl:w-[250px] h-[400px] md:h-auto relative overflow-hidden md:mt-20 z-10'>
             <Link to='service' className=' z-10 w-full h-full'>
               <img src={iphone} />
             </Link>
-            <div style={{ transform: `translate3d(${-slide * 100}%, 0, 0)` }} className=' h-full w-full whitespace-nowrap absolute transition ease-in-out duration-1000'>
+            <div style={{ transform: `translate3d(${-slide * 100}%, 0, 0)` }} className=' h-full md:w-[310px] xl:w-[250px] whitespace-nowrap absolute transition ease-in-out duration-1000'>
               {images.map((image) => (
                 <img src={image.url} alt="services" className={` ${image.bg} w-full h-full inline-block object-contain `} />
               ))}
             </div>
-
           </div>
-          <div className=' h-3 rounded-full w-[240px] lg:w-[180px]  xl:w-[200px] mt-5 md:-mt-6 ml-8 md:ml-0 md:mr-5 bg-gray-300 overflow-hidden'>
+          <div className='h-3 rounded-full w-[240px] lg:w-[180px]  xl:w-[200px] mt-5 md:-mt-6 ml-8 md:ml-0 lg:mr-5 bg-gray-300 overflow-hidden'>
             {images.map((image) => (
               <div style={{ transform: `translate3d(${slide * 132}%, 0, 0)` }} className='h-full rounded-full w-[53px] bg-slate-500 transition ease-linear duration-1000'></div>
             ))}
