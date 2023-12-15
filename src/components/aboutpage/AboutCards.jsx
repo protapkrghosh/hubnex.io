@@ -5,7 +5,7 @@ import { cardsData } from '../../data/data';
 const Aboutsection3 = () => {
   return (
     <>
-      <div className='bg-ablack w-full min-h-screen 2xl:h-[884px]  flex justify-evenly items-center gap-1 flex-col '>
+      <div className='bg-ablack w-full min-h-screen 2xl:h-[884px]  flex justify-evenly items-center gap-1 flex-col pb-20'>
           <div className='text-white font-gilroy-bold text-[28px] flex justify-center items-center  md:text-[3rem] lg:text-[70px] text-center px-5 md:px-0 pt-20 lg:w-[747px]'>
             <h1 className='text-twhite h-full w-full xl:text-[55px] '>Your success is our top priority -always.</h1>
           </div>

@@ -1,6 +1,5 @@
 import React from 'react';
-import { useEffect } from 'react';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Footer from '../components/footer/Footer';
 import About from '../components/homepage/About';
 import Brand from '../components/homepage/Brand';
@@ -10,7 +9,6 @@ import Testimonial from '../components/homepage/Testimonial';
 import LeftNavbar from '../components/navbar/LeftNavbar';
 import Navbar from '../components/navbar/Navbar';
 import { scroller } from 'react-scroll';
-import { useRef } from 'react';
 
 const sectionIds = ['section-1', 'section-2', 'section-3', 'section-4', 'section-5', 'section-6'];
 
