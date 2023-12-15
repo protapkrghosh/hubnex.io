@@ -95,7 +95,7 @@ const Services = () => {
 
 
         <div className='hidden md:static lg:flex lg:h-full flex-col md:gap-10  justify-center items-end w-full  '>
-          <div className=' flex justify-center items-center md:w-[250px] xl:w-[250px] h-[400px] md:h-auto relative overflow-hidden md:mt-20 z-10 md:rounded-[50px] lg:rounded-[40px]'>
+          <div className=' flex justify-center items-center md:w-[210px] xl:w-[250px] h-[400px] md:h-auto relative overflow-hidden md:mt-20 z-10 md:rounded-[50px] lg:rounded-[40px]'>
             <Link to='service' className=' z-10 w-full h-full'>
               <img src={iphone} />
             </Link>
