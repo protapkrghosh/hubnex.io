@@ -1,13 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react'
-
-import Hero from '../../components/serviceUpdated/childrens/SoftwareHero'
-import Ourservice from '../../components/serviceUpdated/childrens/SoftwareCards'
-import Choose from '../../components/serviceUpdated/Choose'
-import Partners from '../../components/aboutpage/Partners'
-import Footer from '../../components/footer/Footer'
-import Ourself from '../../components/Aboutus'
-import Swiperpartners from '../../components/aboutpage/Swiperpartners'
-import ServisesHero from '../../components/servisesHeros/ServisesHero'
 import ServisesOtherSections from '../../components/servisesHeros/ServisesOtherSections'
 import ServisesDataMap from '../../components/servisesHeros/ServisesDataMap'
 import { softwarTestingDatas } from '../../data/data'
@@ -32,7 +23,6 @@ const SoftwareTesting = () => {
     }
   };
   
-
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);

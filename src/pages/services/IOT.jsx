@@ -1,13 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react'
-
-import Hero from '../../components/serviceUpdated/childrens/IOTHero'
-import Ourservice from '../../components/serviceUpdated/Ourservice'
-import Choose from '../../components/serviceUpdated/Choose'
-import Partners from '../../components/aboutpage/Partners'
-import Footer from '../../components/footer/Footer'
-import Ourself from '../../components/Aboutus'
-import Swiperpartners from '../../components/aboutpage/Swiperpartners'
-import ServisesHero from '../../components/servisesHeros/ServisesHero'
 import ServisesOtherSections from '../../components/servisesHeros/ServisesOtherSections'
 import ServisesDataMap from '../../components/servisesHeros/ServisesDataMap'
 import { iotDatas } from '../../data/data'
@@ -31,7 +22,6 @@ const IOT = () => {
       window.scrollTo({ top: nextSectionIndex * sectionHeight, behavior: "smooth" });
     }
   };
-  
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
