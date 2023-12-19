@@ -1,7 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react'
-import Hero from '../../components/serviceUpdated/childrens/DigitalHero'
-import Ourservice from '../../components/serviceUpdated/childrens/DigitalCards'
-import ServisesHero from '../../components/servisesHeros/ServisesHero'
 import ServisesOtherSections from '../../components/servisesHeros/ServisesOtherSections'
 import ServisesDataMap from '../../components/servisesHeros/ServisesDataMap'
 import { digitalMarketingDatas } from '../../data/data'
@@ -26,7 +23,6 @@ const DigitalMarketing = () => {
     }
   };
   
-
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
