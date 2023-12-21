@@ -1,5 +1,3 @@
-
-
 import Choose from '../../components/serviceUpdated/Choose'
 import Partners from '../../components/aboutpage/Partners'
 import Footer from '../../components/footer/Footer'
@@ -36,7 +34,7 @@ const ServisesOtherSections = () => {
   }
     return (
       <div className='h-screen w-full'>
-        <div className='h-full w-full overflow-y-scroll' ref={scrollRef} style={{ scrollSnapType: 'y mandatory' }}>
+        <div className='h-full w-full' ref={scrollRef} style={{ scrollSnapType: 'y mandatory' }}>
           <section
             id='section-1' className='snap-start'
           >

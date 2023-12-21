@@ -1,25 +1,29 @@
-import React from 'react'
-import Work from '../../components/industrypage/Work'
-import Partners from '../../components/aboutpage/Partners';
-import Swiperpartners from '../../components/aboutpage/Swiperpartners';
-import Aboutus from '../../components/Aboutus';
-import Footer from '../../components/footer/Footer';
-import Innovation from '../../components/industrypage/Innovation';
-import HeroTravel from '../../components/industrypage/HeroTravel';
+import React, { useEffect, useRef, useState } from 'react'
 import IndustryHeros from '../../components/industryHeros/IndustryHeros';
 import IndustryOthersPage from '../../components/industryHeros/IndustryOthersPage';
-
 const Travel = () => {
 
-    const isMobile=()=> {
-        const match=window.matchMedia("(max-width:912px)");
-        return(match && match.matches); 
-      }
+  const scrollRef = useRef(null);
+
+
+  
+
+  
 
   return (
-    <div className='overflow-hidden'>
-       <IndustryHeros title={"Public Sector Solutions"  } discriptions={"Your Voice, Your Government Bridging the Gap for Better Governance"} background={"ind5"}  button={"Let's talk"} />
-        <IndustryOthersPage />
+    <div className='h-screen w-full'>
+      
+      <div className='h-full w-full overflow-y-scroll ' ref={scrollRef} style={{ scrollSnapType: 'y mandatory' }}>
+      <section
+        id='section-1' className='snap-start'
+      >
+         <IndustryHeros title={"Public Sector Solutions"  } discriptions={"Your Voice, Your Government Bridging the Gap for Better Governance"} background={"ind4"}  button={"Let's talk"} />
+      </section>
+
+      <section id='section-2' className='snap-start'>
+      <IndustryOthersPage />
+      </section>
+    </div>
     </div>
   )
 }

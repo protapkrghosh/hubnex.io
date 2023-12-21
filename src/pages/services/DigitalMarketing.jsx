@@ -1,12 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
-import Hero from "../../components/serviceUpdated/childrens/DigitalHero";
-import Ourservice from "../../components/serviceUpdated/childrens/DigitalCards";
-import ServisesHero from "../../components/servisesHeros/ServisesHero";
-import ServisesOtherSections from "../../components/servisesHeros/ServisesOtherSections";
-import ServisesDataMap from "../../components/servisesHeros/ServisesDataMap";
-import { digitalMarketingDatas } from "../../data/data";
-import IndustryHeros from "../../components/industryHeros/IndustryHeros";
-const sectionIds = ["section-1", "section-2", "section-3"];
+import React, { useEffect, useRef, useState } from 'react'
+import ServisesOtherSections from '../../components/servisesHeros/ServisesOtherSections'
+import ServisesDataMap from '../../components/servisesHeros/ServisesDataMap'
+import { digitalMarketingDatas } from '../../data/data'
+import IndustryHeros from '../../components/industryHeros/IndustryHeros'
+import ServisesHero from '../../components/servisesHeros/ServisesHero'
+const sectionIds = ['section-1', 'section-2', 'section-3'];
 
 const DigitalMarketing = () => {
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
@@ -31,7 +29,7 @@ const DigitalMarketing = () => {
       });
     }
   };
-
+  
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -53,13 +51,24 @@ const DigitalMarketing = () => {
           />
         </section>
 
-        <section id="section-2" className="snap-start">
+    <div className='h-screen w-full'>
+        <div className='h-full w-full overflow-y-scroll' ref={scrollRef} style={{ scrollSnapType: 'y mandatory' }}>
+          <section
+            id='section-1' className='snap-start'
+          >
+            {/* change industry hero to services hero to make all things align */}
+            <ServisesHero title={"Mastering SEO for Digital Marketing Success"  } discriptions={`"Tailored IoT Solutions for Your Business Success"`} background={"serv6"} button={"Get in touch"}/>
+          </section>
+
+          <section id='section-2' className='snap-start'>
           <ServisesDataMap datas={digitalMarketingDatas} />
         </section>
 
         <section id="section-3" className="snap-start">
           <ServisesOtherSections />
         </section>
+      </div>
+      </div>
       </div>
     </div>
   );

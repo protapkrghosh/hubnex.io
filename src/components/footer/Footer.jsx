@@ -26,7 +26,6 @@ const Footer = () => {
   const [credentials, setCredentials] = useState(emptyCredentials);
   const handleChange = (event) => {
     const { name, value } = event.target;
-// Whatdo:set only aplphabet and numbar eatch phone numbar and name field
     if (name === 'firstName' || name === 'lastName' ||name === 'message') {
       setCredentials({ ...credentials, [name]: value.replace(/[^a-zA-Z]/g, '') });
     } else if (name === 'phoneNo') {

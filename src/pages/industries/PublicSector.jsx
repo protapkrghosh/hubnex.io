@@ -1,11 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react'
-import Work from '../../components/industrypage/Work'
-import Partners from '../../components/aboutpage/Partners';
-import Swiperpartners from '../../components/aboutpage/Swiperpartners';
-import Aboutus from '../../components/Aboutus';
-import Footer from '../../components/footer/Footer';
-import Innovation from '../../components/industrypage/Innovation';
-import HeroPublic from '../../components/industrypage/HeroPublic';
 import IndustryHeros from '../../components/industryHeros/IndustryHeros';
 import IndustryOthersPage from '../../components/industryHeros/IndustryOthersPage';
 const sectionIds = ['section-1', 'section-2'];
@@ -20,38 +13,36 @@ const PublicSector = () => {
     const totalSections = sectionIds.length;
     const sectionHeight = scrollHeight / totalSections;
     const nextSectionIndex = Math.min(totalSections - 1, Math.floor((scrollTop + windowHeight / 2) / sectionHeight));
-  
+
     if (nextSectionIndex !== currentSectionIndex) {
       setCurrentSectionIndex(nextSectionIndex);
       window.scrollTo({ top: nextSectionIndex * sectionHeight, behavior: "smooth" });
     }
   };
-  
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [currentSectionIndex]);
-    const isMobile=()=> {
-        const match=window.matchMedia("(max-width:912px)");
-        return(match && match.matches); 
-      }
+  const isMobile = () => {
+    const match = window.matchMedia("(max-width:912px)");
+    return (match && match.matches);
+  }
 
   return (
-
     <div className='h-screen w-full'>
-    <div className='h-full w-full overflow-y-scroll' ref={scrollRef} style={{ scrollSnapType: 'y mandatory' }}>
-      <section
-        id='section-1' className='snap-start'
-      >
-        <IndustryHeros title={"Empowering Your Financial Future"  } discriptions={"Banking, Financial Services, and Insurance Solutions for Every Stage of Life"} background={"ind4"}  button={"Let's talk"} />
-      </section>
+      <div className='h-full w-full overflow-y-scroll' ref={scrollRef} style={{ scrollSnapType: 'y mandatory' }}>
+        <section
+          id='section-1' className='snap-start'
+        >
+          <IndustryHeros title={"Empowering Your Financial Future"} discriptions={"Banking, Financial Services, and Insurance Solutions for Every Stage of Life"} background={"ind4"} button={"Let's talk"} />
+        </section>
 
-      <section id='section-2' className='snap-start'>
-      <IndustryOthersPage />
-      </section>
+        <section id='section-2' className='snap-start'>
+          <IndustryOthersPage />
+        </section>
+      </div>
     </div>
-  </div>
   )
 }
 
