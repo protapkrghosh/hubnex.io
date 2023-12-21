@@ -43,12 +43,13 @@ const Communication = () => {
 
   return (
     <div className='h-screen w-full'>
-        <div className='h-full w-full overflow-y-scroll' ref={scrollRef} style={{ scrollSnapType: 'y mandatory' }}>
-          <section
-            id='section-1' className='snap-start'
-          >
-            <IndustryHeros title={"Revolutionizing the way we connect"  } discriptions={"Digitalizing Communication Empowering Businesses to Thrive in the Future"} background={"ind1"} button={"Get in touch"} />
-          </section>
+      <div className='h-full w-full overflow-y-scroll' ref={scrollRef} style={{ scrollSnapType: 'y mandatory' }}>
+        {/* Bug Fix: change button text */}
+        <section
+          id='section-1' className='snap-start'
+        >
+          <IndustryHeros title={"Revolutionizing the way we connect"} discriptions={"Digitalizing Communication Empowering Businesses to Thrive in the Future"} background={"ind1"} button={"Let's talk"} />
+        </section>
 
           <section id='section-2' className='snap-start'>
           <IndustryOthersPage />

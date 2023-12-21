@@ -49,7 +49,8 @@ const CloudServices = () => {
           <section
             id='section-1' className='snap-start'
           >
-            <IndustryHeros title={"Secure and Reliable Cloud Services"  } discriptions={`"Powering Your Business with Cloud Confidence"`} background={"serv2"} button={"Get in touch"}/>
+            {/* change industry hero to services hero to make all things align  and also add specific componnet degain */}
+            <ServisesHero divClassName={" w-90 flex flex-col gap-8 xl:gap-14 lg:mb-[180px] xl:mb-48"} title={"Secure and Reliable Cloud Services"  } h1classNames={"text-[28px] md:text-[40px] lg:text-[70px] xl:text-[60px] 2xl:text-[60px] font-gilroy-bold leading-tight lg:w-[700px]"} discriptions={`"Powering Your Business with Cloud Confidence"`} background={"serv2"} button={"Get in touch"}/>
           </section>
 
         <section id="section-2" className="snap-start">

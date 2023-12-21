@@ -1,6 +1,6 @@
 import React from 'react'
 import { useRef, useState, useEffect } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 import logo from '../../assets/hubnex_logo.png'
 import Search from '../searchbar/Search'
 import MobileNavbar from './MobileNavbar'
@@ -15,10 +15,10 @@ import close from '@assets/Xmark.png'
 
 
 const Navbar = () => {
+  const location = useLocation();
+  const isServicesPage = location.pathname.includes('/services');
+  
   const [searchToggle, setSearchToggle] = useState(false);
-
-
-
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(false);
 
@@ -76,7 +76,7 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', setFixed);
   }, []);
 
-  
+
 
   return (
     <div className={`w-full h-14 bg-black bg-opacity-60 shadow-md lg:h-[80px] fixed z-40 transition-all duration-300 ease-in-out ${fix ? 'bg-black shadow-md' : ''}`}>
@@ -100,20 +100,20 @@ const Navbar = () => {
             <div ref={servicedropdownRef} className=' flex items-center relative'>
 
 
-              <span activeClassName='your-active-class' onMouseOver={() => setServiceMenuDropDownOpen(true)} className=' cursor-pointer' onClick={handleServices} >Services</span>
+              <span activeClassName='your-active-class' onMouseOver={() => setServiceMenuDropDownOpen(true)} className=' cursor-pointer' onClick={handleServices}>Services</span>
               <span onMouseOver={() => setServiceMenuDropDownOpen(true)} className=' cursor-pointer' onClick={handleServices}>{isServiceMenuDropDownOpen ? <KeyboardArrowUpIcon /> : <KeyboardArrowDown />}</span>
 
               {
                 isServiceMenuDropDownOpen &&
                 <div className="flex  bg-white/80 bg-opacity-10 backdrop-blur-2xl w-[300px] absolute top-[30px] right-0 rounded-lg">
                   <div className=' flex flex-col'>
-                    <NavLink className={({ isActive }) => isActive ? ` ${setActive(true)} ` : ''} to='/services/ai-ml'><div className='text-black p-4 text-center'>AI-ML</div></NavLink>
-                    <NavLink className={({ isActive }) => isActive ? ` ${setActive(true)} ` : ''} to='/services/cloud-services'><div className='text-black p-4 text-center'>Cloud Services</div></NavLink>
-                    <NavLink className={({ isActive }) => isActive ? ` ${setActive(true)} ` : ''} to='/services/software-testing'><div className='text-black p-4 text-center'>Software Testing</div></NavLink>
+                    <Link to='/services/ai-ml'><div className='text-black p-4 text-center'>AI-ML</div></Link>
+                    <Link to='/services/cloud-services'><div className='text-black p-4 text-center'>Cloud Services</div></Link>
+                    <Link to='/services/software-testing'><div className='text-black p-4 text-center'>Software Testing</div></Link>
                   </div>
                   <div className=' flex flex-col'>
-                    <NavLink className={({ isActive }) => isActive ? ` ${setActive(true)} ` : ''} to='/services/iot'><div className='text-black p-4 text-center'>IOT</div></NavLink>
-                    <NavLink className={({ isActive }) => isActive ? ` ${setActive(true)} ` : ''} to='/services/digital-marketing'><div className='text-black p-4 text-center'>Digital Marketing</div></NavLink>
+                    <Link to='/services/iot'><div className='text-black p-4 text-center'>IOT</div></Link>
+                    <Link to='/services/digital-marketing'><div className='text-black p-4 text-center'>Digital Marketing</div></Link>
                   </div>
                 </div>
               }
@@ -122,12 +122,12 @@ const Navbar = () => {
 
             <div ref={industrydropdownRef} className=' flex items-center relative justify-center'>
 
-              <span onMouseOver={() => setIndustryMenuDropDownOpen(true)} onClick={handleIndustries} className={({ isActive }) => isActive ? 'decoration-white underline decoration-2 underline-offset-4  ' : 'hover-underline-animation'}>Industries</span>
+              <span onMouseOver={() => setIndustryMenuDropDownOpen(true)} onClick={handleIndustries} className=' cursor-pointer'>Industries</span>
 
               <span onMouseOver={() => setIndustryMenuDropDownOpen(true)} className=' cursor-pointer' onClick={handleIndustries}>{isIndustryMenuDropDownOpen ? <KeyboardArrowUpIcon /> : <KeyboardArrowDown />}</span>
               {
                 isIndustryMenuDropDownOpen &&
-                <div className="flex justify-center bg-white/80 bg-opacity-10 backdrop-blur-2xl w-[300px] absolute top-[30px] left-0 rounded-lg">
+                <div className="flex  justify-center bg-white/80 bg-opacity-10 backdrop-blur-2xl w-[300px] absolute top-[30px] left-0 rounded-lg">
                   <div className=' flex flex-col'>
                     <Link to='/industries/communication'><div className='text-black p-4 text-center'>Communication</div></Link>
                     <Link to='/industries/logistics'><div className='text-black p-4 text-center'> Logistics</div></Link>
@@ -146,7 +146,12 @@ const Navbar = () => {
 
 
 
-            <Link to='https://startups.hubnex.in' className={` border-white ${active ? 'bg-white text-black' : 'bg-transparent text-white'}  border-2 py-[8px] px-[12px] rounded-full text-[16px] font-gilroy-semi-bold hover:bg-white hover:text-black duration-150 ease-in-out transition-all`}>Startup Programme</Link>
+            <Link
+              to='https://startups.hubnex.in'
+              className={`border-white ${isServicesPage ? 'bg-white text-black' : 'bg-transparent text-white'}  border-2 py-[8px] px-[12px] rounded-full text-[16px] font-gilroy-semi-bold hover:bg-white hover:text-black duration-150 ease-in-out transition-all`}
+            >
+              Startup Programme
+            </Link>
 
           </div>
           <div className=' flex xl:hidden z-50'>
@@ -161,6 +166,7 @@ const Navbar = () => {
         </div>
       </div>
     </div>
+    
   )
 }
 

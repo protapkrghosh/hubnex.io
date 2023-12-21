@@ -141,7 +141,7 @@ const Footer = () => {
       <div className='lg:w-[90%] xl:w-[70%] h-full lg:flex sm:justify-between items-center text-white py-5 lg:py-0'>
         <div className='flex flex-col gap-[36px] md:gap-14 xl:gap-16'>
           <div className='text-4xl lg:text-[70px] 2xl:text-[70px] md:py-0 font-gilroy-extrabold text-white'>
-            <h1 className='text-center lg:text-start'>let's talk</h1>
+            <h1 className='text-center lg:text-start mt-5'>let's talk</h1>
           </div>
 
           <div className='w-[90%] mx-auto md:mx-0 md:w-[310px] lg:h-[310px] text-1xl lg:text-[48px] font-gilroy-light'>
@@ -185,7 +185,7 @@ const Footer = () => {
           }
         </form>
       </div>
-      <div className='flex flex-col w-full h-40 justify-center xl:mt-8 items-center gap-4 text-white sm:h-80 text-lg'>
+      <div className='flex flex-col w-full h-40 justify-center -mt-5 md:-mt-16 items-center gap-4 text-white sm:h-80 text-lg'>
         <span className='font-gilroy-semi-bold text-[28px] md:text-[24px]'>Connect with us</span>
         <div className='flex flex-wrap gap-5 items-center'>
           {/* Note: Added social media links and they will open in new tab */}
@@ -195,7 +195,7 @@ const Footer = () => {
           <a href='https://facebook.com' target="_blank">{isMobile() ? <FacebookIcon fontSize='medium' /> : <FacebookIcon fontSize='large' />}</a>
         </div>
       </div>
-      <div className='w-full h-fit py-3 px-4 md:px-20 lg:px-40 flex flex-col gap-y-4 lg:flex-row justify-between items-center border-t border-gray-400'>
+      <div className='w-full h-fit py-3 px-4 md:px-20 lg:px-40 flex flex-col gap-y-4 lg:flex-row justify-between items-center border-t border-gray-400 -mt-5 md:-mt-16'>
         <div>
           {/* Note: The copyright year will be added dynamically */}
           <p className='text-sm text-white font-gilroy-regular'>
