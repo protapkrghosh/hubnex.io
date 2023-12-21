@@ -2,9 +2,9 @@ import React from 'react'
 import Navbar from '../navbar/Navbar'
 import { Link } from 'react-router-dom'
 
-const IndustryHeros = ({title,discriptions,background,button,firstdiv}) => {
+const IndustryHeros = ({title,discriptions,background,button}) => {
     return (
-        <div>
+        // add xl:h-[838px] h-screen to handle the background  and also removed extra div
         <div className={` xl:h-[838px] h-screen  bg-${background} bg-cover bg-center w-full relative`} >
          <Navbar />
          <div className=' h-screen w-full flex items-center justify-center'>
@@ -17,8 +17,7 @@ const IndustryHeros = ({title,discriptions,background,button,firstdiv}) => {
                </div>
            </div>
          </div>
-     </div>
-   </div>
+     </div> 
     );
 };
 
