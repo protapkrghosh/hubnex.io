@@ -2,10 +2,10 @@ import React from 'react'
 import Navbar from '../navbar/Navbar'
 import { Link } from 'react-router-dom'
 
-const IndustryHeros = ({title,discriptions,background,button}) => {
+const IndustryHeros = ({title,discriptions,background,button,firstdiv}) => {
     return (
         <div>
-        <div className={` h-full bg-${background} bg-cover bg-center w-full relative`} >
+        <div className={` xl:h-[838px] h-screen  bg-${background} bg-cover bg-center w-full relative`} >
          <Navbar />
          <div className=' h-screen w-full flex items-center justify-center'>
          <div className=' w-[80%] flex items-center'>

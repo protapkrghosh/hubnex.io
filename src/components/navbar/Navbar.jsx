@@ -122,12 +122,12 @@ const Navbar = () => {
 
             <div ref={industrydropdownRef} className=' flex items-center relative justify-center'>
 
-              <span onMouseOver={() => setIndustryMenuDropDownOpen(true)} onClick={handleIndustries} className={({ isActive }) => isActive ? 'decoration-white underline decoration-2 underline-offset-4  ' : 'hover-underline-animation'}>Industries</span>
+              <span onMouseOver={() => setIndustryMenuDropDownOpen(true)} onClick={handleIndustries} className=' cursor-pointer'>Industries</span>
 
               <span onMouseOver={() => setIndustryMenuDropDownOpen(true)} className=' cursor-pointer' onClick={handleIndustries}>{isIndustryMenuDropDownOpen ? <KeyboardArrowUpIcon /> : <KeyboardArrowDown />}</span>
               {
                 isIndustryMenuDropDownOpen &&
-                <div className="flex justify-center bg-white/80 bg-opacity-10 backdrop-blur-2xl w-[300px] absolute top-[30px] left-0 rounded-lg">
+                <div className="flex  justify-center bg-white/80 bg-opacity-10 backdrop-blur-2xl w-[300px] absolute top-[30px] left-0 rounded-lg">
                   <div className=' flex flex-col'>
                     <Link to='/industries/communication'><div className='text-black p-4 text-center'>Communication</div></Link>
                     <Link to='/industries/logistics'><div className='text-black p-4 text-center'> Logistics</div></Link>
