@@ -29,40 +29,42 @@ const MobileNavbar = ({ open }) => {
             
             <div className=' flex flex-col'>
               <div className=' flex justify border-b-2 w-full border-b-gray-500 py-5 px-5 items-center relative gap-2'>
-                <NavLink to='/services' className={({ isActive }) => isActive ? ` decoration-white underline decoration-2 underline-offset-4` : ''} >Services  </NavLink> 
+                <div className={({ isActive }) => isActive ? ` decoration-white underline decoration-2 underline-offset-4` : ''} >Services  </div> 
                 <span onClick={handleServices}>{dropServices ?<KeyboardArrowUpIcon/>:<KeyboardArrowDown/>}</span>
             </div>
             {
             dropServices && 
-            <div className="flex flex-col w-[80%] m-auto  rounded-lg">
-             <Link to='/services/ai-ml'><div className='text-white p-3 border-b-[1px] w-full border-b-gray-500 text-[15px]'>AI/ML</div></Link> 
-             <Link to='/services/cloud-services'><div className='text-white p-3 border-b-[1px] w-full border-b-gray-500 text-[15px]'>Cloud Services</div></Link> 
-             <Link to='/services/digital-marketing'><div className='text-white p-3 border-b-[1px] w-full border-b-gray-500 text-[15px]'>Digital Marketing</div></Link> 
-             <Link to='/services/iot'><div className='text-white p-3 border-b-[1px] w-full border-b-gray-500 text-[15px]'>IOT</div></Link> 
-             <Link to='/services/software-testing'><div className='text-white p-3 border-b-[1px] w-full border-b-gray-500 text-[15px]'>Software Testing</div></Link> 
+            //bug fix:  Add px-5 py-3 in every link and remove  w-80% m-auto from main div(38No line)
+            <div className="flex flex-col rounded-lg">
+             <Link to='/services/ai-ml'><div className='text-white  px-5 py-3 border-b-[1px] w-full border-b-gray-500 text-[15px]'>AI/ML</div></Link> 
+             <Link to='/services/cloud-services'><div className='text-white  px-5 py-3 border-b-[1px] w-full border-b-gray-500 text-[15px]'>Cloud Services</div></Link> 
+             <Link to='/services/digital-marketing'><div className='text-white  px-5 py-3 border-b-[1px] w-full border-b-gray-500 text-[15px]'>Digital Marketing</div></Link> 
+             <Link to='/services/iot'><div className='text-white  px-5 py-3 border-b-[1px] w-full border-b-gray-500 text-[15px]'>IOT</div></Link> 
+             <Link to='/services/software-testing'><div className='text-white  px-5 py-3 border-b-[1px] w-full border-b-gray-500 text-[15px]'>Software Testing</div></Link> 
             </div>
           }
           </div>
           <div className=' flex flex-col'>
             <div className=' flex justify border-b-2 w-full border-b-gray-500 py-5 px-5 items-center relative'>
-              <NavLink to='/industries' className={({ isActive }) => isActive ? ` underline decoration-white decoration-2 underline-offset-8  text-white` : ' flex items-center '}>Industries  </NavLink>
+              <div className={({ isActive }) => isActive ? ` underline decoration-white decoration-2 underline-offset-8  text-white` : ' flex items-center '}>Industries  </div>
               <span onClick={handleIndustries}>{dropIndustries ?<KeyboardArrowUpIcon/>:<KeyboardArrowDown/>}</span>
             </div>
             {
             dropIndustries && 
-            <div className="flex flex-col w-[80%] m-auto  rounded-lg">
-              <Link to='/industries/communication'><div className='text-white p-3 border-b-[1px] w-full border-b-gray-500 text-[15px]'>Communication</div></Link> 
-             <Link to='/industries/logistics'><div className='text-white p-3 border-b-[1px] w-full border-b-gray-500 text-[15px]'>Logistics</div></Link> 
-             <Link to='/industries/retail'><div className='text-white p-3 border-b-[1px] w-full border-b-gray-500 text-[15px]'> Retail</div></Link> 
-             <Link to='/industries/banking'><div className='text-white p-3 border-b-[1px] w-full border-b-gray-500 text-[15px]'>Banking and Finances</div></Link> 
-             <Link to='//industries/public-sector'><div className='text-white p-3 border-b-[1px] w-full border-b-gray-500 text-[15px]'>Public Sector</div></Link> 
-             {/* <Link to='/industries/travel'><div className='text-white p-3 border-b-[1px] w-full border-b-gray-500 text-[15px]'>industries 6</div></Link>              */}
+            // bug fix:  Add px-5 py-3 in every link and remove  w-80% m-auto from main div(55No line)
+            <div className="flex flex-col rounded-lg">
+              <Link to='/industries/communication'><div className='text-white px-5 py-3 border-b-[1px] w-full border-b-gray-500 text-[15px]'>Communication</div></Link> 
+             <Link to='/industries/logistics'><div className='text-white px-5 py-3 border-b-[1px] w-full border-b-gray-500 text-[15px]'>Logistics</div></Link> 
+             <Link to='/industries/retail'><div className='text-white px-5 py-3 border-b-[1px] w-full border-b-gray-500 text-[15px]'> Retail</div></Link> 
+             <Link to='/industries/banking'><div className='text-white px-5 py-3 border-b-[1px] w-full border-b-gray-500 text-[15px]'>Banking and Finances</div></Link> 
+             <Link to='//industries/public-sector'><div className='text-white px-5 py-3 border-b-[1px] w-full border-b-gray-500 text-[15px]'>Public Sector</div></Link> 
+             
              </div>
           }
           </div>
           
           <NavLink to='/contact' className='border-b-2 w-full border-b-gray-500 py-5 px-5'>Contact</NavLink>
-          <NavLink to='https://startups.hubnex.in' className={`  bg- text-lime-500 border-t-2 border-b-2 w-full border-b-gray-500 border-t-gray-500 py-5 px-5`}>Startup Programme</NavLink>
+          <NavLink to='https://startups.hubnex.in' className={` border-t-2 border-b-2 w-full border-b-gray-500 border-t-gray-500 py-5 px-5`}>Startup Programme</NavLink>
           
           </div>
         </div>

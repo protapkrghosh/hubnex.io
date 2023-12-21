@@ -79,8 +79,8 @@ const Navbar = () => {
   
 
   return (
-
-    <div className={`w-full h-14 bg-black opacity-70 shadow-md lg:h-[80px] fixed z-40 transition-all duration-300 ease-in-out ${fix ? 'bg-black opacity-70 shadow-md' : ''}`}>
+    // remove the bg opacity
+    <div className={`w-full h-14 bg-black shadow-md lg:h-[80px] fixed z-40 transition-all duration-300 ease-in-out ${fix ? 'bg-black shadow-md' : ''}`}>
       <div className={`w-full h-14 lg:h-[80px] fixed z-40 `}>
 
         {searchToggle && <Search toggler={searchToggle} />}
