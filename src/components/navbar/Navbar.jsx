@@ -1,6 +1,6 @@
 import React from 'react'
 import { useRef, useState, useEffect } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 import logo from '../../assets/hubnex_logo.png'
 import Search from '../searchbar/Search'
 import MobileNavbar from './MobileNavbar'
@@ -15,10 +15,10 @@ import close from '@assets/Xmark.png'
 
 
 const Navbar = () => {
+  const location = useLocation();
+  const isServicesPage = location.pathname.includes('/services');
+  
   const [searchToggle, setSearchToggle] = useState(false);
-
-
-
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(false);
 
@@ -146,7 +146,12 @@ const Navbar = () => {
 
 
 
-            <Link to='https://startups.hubnex.in' className={` border-white ${active ? 'bg-white text-black' : 'bg-transparent text-white'}  border-2 py-[8px] px-[12px] rounded-full text-[16px] font-gilroy-semi-bold hover:bg-white hover:text-black duration-150 ease-in-out transition-all`}>Startup Programme</Link>
+            <Link
+              to='https://startups.hubnex.in'
+              className={`border-white ${isServicesPage ? 'bg-white text-black' : 'bg-transparent text-white'}  border-2 py-[8px] px-[12px] rounded-full text-[16px] font-gilroy-semi-bold hover:bg-white hover:text-black duration-150 ease-in-out transition-all`}
+            >
+              Startup Programme
+            </Link>
 
           </div>
           <div className=' flex xl:hidden z-50'>
