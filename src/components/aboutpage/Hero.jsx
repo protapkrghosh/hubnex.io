@@ -7,7 +7,8 @@ const Hero = () => {
     <div className=' h-full w-full relative'>
       <img src={aboutLander} alt='aboutLanderPage' className=' absolute bottom-0 right-0 w-full object-cover h-[60%] lg:h-[1147px] lg:w-[1720px]' />
       <div className=' w-full md:w-[70%] h-full md:m-auto flex items-center'>
-        <div className=' flex flex-col h-full justify-center lg:justify-start lg:mt-32 xl:mt-96 text-white gap-14 absolute left-10 md:left-28'>
+        {/* bug fix:  -top-24 md:-top-0 */}
+        <div className='flex flex-col h-full justify-center lg:justify-start lg:mt-32 xl:mt-96 text-white gap-8 md:gap-14 absolute -top-24 md:-top-0 left-10 md:left-28'>
           <div className='text-[28px] font-gilroy-semi-bold md:text-[70px] xl:text-[60px] 2xl:text-[60px]'>
             <span>About Us</span>
           </div>

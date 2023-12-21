@@ -3,6 +3,7 @@ import ServisesOtherSections from '../../components/servisesHeros/ServisesOtherS
 import ServisesDataMap from '../../components/servisesHeros/ServisesDataMap'
 import { iotDatas } from '../../data/data'
 import IndustryHeros from '../../components/industryHeros/IndustryHeros'
+import ServisesHero from '../../components/servisesHeros/ServisesHero'
 const sectionIds = ['section-1', 'section-2', 'section-3'];
 
 const IOT = () => {
@@ -39,7 +40,8 @@ const IOT = () => {
           <section
             id='section-1' className='snap-start'
           >
-            <IndustryHeros title={"Efficient and Effective  Integration Services"  } discriptions={`"Enhancing Your Site's Performance and User Experience"`} background={"serv4"} button={"Get in touch"}/>
+            {/* change industry hero to services hero to make all things align */}
+            <ServisesHero title={"Efficient and Effective  Integration Services"  } discriptions={`"Enhancing Your Site's Performance and User Experience"`} background={"serv4"} button={"Get in touch"}/>
           </section>
 
           <section id='section-2' className='snap-start'>

@@ -1,8 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react'
 import ServisesOtherSections from '../../components/servisesHeros/ServisesOtherSections'
+
 import ServisesDataMap from '../../components/servisesHeros/ServisesDataMap'
 import { aimldatas } from '../../data/data'
 import IndustryHeros from '../../components/industryHeros/IndustryHeros'
+import ServisesHero from '../../components/servisesHeros/ServisesHero'
 const sectionIds = ['section-1', 'section-2', 'section-3'];
 
 const AIML = () => {
@@ -34,7 +36,8 @@ const AIML = () => {
           <section
             id='section-1' className='snap-start'
           >
-            <IndustryHeros title={"Smarter Business Decisions with AI/ML"  } discriptions={`"Empowering Smarter Business Decisions with this"`} background={"serv1"} button={"Get in touch"}/>
+            {/* change industry hero to services hero to make all things align */}
+            <ServisesHero title={"Smarter Business Decisions with AI/ML"  } discriptions={`"Empowering Smarter Business Decisions with this"`} background={"serv1"} button={"Get in touch"}/>
           </section>
 
           <section id='section-2' className='snap-start'>

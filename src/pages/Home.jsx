@@ -59,6 +59,7 @@ const Home = () => {
           <section id='section-3' className='h-auto xs:h-full snap-start w-full bg-vector relative bg-cover bg-no-repeat bg-center mb-10'>
             <Services />
           </section>
+          
           {/* correction the ballon and text with responsive */}
           <section id='section-4' className='h-full w-full snap-start md:bg-balloon bg-balloonMob relative bg-center bg-[#C4D6FF] lg:bg-[length:100%_90%] xl:bg-[length:100%_96%] bg-no-repeat'> 
             <Testimonial />

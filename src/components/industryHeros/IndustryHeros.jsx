@@ -12,7 +12,8 @@ const IndustryHeros = ({title,discriptions,background,button}) => {
              <div className=' text-white flex-cols lg:items-start gap-10 w-90 max-[820px]:text-center'>
                  <div className='  text-[28px] md:text-[50px] lg:text-[60px] font-gilroy-bold leading-tight lg:w-[700px]'>{title}</div>
                  <p className=' text-peragrap'>{discriptions}</p>
-                 <Link to='/contact' className='btn-primary'>{button}</Link>
+                   {/* change the btn primary to btn servise to handle both mobile view and pc view */}
+                 <Link to='/contact' className='btn-service'>{button}</Link>
                </div>
            </div>
          </div>
