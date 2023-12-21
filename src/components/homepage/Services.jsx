@@ -69,7 +69,7 @@ const Services = () => {
           <h2 className=' md:static top-8 left-14 md:mt-0 text-4xl md:text-[55px] lg:w-full font-gilroy-bold text-center leading-tight lg:text-start'>let us build it for you.</h2>
           <div className=' flex md:h-full lg:hidden flex-col md:gap-10 justify-center items-center w-full mb-10'>
 
-            <div className=' flex w-[200px]  h-[399px] md:h-[400px] lg:h-auto relative overflow-hidden rounded-[28px]'>
+            <div className=' flex w-[200px]  h-[401px] md:h-[400px] lg:h-auto relative overflow-hidden rounded-[28px]'>
               <Link to='service' className='mb-10 z-10 w-full h-full'>
                 <img src={iphone} />
               </Link>
@@ -95,7 +95,9 @@ const Services = () => {
 
 
         <div className='hidden md:static lg:flex lg:h-full flex-col md:gap-10  justify-center items-end w-full  '>
-          <div className=' flex justify-center items-center md:w-[200px] xl:w-[250px] h-[400px] md:h-auto relative overflow-hidden md:mt-20 z-10 md:rounded-[50px] lg:rounded-[35px]'>
+
+          <div className=' flex justify-center items-center md:w-[210px] xl:w-[250px] h-[400px] md:h-auto relative overflow-hidden md:mt-20 z-10 md:rounded-[50px] lg:rounded-[35px]'>
+
             <Link to='service' className=' z-10 w-full h-full'>
               <img src={iphone} />
             </Link>
