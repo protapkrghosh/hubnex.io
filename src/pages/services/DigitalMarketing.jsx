@@ -16,40 +16,20 @@ const DigitalMarketing = () => {
     const scrollHeight = document.documentElement.scrollHeight;
     const totalSections = sectionIds.length;
     const sectionHeight = scrollHeight / totalSections;
-    const nextSectionIndex = Math.min(
-      totalSections - 1,
-      Math.floor((scrollTop + windowHeight / 2) / sectionHeight)
-    );
-
+    const nextSectionIndex = Math.min(totalSections - 1, Math.floor((scrollTop + windowHeight / 2) / sectionHeight));
+  
     if (nextSectionIndex !== currentSectionIndex) {
       setCurrentSectionIndex(nextSectionIndex);
-      window.scrollTo({
-        top: nextSectionIndex * sectionHeight,
-        behavior: "smooth",
-      });
+      window.scrollTo({ top: nextSectionIndex * sectionHeight, behavior: "smooth" });
     }
   };
   
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, [currentSectionIndex]);
 
   return (
-    <div className="h-screen w-full">
-      <div
-        className="h-full w-full overflow-y-scroll"
-        ref={scrollRef}
-        style={{ scrollSnapType: "y mandatory" }}
-      >
-        <section id="section-1" className="snap-start">
-          <IndustryHeros
-            title={"Mastering SEO for Digital Marketing Success"}
-            discriptions={`"Tailored IoT Solutions for Your Business Success"`}
-            background={"serv6"}
-            button={"Get in touch"}
-          />
-        </section>
 
     <div className='h-screen w-full'>
         <div className='h-full w-full overflow-y-scroll' ref={scrollRef} style={{ scrollSnapType: 'y mandatory' }}>
@@ -57,21 +37,19 @@ const DigitalMarketing = () => {
             id='section-1' className='snap-start'
           >
             {/* change industry hero to services hero to make all things align */}
-            <ServisesHero title={"Mastering SEO for Digital Marketing Success"  } discriptions={`"Tailored IoT Solutions for Your Business Success"`} background={"serv6"} button={"Get in touch"}/>
+            <ServisesHero title={"Mastering SEO for Digital Marketing Success"  } discriptions={"Tailored IoT Solutions for Your Business Success"} background={"serv6"} button={"Get in touch"}/>
           </section>
 
           <section id='section-2' className='snap-start'>
           <ServisesDataMap datas={digitalMarketingDatas} />
-        </section>
+          </section>
 
-        <section id="section-3" className="snap-start">
+          <section id='section-3' className='snap-start'>
           <ServisesOtherSections />
-        </section>
+          </section>
+        </div>
       </div>
-      </div>
-      </div>
-    </div>
-  );
-};
+  )
+}
 
-export default DigitalMarketing;
+export default DigitalMarketing

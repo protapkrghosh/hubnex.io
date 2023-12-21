@@ -76,7 +76,7 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', setFixed);
   }, []);
 
-
+  
 
   return (
     <div className={`w-full h-14 bg-black bg-opacity-60 shadow-md lg:h-[80px] fixed z-40 transition-all duration-300 ease-in-out ${fix ? 'bg-black shadow-md' : ''}`}>
@@ -100,20 +100,20 @@ const Navbar = () => {
             <div ref={servicedropdownRef} className=' flex items-center relative'>
 
 
-              <span activeClassName='your-active-class' onMouseOver={() => setServiceMenuDropDownOpen(true)} className=' cursor-pointer' onClick={handleServices}>Services</span>
+              <span activeClassName='your-active-class' onMouseOver={() => setServiceMenuDropDownOpen(true)} className=' cursor-pointer' onClick={handleServices} >Services</span>
               <span onMouseOver={() => setServiceMenuDropDownOpen(true)} className=' cursor-pointer' onClick={handleServices}>{isServiceMenuDropDownOpen ? <KeyboardArrowUpIcon /> : <KeyboardArrowDown />}</span>
 
               {
                 isServiceMenuDropDownOpen &&
                 <div className="flex  bg-white/80 bg-opacity-10 backdrop-blur-2xl w-[300px] absolute top-[30px] right-0 rounded-lg">
                   <div className=' flex flex-col'>
-                    <Link to='/services/ai-ml'><div className='text-black p-4 text-center'>AI-ML</div></Link>
-                    <Link to='/services/cloud-services'><div className='text-black p-4 text-center'>Cloud Services</div></Link>
-                    <Link to='/services/software-testing'><div className='text-black p-4 text-center'>Software Testing</div></Link>
+                    <NavLink className={({ isActive }) => isActive ? ` ${setActive(true)} ` : ''} to='/services/ai-ml'><div className='text-black p-4 text-center'>AI-ML</div></NavLink>
+                    <NavLink className={({ isActive }) => isActive ? ` ${setActive(true)} ` : ''} to='/services/cloud-services'><div className='text-black p-4 text-center'>Cloud Services</div></NavLink>
+                    <NavLink className={({ isActive }) => isActive ? ` ${setActive(true)} ` : ''} to='/services/software-testing'><div className='text-black p-4 text-center'>Software Testing</div></NavLink>
                   </div>
                   <div className=' flex flex-col'>
-                    <Link to='/services/iot'><div className='text-black p-4 text-center'>IOT</div></Link>
-                    <Link to='/services/digital-marketing'><div className='text-black p-4 text-center'>Digital Marketing</div></Link>
+                    <NavLink className={({ isActive }) => isActive ? ` ${setActive(true)} ` : ''} to='/services/iot'><div className='text-black p-4 text-center'>IOT</div></NavLink>
+                    <NavLink className={({ isActive }) => isActive ? ` ${setActive(true)} ` : ''} to='/services/digital-marketing'><div className='text-black p-4 text-center'>Digital Marketing</div></NavLink>
                   </div>
                 </div>
               }
