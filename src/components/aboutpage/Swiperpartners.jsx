@@ -16,6 +16,7 @@ import { Autoplay, FreeMode, Pagination } from "swiper";
 const Swiperpartners = () => {
   return (
     <div className='bg-black text-white h-[200px] '>
+      {/* add pt-28 add align the text in the center  */}
         <div className="text-white font-bold  pt-28 md:pt-0 p-5 text-center"><h1>Our Partners</h1></div>
      <Swiper
         slidesPerView={2}
