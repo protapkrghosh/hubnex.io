@@ -56,8 +56,9 @@ const MobileNavbar = ({ open }) => {
                 <Link to='/industries/communication'><div className='text-white px-5 py-3 border-b-[1px] w-full border-b-gray-500 text-[15px]'>Communication</div></Link>
                 <Link to='/industries/logistics'><div className='text-white px-5 py-3 border-b-[1px] w-full border-b-gray-500 text-[15px]'>Logistics</div></Link>
                 <Link to='/industries/retail'><div className='text-white px-5 py-3 border-b-[1px] w-full border-b-gray-500 text-[15px]'> Retail</div></Link>
-                <Link to='/industries/banking'><div className='text-white px-5 py-3 border-b-[1px] w-full border-b-gray-500 text-[15px]'>Banking and Finances</div></Link>
-                <Link to='//industries/public-sector'><div className='text-white px-5 py-3 border-b-[1px] w-full border-b-gray-500 text-[15px]'>Public Sector</div></Link>
+                  <Link to='/industries/banking'><div className='text-white px-5 py-3 border-b-[1px] w-full border-b-gray-500 text-[15px]'>Banking and Finances</div></Link>
+                  {/* Bug Fix: solved navigate issue */}
+                <Link to='/industries/public-sector'><div className='text-white px-5 py-3 border-b-[1px] w-full border-b-gray-500 text-[15px]'>Public Sector</div></Link>
 
               </div>
             }
