@@ -36,7 +36,7 @@ const Communication = () => {
         <section
           id='section-1' className='snap-start'
         >
-          <IndustryHeros title={"Revolutionizing the way we connect"} discriptions={"Digitalizing Communication Empowering Businesses to Thrive in the Future"} background={"ind1"} button={"Get in touch"} />
+          <IndustryHeros title={"Revolutionizing the way we connect"} discriptions={"Digitalizing Communication Empowering Businesses to Thrive in the Future"} background={"ind1"} button={"Let's talk"} />
         </section>
 
         <section id='section-2' className='snap-start'>
