@@ -85,7 +85,7 @@ const Navbar = () => {
 
         {searchToggle && <Search toggler={searchToggle} />}
 
-        <div className=' h-full xl:max-w-[95%] xl:min-w-[90%] w-[90%] m-auto items-center flex justify-between'>
+        <div className=' h-full xl:max-w-[95%] xl:min-w-[90%] w-[90%] m-auto flex  items-center justify-between'>
 
           {/* Note: Change hubnex project logo and logo resize in navbar */}
           <div className='cursor-pointer z-50'>
