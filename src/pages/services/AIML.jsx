@@ -36,7 +36,7 @@ const AIML = () => {
           <section
             id='section-1' className='snap-start'
           >
-            {/* change industry hero to services hero to make all things align */}
+            {/* change industry hero to services hero to make all things align and also add specific componnet degain  */}
             <ServisesHero h1classNames={"text-[24px] md:text-[60px] lg:text-[70px] xl:text-[60px] 2xl:text-[60px] font-gilroy-bold mt-20 leading-tight lg:w-[700px]"} divClassName={"w-90 flex flex-col gap-8 xl:gap-14 lg:mb-[180px] xl:mb-40"} title={"Smarter Business Decisions with AI/ML"  } discriptions={`"Empowering Smarter Business Decisions with this"`} background={"serv1"} button={"Get in touch"}/>
           </section>
 

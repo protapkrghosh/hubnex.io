@@ -31,7 +31,7 @@ const Retail = () => {
       <section
         id='section-1' className='snap-start'
       >
-       <IndustryHeros title={"Revolutionizing the way we connect"  } discriptions={"Digitalizing Communication Empowering Businesses to Thrive in the Future"} background={"ind3"} button={"Let's talk"}  />
+       <IndustryHeros title={"Retail and Customer Goods"  } discriptions={"Delivering with Care Sustainable Solutions for a Healthier Planet"} background={"ind3"} button={"Let's talk"}  />
       </section>
 
       <section id='section-2' className='snap-start'>
