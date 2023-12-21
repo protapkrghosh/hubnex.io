@@ -49,6 +49,9 @@
 .btn-primary {
     @apply w-max border-white font-gilroy-semi-bold text-[16px] md:text-[20px] border-2 md:border-none bg-transparent md:bg-white text-white md:text-black rounded-full py-2 lg:py-[10px] px-5;
 }
+.btn-service {
+    @apply h-full rounded-full flex justify-center items-center  font-gilroy-semi-bold text-[12px] md:text-[20px] bg-white text-black py-2 w-max md:py-[10px] px-5;
+}
 .btn-secendary {
     @apply w-max bg-black text-xs md:text-[20px] text-white py-2 md:py-[15px] px-5 rounded-full;
 }

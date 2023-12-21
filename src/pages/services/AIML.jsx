@@ -1,17 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react'
-
-import Hero from '../../components/serviceUpdated/childrens/AIMLHero'
-import Ourservice from '../../components/serviceUpdated/childrens/AIMLCards'
-import Choose from '../../components/serviceUpdated/Choose'
-import Partners from '../../components/aboutpage/Partners'
-import Footer from '../../components/footer/Footer'
-import Ourself from '../../components/Aboutus'
-import Swiperpartners from '../../components/aboutpage/Swiperpartners'
-import ServisesHero from '../../components/servisesHeros/ServisesHero'
 import ServisesOtherSections from '../../components/servisesHeros/ServisesOtherSections'
+
 import ServisesDataMap from '../../components/servisesHeros/ServisesDataMap'
 import { aimldatas } from '../../data/data'
 import IndustryHeros from '../../components/industryHeros/IndustryHeros'
+import ServisesHero from '../../components/servisesHeros/ServisesHero'
 const sectionIds = ['section-1', 'section-2', 'section-3'];
 
 const AIML = () => {
@@ -31,7 +24,6 @@ const AIML = () => {
       window.scrollTo({ top: nextSectionIndex * sectionHeight, behavior: "smooth" });
     }
   };
-  
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
@@ -44,7 +36,8 @@ const AIML = () => {
           <section
             id='section-1' className='snap-start'
           >
-            <IndustryHeros title={"Smarter Business Decisions with AI/ML"  } discriptions={`"Empowering Smarter Business Decisions with this"`} background={"serv1"} button={"Get in touch"}/>
+            {/* change industry hero to services hero to make all things align */}
+            <ServisesHero title={"Smarter Business Decisions with AI/ML"  } discriptions={`"Empowering Smarter Business Decisions with this"`} background={"serv1"} button={"Get in touch"}/>
           </section>
 
           <section id='section-2' className='snap-start'>
