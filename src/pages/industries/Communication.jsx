@@ -33,6 +33,7 @@ const Communication = () => {
   return (
     <div className='h-screen w-full'>
       <div className='h-full w-full overflow-y-scroll' ref={scrollRef} style={{ scrollSnapType: 'y mandatory' }}>
+        {/* Bug Fix: change button text */}
         <section
           id='section-1' className='snap-start'
         >
