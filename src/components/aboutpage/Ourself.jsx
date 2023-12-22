@@ -7,7 +7,7 @@ const Ourself = () => {
             <div className=' w-[80%] flex justify-between'>
                 <div className=' w-full flex flex-col lg:gap-20 xl:gap-22 text-white '>
                     {/* bug fix: lg:gap-10 xl:gap-12 */}
-                   <div className=' w-90 flex flex-col lg:gap-10 xl:gap-12 text-center md:mt-40 '>
+                   <div className=' w-90 flex flex-col lg:gap-10 xl:gap-12 text-center md:mt-40 mb-12 md:mb-0'>
                     <span className=' text-[32px] md:text-[65px] xl:text-[60px] font-gilroy-semi-bold mb-4 md:mb-0'>Who We Are</span>
                     <p className='text-center font-gilroy-medium text-[15px] md:text-[22px]'>Our values shape the culture of our organization and define who we are. These are at the core of how we work and what we do. We are:</p>
                    </div>
