@@ -22,13 +22,14 @@ const MobileNavbar = ({ open }) => {
 
   return (
 
-    <div className=' absolute top-0 -right-full   overflow-y-auto flex justify-center h-screen w-24 z-40 xl:hidden '>
+    <div className=' absolute top-0 -right-full overflow-y-auto flex justify-center h-screen w-24 z-40 xl:hidden '>
       <div className={`xl:hidden ${!open ? 'translate-x-0 ease-out' : '-translate-x-full overflow-y-auto fixed'} h-full w-full  transition-all text-xl duration-500 ease text-white font-gilroy-regular bg-gradient-to-br z-50 from-gray-600 to-gray-800 flex flex-col items-center`}>
         <div className=' flex flex-col h-auto lg:mt-[110px] mt-[80px] overflow-y-auto  w-full  '>
           <NavLink to='/about' className='border-t-2 border-b-2 w-full border-b-gray-500 border-t-gray-500 py-5 px-5'>About Us</NavLink>
 
           <div className=' flex flex-col'>
             <div className=' flex justify border-b-2 w-full border-b-gray-500 py-5 px-5 items-center relative gap-2'>
+              {/* add div instead of navLink */}
               <div className={({ isActive }) => isActive ? ` decoration-white underline decoration-2 underline-offset-4` : ''} >Services  </div>
               <span onClick={handleServices}>{dropServices ? <KeyboardArrowUpIcon /> : <KeyboardArrowDown />}</span>
             </div>
@@ -46,6 +47,7 @@ const MobileNavbar = ({ open }) => {
           </div>
           <div className=' flex flex-col'>
             <div className=' flex justify border-b-2 w-full border-b-gray-500 py-5 px-5 items-center relative'>
+              {/* add div instead of navLink */}
               <div className={({ isActive }) => isActive ? ` underline decoration-white decoration-2 underline-offset-8  text-white` : ' flex items-center '}>Industries  </div>
               <span onClick={handleIndustries}>{dropIndustries ? <KeyboardArrowUpIcon /> : <KeyboardArrowDown />}</span>
             </div>

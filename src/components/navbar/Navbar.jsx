@@ -91,7 +91,7 @@ const Navbar = () => {
           {/* Note: Change hubnex project logo and logo resize in navbar */}
           <div className='cursor-pointer z-50'>
             <Link to='/' className=' flex gap-2 items-center'>
-              <img src={logo} alt='Logo' className='md:w-[110px] w-[90px]' />
+              <img src={logo} alt='Logo' className='md:w-[110px] w-[80px]' />
             </Link>
           </div>
 
@@ -156,9 +156,9 @@ const Navbar = () => {
 
           </div>
           <div className=' flex xl:hidden z-50'>
-
+              {/* bug fix: remove  right-4 top-6 absolute */}
             {!open ?
-              <img onClick={handleOpen} src={menu} className=" w-[30px] cursor-pointer right-4 top-6 absolute" />
+              <img onClick={handleOpen} src={menu} className=" w-[30px] cursor-pointer" />
               :
               <img onClick={handleOpen} src={close} className=" w-[25px] z-[100] cursor-pointer right-8 top-7 absolute" />
             }
@@ -167,7 +167,8 @@ const Navbar = () => {
         </div>
       </div>
     </div>
+    
   )
 }
 
-export default Navbar
+export default Navbar

@@ -16,10 +16,10 @@ const ServisesHero = ({title,discriptions,background,h1classNames,divClassName})
                     <Link to='/contact' className='btn-service'>Get in touch</Link>
                 </div>  
             </div>
+          </div>
         </div>
-    </div>
-        </div>
-    );
+      </div>
+  );
 };
 
 export default ServisesHero;
