@@ -13,8 +13,9 @@ const isMobile = () => {
 const sectionIds = ['section-1', 'section-2', 'section-3', 'section-4', 'section-5'];
 
 const IndustryOthersPage = () => {
-  const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
   const scrollRef = useRef(null);
+  const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
+ 
 
   const handleScroll = () => {
     const scrollTop = window.scrollY;

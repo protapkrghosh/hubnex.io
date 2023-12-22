@@ -1,4 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react'
+
+import Hero from '../../components/serviceUpdated/childrens/CloudHero'
+import Ourservice from '../../components/serviceUpdated/childrens/CloudServiceCards'
+import Choose from '../../components/serviceUpdated/Choose'
+import Partners from '../../components/aboutpage/Partners'
+import Footer from '../../components/footer/Footer'
+import Ourself from '../../components/Aboutus'
+import Swiperpartners from '../../components/aboutpage/Swiperpartners'
+import ServisesHero from '../../components/servisesHeros/ServisesHero'
 import ServisesOtherSections from '../../components/servisesHeros/ServisesOtherSections'
 import ServisesDataMap from '../../components/servisesHeros/ServisesDataMap'
 import { cloudServiseDatas } from '../../data/data'
@@ -15,17 +24,24 @@ const CloudServices = () => {
     const scrollHeight = document.documentElement.scrollHeight;
     const totalSections = sectionIds.length;
     const sectionHeight = scrollHeight / totalSections;
-    const nextSectionIndex = Math.min(totalSections - 1, Math.floor((scrollTop + windowHeight / 2) / sectionHeight));
-  
+    const nextSectionIndex = Math.min(
+      totalSections - 1,
+      Math.floor((scrollTop + windowHeight / 2) / sectionHeight)
+    );
+
     if (nextSectionIndex !== currentSectionIndex) {
       setCurrentSectionIndex(nextSectionIndex);
-      window.scrollTo({ top: nextSectionIndex * sectionHeight, behavior: "smooth" });
+      window.scrollTo({
+        top: nextSectionIndex * sectionHeight,
+        behavior: "smooth",
+      });
     }
   };
   
+
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [currentSectionIndex]);
   return (
     <div className='h-screen w-full'>
@@ -33,19 +49,20 @@ const CloudServices = () => {
           <section
             id='section-1' className='snap-start'
           >
-            <IndustryHeros title={"Secure and Reliable Cloud Services"  } discriptions={`"Powering Your Business with Cloud Confidence"`} background={"serv2"} button={"Get in touch"}/>
+            {/* change industry hero to services hero to make all things align  and also add specific componnet degain */}
+            <ServisesHero divClassName={" w-90 flex flex-col gap-8 xl:gap-14 lg:mb-[180px] xl:mb-48"} title={"Secure and Reliable Cloud Services"  } h1classNames={"text-[28px] md:text-[40px] lg:text-[70px] xl:text-[60px] 2xl:text-[60px] font-gilroy-bold leading-tight lg:w-[700px]"} discriptions={`"Powering Your Business with Cloud Confidence"`} background={"serv2"} button={"Get in touch"}/>
           </section>
 
-          <section id='section-2' className='snap-start'>
+        <section id="section-2" className="snap-start">
           <ServisesDataMap datas={cloudServiseDatas} />
-          </section>
+        </section>
 
-          <section id='section-3' className='snap-start'>
+        <section id="section-3" className="snap-start">
           <ServisesOtherSections />
-          </section>
-        </div>
+        </section>
       </div>
-  )
-}
+    </div>
+  );
+};
 
-export default CloudServices
+export default CloudServices;

@@ -3,7 +3,8 @@ import SingleServises from './SingleServises';
 
 const ServisesDataMap = ({datas}) => {
     return (
-        <div className=' py-10 w-full bg-black flex justify-center items-center h-auto'>
+        // add py-16 to make distance between navbar and our servises
+        <div className=' py-16  w-full bg-black flex justify-center items-center h-auto'>
         <div className=' h-full w-full flex justify-center items-center'>
             <div className='w-[90%] flex flex-col gap-10 md:justify-around h-full items-center text-black'>  
                 <div className='w-full gap-5 flex flex-col items-center justify-center'>

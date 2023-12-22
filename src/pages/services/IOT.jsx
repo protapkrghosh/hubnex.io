@@ -1,4 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react'
+
+import Hero from '../../components/serviceUpdated/childrens/IOTHero'
+import Ourservice from '../../components/serviceUpdated/Ourservice'
+import Choose from '../../components/serviceUpdated/Choose'
+import Partners from '../../components/aboutpage/Partners'
+import Footer from '../../components/footer/Footer'
+import Ourself from '../../components/Aboutus'
+import Swiperpartners from '../../components/aboutpage/Swiperpartners'
+import ServisesHero from '../../components/servisesHeros/ServisesHero'
 import ServisesOtherSections from '../../components/servisesHeros/ServisesOtherSections'
 import ServisesDataMap from '../../components/servisesHeros/ServisesDataMap'
 import { iotDatas } from '../../data/data'
@@ -15,23 +24,29 @@ const IOT = () => {
     const scrollHeight = document.documentElement.scrollHeight;
     const totalSections = sectionIds.length;
     const sectionHeight = scrollHeight / totalSections;
-    const nextSectionIndex = Math.min(totalSections - 1, Math.floor((scrollTop + windowHeight / 2) / sectionHeight));
-  
+    const nextSectionIndex = Math.min(
+      totalSections - 1,
+      Math.floor((scrollTop + windowHeight / 2) / sectionHeight)
+    );
+
     if (nextSectionIndex !== currentSectionIndex) {
       setCurrentSectionIndex(nextSectionIndex);
-      window.scrollTo({ top: nextSectionIndex * sectionHeight, behavior: "smooth" });
+      window.scrollTo({
+        top: nextSectionIndex * sectionHeight,
+        behavior: "smooth",
+      });
     }
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [currentSectionIndex]);
 
-  const isMobile=()=> {
-    const match=window.matchMedia("(max-width:912px)");
-    return(match && match.matches); 
-  }
+  const isMobile = () => {
+    const match = window.matchMedia("(max-width:912px)");
+    return match && match.matches;
+  };
 
   return (
     <div className='h-screen w-full'>
@@ -39,19 +54,20 @@ const IOT = () => {
           <section
             id='section-1' className='snap-start'
           >
-            <IndustryHeros title={"Efficient and Effective  Integration Services"  } discriptions={`"Enhancing Your Site's Performance and User Experience"`} background={"serv4"} button={"Get in touch"}/>
+            {/* change industry hero to services hero to make all things align and also add specific componnet degain  */}
+            <ServisesHero h1classNames={"text-[28px] md:text-[50px] lg:text-[70px] xl:text-[60px] 2xl:text-[60px] font-gilroy-bold leading-tight lg:w-[700px]"} divClassName={" w-90 flex flex-col gap-8 xl:gap-14 lg:mb-[180px] xl:mb-48"} title={"Efficient and Effective  Integration Services"  } discriptions={`"Tailored IoT Solutions for Your Business Success"`} background={"serv4"} button={"Get in touch"}/>
           </section>
 
-          <section id='section-2' className='snap-start'>
+        <section id="section-2" className="snap-start">
           <ServisesDataMap datas={iotDatas} />
-          </section>
+        </section>
 
-          <section id='section-3' className='snap-start'>
+        <section id="section-3" className="snap-start">
           <ServisesOtherSections />
-          </section>
-        </div>
+        </section>
       </div>
-  )
-}
+    </div>
+  );
+};
 
-export default IOT
+export default IOT;

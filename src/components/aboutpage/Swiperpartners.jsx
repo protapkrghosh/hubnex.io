@@ -15,16 +15,17 @@ import { Autoplay, FreeMode, Pagination } from "swiper";
 
 const Swiperpartners = () => {
   return (
-    <div className='bg-black text-white h-[200px] '>
-        <div className="text-white font-bold text-4xl p-5 text-center"><h1>Our Partners</h1></div>
-     <Swiper
-        slidesPerView={2}
+    <div className='bg-black text-white h-[200px]'>
+      {/* Bug Fix: Added text-[30px] */}
+      <div className="text-white font-bold text-[30px] pt-28 md:pt-0 p-5 text-center"><h1>Our Partners</h1></div>
+      <Swiper
+        slidesPerView={3}
         spaceBetween={30}
         freeMode={true}
         pagination={{
           clickable: true,
         }}
-        modules={[FreeMode, Pagination,Autoplay]}
+        modules={[FreeMode, Pagination, Autoplay]}
         autoplay={true}
         className="mySwiper"
       >
@@ -32,9 +33,9 @@ const Swiperpartners = () => {
         <SwiperSlide ><img src={chorus} alt="chorus"></img></SwiperSlide>
         <SwiperSlide className='mb-6' ><img src={tcs} alt="tcs"></img></SwiperSlide>
         <SwiperSlide><img src={pantera} alt="pantera"></img></SwiperSlide>
-       
+
       </Swiper>
-      
+
     </div>
   )
 }
