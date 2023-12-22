@@ -17,8 +17,9 @@ const Swiperpartners = () => {
   return (
     <div className='bg-black text-white h-[200px] '>
         <div className="text-white font-bold pt-28 md:pt-0 p-5 text-center"><h1>Our Partners</h1></div>
+
      <Swiper
-        slidesPerView={2}
+        slidesPerView={4}
         spaceBetween={30}
         freeMode={true}
         pagination={{

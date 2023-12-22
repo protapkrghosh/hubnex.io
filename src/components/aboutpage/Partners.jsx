@@ -7,6 +7,7 @@ const Partners = () => {
       {/* Bug Fix: Added top section spacing */}
       <span className='text-[60px] text-white font-gilroy-semi-bold mt-10'>Our Partners</span>
       <div className='flex flex-wrap justify-around md:justify-evenly items-center w-full px-5 md:px-0  xl:-mt-5'>
+
         {imgesData.map((image) => (
           <img key={image.id} src={image.image} className='w-[158px] h-[70px]' alt={`partner-${image.id}`} />
         ))}

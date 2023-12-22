@@ -7,7 +7,7 @@ const OueWork = () => {
     <div>
       {/* Note: Fixed section padding */}
       <div className='bg-black 2xl:h-[902px] py-3 md:py-20 min-h-screen  flex justify-center items-center flex-col gap-0'>
-        {/* Bug Fix: Added spacing in heading part */}
+        {/* Bug Fix: Added mt-10 */}
         <div className='text-white text-[28px] md:text-[60px] font-gilroy-bold mt-10'>
           <h1>What We Do</h1>
         </div>
