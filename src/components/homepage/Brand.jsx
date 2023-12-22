@@ -14,6 +14,7 @@ const Brand = () => {
             </div>
         </div>
         <div className=' text-white'>
+            {/* bug fix: add mb-52 */}
             <div className=' flex flex-col items-center gap-5 mb-52 md:mb-20 lg:mb-10'>
                 <div className=' flex flex-col items-center font-gilroy-bold md:font-gilroy-semi-bold text-[18px] md:text-[24px] xl:text-[24px]'>
                     <span>your have an idea?</span>
