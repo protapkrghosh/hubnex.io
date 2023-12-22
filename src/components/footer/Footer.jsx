@@ -137,7 +137,7 @@ const Footer = () => {
 
   return (
     //Note: added some pading both phone and computer veiw
-    <div className='flex-cols w-full bg-black md:pt-36 pt-20'>
+    <div className='flex-cols w-full bg-black md:pt-36 '>
       <div className='lg:w-[90%] xl:w-[70%] h-full lg:flex sm:justify-between items-center text-white py-5 lg:py-0'>
         <div className='flex flex-col gap-[36px] md:gap-14 xl:gap-16'>
           <div className='text-4xl lg:text-[70px] 2xl:text-[70px] md:py-0 font-gilroy-extrabold text-white'>
