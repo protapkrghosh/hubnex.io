@@ -86,8 +86,8 @@ const Services = () => {
             </div>
           </div>
 
-          <div className=' md:static md:flex-none xs:mt-16 flex flex-col justify-center gap-5 items-center lg:items-start bottom-5'>
-            <p className=' text-lg md:text-[26px] text-center lg:text-start font-gilroy-semi-bold'>providing you industry level<br /> solutions to cater your needs and <br /> help you become the next big<br /> thing</p>
+          <div className=' md:static md:flex-none lg:mt-7 flex flex-col justify-center gap-5 items-center lg:items-start -mt-5 md:-mt-0 bottom-5'>
+            <p className=' text-lg md:text-[26px] text-center lg:text-start font-gilroy-semi-bold lg:mb-7'>providing you industry level<br /> solutions to cater your needs and <br /> help you become the next big<br /> thing</p>
             <Link to='/contact' className='w-max bg-black text-xs md:text-[20px] text-white py-2 md:py-[15px] px-5 rounded-full'>Get started</Link>
           </div>
         </div>

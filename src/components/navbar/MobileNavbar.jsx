@@ -29,6 +29,7 @@ const MobileNavbar = ({ open }) => {
 
           <div className=' flex flex-col'>
             <div className=' flex justify border-b-2 w-full border-b-gray-500 py-5 px-5 items-center relative gap-2'>
+              {/* add div instead of navLink */}
               <div className={({ isActive }) => isActive ? ` decoration-white underline decoration-2 underline-offset-4` : ''} >Services  </div>
               <span onClick={handleServices}>{dropServices ? <KeyboardArrowUpIcon /> : <KeyboardArrowDown />}</span>
             </div>
@@ -46,6 +47,7 @@ const MobileNavbar = ({ open }) => {
           </div>
           <div className=' flex flex-col'>
             <div className=' flex justify border-b-2 w-full border-b-gray-500 py-5 px-5 items-center relative'>
+              {/* add div instead of navLink */}
               <div className={({ isActive }) => isActive ? ` underline decoration-white decoration-2 underline-offset-8  text-white` : ' flex items-center '}>Industries  </div>
               <span onClick={handleIndustries}>{dropIndustries ? <KeyboardArrowUpIcon /> : <KeyboardArrowDown />}</span>
             </div>
