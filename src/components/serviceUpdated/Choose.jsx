@@ -19,9 +19,9 @@ const Choose = () => {
                 <span className=' text-[16.22px] md:text-[24px] font-gilroy-semi-bold'>Your Next-Gen Technology Partner</span>
                 <p className=' text-[14.42] md:text-[18px] xl:w-full xl:h-[125px] font-gilroy-regular'>Adherence to agile and CI/CD principles throughout the product development lifecycle gain competitive advantage through innovative software solutions.</p>
               </div>
-              <hr className=' w-[50%] md:w-0 md:h-[50%] border-gray-700 border-[1px]' />
+              <hr className=' w-[50%] md:w-0 md:h-[50%] border-gray-700 lg:mt-4 border-[1px]' />
 
-              <div className='w-[303px] h-[199px] text-center  flex flex-col items-center gap-4 '>
+              <div className='w-[303px] h-[199px] text-center  flex flex-col items-center gap-8  lg:gap-4 '>
                 <span className=' text-[16.22px] md:text-[24px] font-gilroy-semi-bold '>Team-Oriented</span>
                 <p className='text-[14.42] md:text-[18px] xl:w-full xl:h-[125px] font-gilroy-regular'>Efficient & transparent development, communication, and reporting Our domain knowledge, expertise, and proven methodologies enable us to create.</p>
               </div>
