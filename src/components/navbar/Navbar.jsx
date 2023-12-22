@@ -15,9 +15,11 @@ import close from '@assets/Xmark.png'
 
 
 const Navbar = () => {
+  // Bug Fix: change dynamic background color in button 
   const location = useLocation();
   const isServicesPage = location.pathname.includes('/services');
-  
+  const isIndustriesPage = location.pathname.includes('/industries');
+
   const [searchToggle, setSearchToggle] = useState(false);
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(false);
@@ -144,11 +146,10 @@ const Navbar = () => {
 
             <NavLink to='/contact' className={({ isActive }) => isActive ? 'decoration-white underline decoration-2 underline-offset-4' : 'hover-underline-animation'}>Contact</NavLink>
 
-
-
+            {/* Bug Fix: change dynamic background color in button  */}
             <Link
               to='https://startups.hubnex.in'
-              className={`border-white ${isServicesPage ? 'bg-white text-black' : 'bg-transparent text-white'}  border-2 py-[8px] px-[12px] rounded-full text-[16px] font-gilroy-semi-bold hover:bg-white hover:text-black duration-150 ease-in-out transition-all`}
+              className={`border-white ${isServicesPage || isIndustriesPage ? 'bg-white text-black' : 'bg-transparent text-white'}  border-2 py-[8px] px-[12px] rounded-full text-[16px] font-gilroy-semi-bold hover:bg-white hover:text-black duration-150 ease-in-out transition-all`}
             >
               Startup Programme
             </Link>
