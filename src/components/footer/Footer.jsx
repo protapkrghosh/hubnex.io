@@ -137,9 +137,9 @@ const Footer = () => {
 
   return (
     //Note: added some pading both phone and computer veiw
-    <div className='flex-cols w-full bg-black md:pt-36 pt-20'>
+    <div className='flex-cols w-full bg-black lg:pt-20'>
       <div className='lg:w-[90%] xl:w-[70%] h-full lg:flex sm:justify-between items-center text-white py-5 lg:py-0'>
-        <div className='flex flex-col gap-[36px] md:gap-14 xl:gap-16'>
+        <div className='flex flex-col gap-[20px] md:gap-14 xl:gap-16'>
           <div className='text-4xl lg:text-[70px] 2xl:text-[70px] md:py-0 font-gilroy-extrabold text-white'>
             <h1 className='text-center lg:text-start mt-5'>let's talk</h1>
           </div>
@@ -149,11 +149,11 @@ const Footer = () => {
             <p className='text-center leading-tight lg:text-start'>Let's build it together</p>
           </div>
           <div className='text-xs font-gilroy-light md:text-[16px]'>
-            <p className='text-center md:text-start leading-6'>our team will reach out to you as soon as possible</p>
+            <p className='text-center md:text-start'>our team will reach out to you as soon as possible</p>
           </div>
         </div>
         
-        <form className='flex flex-col gap-4 m-auto text-[16px] w-[80%] md:w-auto md:m-0 mt-10 md:py-1 md:mt-0' onSubmit={handleSubmit}>
+        <form className='flex flex-col gap-2 lg:gap-4 m-auto text-[16px] w-[80%] md:w-auto md:m-0 mt-5 lg:mt-10 md:py-1 md:mt-0' onSubmit={handleSubmit}>
           <label className='text-gray-200' htmlFor='first_name'>FIRST NAME {errFirstname ? <span className='text-red-500 pl-3'>Firstname is mandatory</span> : <span className='text-red-500'>*</span>}</label>
           <input className='outline-none bg-transparent border-b-[1px] border-b-gray-300 w-full md:w-96' type='text' id='first_name' maxLength={25} name='firstName' value={credentials.firstName} onChange={handleChange}   />
 
@@ -168,7 +168,7 @@ const Footer = () => {
           <input className='outline-none bg-transparent border-b-[1px] border-b-gray-300 w-full md:w-96' type='tel' id='mobile_no' maxLength={12} name='phoneNo' value={credentials.phoneNo} onChange={handleChange} />
 
           <label className='text-gray-200' htmlFor='message'>MESSAGE</label>
-          <input className='pt-5 outline-none bg-transparent border-b-[1px] border-b-gray-300 w-full md:w-96' type='text' id='message' name='message' value={credentials.message} onChange={handleChange} />
+          <input className='pt-2 outline-none bg-transparent border-b-[1px] border-b-gray-300 w-full md:w-96' type='text' id='message' name='message' value={credentials.message} onChange={handleChange} />
 
           <button className='btn-submit'>
             <label htmlFor='submit' className='flex cursor-pointer gap-3 w-full h-full rounded-full font-gilroy-light items-center justify-center text-[18px] absolute -left-[2px] bottom-[2px] border-white border-2'>
@@ -185,7 +185,7 @@ const Footer = () => {
           }
         </form>
       </div>
-      <div className='flex flex-col w-full h-40 justify-center -mt-5 md:-mt-16 items-center gap-4 text-white sm:h-80 text-lg'>
+      <div className='flex flex-col w-full h-40 justify-center -mt-10 md:-mt-16 items-center gap-4 text-white sm:h-80 text-lg'>
         <span className='font-gilroy-semi-bold text-[28px] md:text-[24px]'>Connect with us</span>
         <div className='flex flex-wrap gap-5 items-center'>
           {/* Note: Added social media links and they will open in new tab */}
