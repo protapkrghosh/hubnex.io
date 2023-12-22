@@ -155,7 +155,7 @@ const Navbar = () => {
 
           </div>
           <div className=' flex xl:hidden z-50'>
-
+              {/* bug fix: remove  right-4 top-6 absolute */}
             {!open ?
               <img onClick={handleOpen} src={menu} className=" w-[30px] cursor-pointer" />
               :
