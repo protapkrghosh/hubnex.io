@@ -16,9 +16,8 @@ const Hero = () => {
             <p className=' leading-tight font-gilroy-medium'>Passionate about exceptional IT services, delivering innovative solutions to meet unique needs.</p>
           </div>
           <div>
-
-            <Link to='/contact' className='btn-primary'>Know more</Link>
-
+            {/* Bug Fix: Change sm device button background color */}
+            <Link to='/contact' className='w-max border-white font-gilroy-semi-bold text-[16px] md:text-[20px] border-2 md:border-none bg-transparent bg-white text-black rounded-full py-2 lg:py-[10px] px-5'>Know more</Link>
           </div>
         </div>
       </div>
