@@ -13,7 +13,7 @@ const Aboutsection3 = () => {
             <p className='aboutUsTopP'>At our IT consultancy firm, we prioritize certain values and approaches that have helped us build a reputation for excellence in the industry. First and foremost, we prioritize customer satisfaction, and we always go the extra mile to ensure our clients' needs are met.</p>
          
 
-          <div className='flex flex-wrap gap-3 xl:gap-10 md:gap-0 justify-center'>
+          <div className='flex flex-wrap gap-3 xl:gap-10 md:gap-0 justify-center lg:-mt-4 2xl:-mt-20'>
   {cardsData.map((cards, index) => (
     <div key={index} className="about-us-cards-text-div">
       <div className='about-us-cards-image-div'>

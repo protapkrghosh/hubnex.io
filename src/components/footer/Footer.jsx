@@ -163,7 +163,7 @@ const Footer = () => {
 
           <label className='text-gray-200' htmlFor='message'>MESSAGE</label>
           {/* bug fix: add pt-2  */}
-          <input className='pt-2 formInput' type='text' id='message' name='message' value={credentials.message} onChange={handleChange} />
+          <input className='outline-none bg-transparent border-b-[1px] border-b-gray-300 w-full md:w-96' type='text' id='message' name='message' value={credentials.message} onChange={handleChange} />
 
           <button className='btn-submit'>
             <label htmlFor='submit' className='footerFormSubmitLabel'>
@@ -182,13 +182,13 @@ const Footer = () => {
       </div>
       {/* bug fix: add -mt-10 md:-mt-16  */}
       <div className='flex flex-col w-full h-40 justify-center -mt-10 md:-mt-16 items-center gap-4 text-white sm:h-80 text-lg'>
-        <span className='font-gilroy-semi-bold text-[28px] md:text-[24px]'>Connect with us</span>
-        <div className='flex flex-wrap gap-5 items-center'>
+        <span className='font-gilroy-semi-bold text-[34px] md:text-[24px]'>Connect with us</span>
+        <div className='flex flex-wrap gap-x-10 lg:gap-5 items-center'>
           {/* Note: Added social media links and they will open in new tab */}
-          <a href='https://twitter.com' target="_blank">{isMobile() ? <TwitterIcon fontSize='medium' /> : <TwitterIcon fontSize='large' />}</a>
-          <a href='https://linkedin.com' target="_blank">{isMobile() ? <LinkedInIcon fontSize='medium' /> : <LinkedInIcon fontSize='large' />}</a>
-          <a href='https://instagram.com' target="_blank">{isMobile() ? <InstagramIcon fontSize='medium' /> : <InstagramIcon fontSize='large' />}</a>
-          <a href='https://facebook.com' target="_blank">{isMobile() ? <FacebookIcon fontSize='medium' /> : <FacebookIcon fontSize='large' />}</a>
+          <a href='https://twitter.com' target="_blank">{isMobile() ? <TwitterIcon fontSize='large' /> : <TwitterIcon fontSize='large' />}</a>
+          <a href='https://linkedin.com' target="_blank">{isMobile() ? <LinkedInIcon fontSize='large' /> : <LinkedInIcon fontSize='large' />}</a>
+          <a href='https://instagram.com' target="_blank">{isMobile() ? <InstagramIcon fontSize='large' /> : <InstagramIcon fontSize='large' />}</a>
+          <a href='https://facebook.com' target="_blank">{isMobile() ? <FacebookIcon fontSize='large' /> : <FacebookIcon fontSize='large' />}</a>
         </div>
       </div>
       {/* bug fix:  -mt-5 md:-mt-16 */}

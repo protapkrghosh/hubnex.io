@@ -79,7 +79,7 @@
     @apply   text-[14.42px] mt-5 md:text-[20px] font-gilroy-regular leading-6 ;
 }
 .about-us-who-we-are-div {
-    @apply   md:w-[303px] lg:h-[163px] text-center max-[360px]:w-60;
+    @apply   md:w-[356px] lg:h-[163px] text-center max-[360px]:w-60;
 }
 .about-us-who-we-are-span {
     @apply   text-[16.22px] md:text-[22px] font-gilroy-semi-bold;
