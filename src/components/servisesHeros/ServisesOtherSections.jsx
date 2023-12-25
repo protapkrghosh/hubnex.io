@@ -1,4 +1,4 @@
-import Choose from './Choose'
+
 import Partners from '../../components/aboutpage/Partners'
 import Footer from '../../components/footer/Footer'
 import Ourself from '../Aboutus'

@@ -15,12 +15,12 @@ const Aboutsection3 = () => {
 
           <div className='flex flex-wrap gap-3 xl:gap-10 md:gap-0 justify-center'>
   {cardsData.map((cards, index) => (
-    <div key={index} className="about-us-crds-text-div">
-      <div className='about-us-crds-imge-div'>
+    <div key={index} className="about-us-cards-text-div">
+      <div className='about-us-cards-image-div'>
         <img src={cards.imge} alt="mission" className='w-[19.18px] h-[19.18px] rounded-full md:w-[31px] md:h-[31px]' />
       </div>
-      <h1 className='about-us-crds-h1 font-poppins-semibold'>{cards.title}</h1>
-      <p className='about-us-crds-p font-poppins-regular'>{cards.discriptions}</p>
+      <h1 className='about-us-cards-h1  font-poppins-semibold'>{cards.title}</h1>
+      <p className='about-us-cards-p font-poppins-regular'>{cards.discriptions}</p>
     </div>
   ))}
 </div>

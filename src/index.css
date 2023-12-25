@@ -52,31 +52,27 @@
 .btn-service {
     @apply h-full rounded-full flex justify-center items-center  font-gilroy-semi-bold text-[12px] md:text-[20px] bg-white text-black py-2 w-max md:py-[10px] px-5;
 }
-.btn-secendary {
-    @apply w-max bg-black text-xs md:text-[20px] text-white py-2 md:py-[15px] px-5 rounded-full;
-}
+
 .btn-submit {
     @apply h-[41px] mt-10 w-[121px] py-1 px-5 border-violet-700 border-[2px] border-t-0 border-l-0 relative bg-transparent rounded-full;
 }
-.survise-text {
-    @apply text-[28px] md:text-[50px] lg:text-[70px] xl:text-[60px] 2xl:text-[60px] font-gilroy-bold leading-tight lg:w-[700px];
-}
-.text-peragrap {
+
+.text-paragraph {
     @apply text-[16px] md:text-[24px] font-gilroy-semi-bold lg:w-[600px];
 }
 
 /* about us start there */
 
-.about-us-crds-text-div {
+.about-us-cards-text-div {
     @apply flex flex-col justify-evenly md:justify-center md:gap-5 w-[180px] h-[198px] md:w-[292px] md:h-[320px] lg:w-[300px] xl:w-[260px] 2xl:w-[300px] rounded-lg md:m-6 md:p-5 lg:p-8 bg-white items-center text-center font-gilroy-bold  overflow-hidden;
 }
-.about-us-crds-imge-div {
+.about-us-cards-image-div {
     @apply w-[43.31px] h-[43.31px] md:w-[70px] md:h-[70px] shadow-xl flex justify-center items-center md:p-5 bg-orange rounded-full;
 }
-.about-us-crds-h1 {
+.about-us-cards-h1 {
     @apply  text-grey text-[14px] md:text-[24px] font-semibold;
 }
-.about-us-crds-p {
+.about-us-cards-p {
     @apply   text-grey text-[9.9px] md:text-[16px] px-2 md:px-0 ;
 }
 .about-us-who-we-are-p {
@@ -272,6 +268,53 @@
 
 /* inovetion style end there */
 
+
+/* footer start here */
+.formLabel{
+    @apply  text-red-500 pl-3;
+}
+.formInput{
+    @apply  outline-none bg-transparent border-b-[1px] border-b-gray-300 w-full md:w-96;
+}
+.footerFirstDiv{
+    @apply flex-cols w-full bg-black lg:pt-14 pt-8;
+}
+.footerSecondDiv{
+    @apply lg:w-[90%] xl:w-[70%] h-full lg:flex sm:justify-between items-center text-white py-5 lg:py-0;
+}
+.footerThirdDiv{
+    @apply flex flex-col gap-[20px] md:gap-14 xl:gap-16;
+}
+.footerH1{
+    @apply text-4xl lg:text-[60px] 2xl:text-[60px] md:py-0 font-gilroy-extrabold text-white text-center lg:text-start ;
+}
+.footerFirstP{
+    @apply w-[90%] mx-auto md:-mt-8 md:mx-0 md:w-[310px] lg:h-[310px]  lg:text-[40px] font-gilroy-light text-center leading-tight lg:text-start;
+}
+.footerSecondP{
+    @apply text-xs font-gilroy-light md:text-[16px] text-center md:text-start;
+}
+.footerForm{
+    @apply flex flex-col gap-2 lg:gap-4 m-auto text-[16px] w-[80%] md:w-auto md:m-0 mt-5 lg:mt-10 md:py-1 md:mt-0;
+}
+.footerFormSubmitLabel{
+    @apply flex cursor-pointer gap-3 w-full h-full rounded-full font-gilroy-light items-center justify-center text-[18px] absolute -left-[2px] bottom-[2px] border-white border-2;
+}
+
+
+
+/* footer end here */
+
+/* navbar start here */
+.navDataDiv{
+    @apply text-black p-4 text-center;
+}
+.navbarDiv{
+    @apply flex  bg-white/80 bg-opacity-10 backdrop-blur-2xl w-[300px] absolute top-[30px] right-0 rounded-lg;
+}
+
+
+/* navbar end here */
 
 
 input:-webkit-autofill,

@@ -25,8 +25,6 @@ const Travel = React.lazy(() => import('./pages/industries/Travel'))
 // Hubnex pages (public)
 const Home = React.lazy(() => import('./pages/Home'))
 const About = React.lazy(() => import('./pages/About'))
-const Services = React.lazy(() => import('./pages/Services'))
-const Industries = React.lazy(() => import('./pages/Industries'))
 const Contact = React.lazy(() => import('./pages/Contact'))
 
 // Content Management System   
@@ -127,10 +125,6 @@ function App() {
             element: <Suspense fallback={<Loader />}><About /></Suspense>
           },
           {
-            path: '/services',
-            element: <Suspense fallback={<Loader />}><Services /></Suspense>,
-          },
-          {
             path: '/services/ai-ml',
             element: <Suspense fallback={<Loader />}><AIML /></Suspense>
           },
@@ -150,19 +144,16 @@ function App() {
             path: '/services/software-testing',
             element: <Suspense fallback={<Loader />}><SoftwareTesting /></Suspense>
           },
-          {
-            path: '/industries',
-            element: <Suspense fallback={<Loader />}><Industries /></Suspense>,
-          },
+         
           {
             path: '/industries/communication',
             element: <Suspense fallback={<Loader />}><Communication /></Suspense>
           },
           
-          // {
-          //   path: '/industries/logistics',
-          //   element: <Suspense fallback={<Loader/>}><Logistics/></Suspense>
-          // },
+          {
+            path: '/industries/logistics',
+            element: <Suspense fallback={<Loader/>}><Logistics/></Suspense>
+          },
           {
             path: '/industries/retail',
             element: <Suspense fallback={<Loader />}><Retail /></Suspense>

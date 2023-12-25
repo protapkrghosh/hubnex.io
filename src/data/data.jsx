@@ -420,3 +420,64 @@ export const whatWeDoData = [
     },
     
 ]
+
+export const servicesNavDataFirst = [
+    {
+        to:"/services/ai-ml",
+        title:'AI-ML'
+    },
+    {
+        to:"/services/cloud-services",
+        title:'Cloud Services'
+    },
+    {
+        to:"/services/software-testing",
+        title:'Software Testing'
+    },
+   
+    
+
+]
+export const servicesNavDataSecond = [
+    {
+        to:"/services/iot",
+        title:'IOT'
+    },
+    
+    {
+        to:"/services/digital-marketing",
+        title:'Digital Marketing'
+    }
+    
+
+]
+export const IndustryNavDataFirst = [
+    {
+        to:"/industries/communication",
+        title:'Communication'
+    },
+    {
+        to:"/industries/logistics",
+        title:'Logistics'
+    },
+    {
+        to:"/industries/retail",
+        title:'Retail'
+    },
+   
+    
+
+]
+export const IndustryNavDataSecond = [
+    {
+        to:"/industries/banking",
+        title:'Banking and Finances'
+    },
+    
+    {
+        to:"/industries/public-sector",
+        title:'Public Sector'
+    }
+    
+
+]
