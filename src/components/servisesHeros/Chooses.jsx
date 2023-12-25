@@ -20,12 +20,12 @@ const Chooses = ({firsTitle,secondTitle,thirdTitle,firstDescriptions,secondDescr
                         <hr className=' about-us-who-we-are-hr'/>
                         <div className='about-us-who-we-are-div'>
                             <span className=' about-us-who-we-are-span '>{secondTitle}</span>
-                            <p className='about-us-who-we-are-p pt-6'>{secondDescriptions}</p>
+                            <p className='about-us-who-we-are-p '>{secondDescriptions}</p>
                         </div>
                         <hr className=' about-us-who-we-are-hr'/>
                         <div className='about-us-who-we-are-div'>
                             <span className=' about-us-who-we-are-span '>{thirdTitle}</span>
-                            <p className='about-us-who-we-are-p pt-5'>{thirdDescriptions} </p>
+                            <p className='about-us-who-we-are-p '>{thirdDescriptions} </p>
                         </div>
                    </div>
                 </div>
