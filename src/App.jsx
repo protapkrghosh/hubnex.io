@@ -17,7 +17,6 @@ const DigitalMarketing = React.lazy(() => import('./pages/services/DigitalMarket
 
 // Industries Dropdown pages
 const Communication = React.lazy(() => import('./pages/industries/Communication'))
-const Hospitality = React.lazy(() => import('./pages/industries/Hospitality'))
 const Logistics = React.lazy(() => import('./pages/industries/Logistics'))
 const PublicSector = React.lazy(() => import('./pages/industries/PublicSector'))
 const Retail = React.lazy(() => import('./pages/industries/Retail'))
@@ -26,8 +25,6 @@ const Travel = React.lazy(() => import('./pages/industries/Travel'))
 // Hubnex pages (public)
 const Home = React.lazy(() => import('./pages/Home'))
 const About = React.lazy(() => import('./pages/About'))
-const Services = React.lazy(() => import('./pages/Services'))
-const Industries = React.lazy(() => import('./pages/Industries'))
 const Contact = React.lazy(() => import('./pages/Contact'))
 
 // Content Management System   
@@ -48,6 +45,7 @@ function App() {
     // Note: there have some 404 imge can i remove this one
     const images = [
       '@assets/aboutLander.png',
+      '@assets/ind1.png',
       '@assets/abouts.png',
       '@assets/arrowR.png',
       '@assets/backgroundVector.png',
@@ -127,10 +125,6 @@ function App() {
             element: <Suspense fallback={<Loader />}><About /></Suspense>
           },
           {
-            path: '/services',
-            element: <Suspense fallback={<Loader />}><Services /></Suspense>,
-          },
-          {
             path: '/services/ai-ml',
             element: <Suspense fallback={<Loader />}><AIML /></Suspense>
           },
@@ -150,22 +144,16 @@ function App() {
             path: '/services/software-testing',
             element: <Suspense fallback={<Loader />}><SoftwareTesting /></Suspense>
           },
-          {
-            path: '/industries',
-            element: <Suspense fallback={<Loader />}><Industries /></Suspense>,
-          },
+         
           {
             path: '/industries/communication',
             element: <Suspense fallback={<Loader />}><Communication /></Suspense>
           },
+          
           {
             path: '/industries/logistics',
-            element: <Suspense fallback={<Loader />}><Hospitality /></Suspense>
+            element: <Suspense fallback={<Loader/>}><Logistics/></Suspense>
           },
-          // {
-          //   path: '/industries/logistics',
-          //   element: <Suspense fallback={<Loader/>}><Logistics/></Suspense>
-          // },
           {
             path: '/industries/retail',
             element: <Suspense fallback={<Loader />}><Retail /></Suspense>

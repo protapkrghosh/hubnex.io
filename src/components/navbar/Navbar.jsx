@@ -11,6 +11,7 @@ import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
 import menu from '@assets/menuUp.png'
 import close from '@assets/Xmark.png'
+import { IndustryNavDataFirst, IndustryNavDataSecond, servicesNavDataFirst, servicesNavDataSecond } from '../../data/data'
 
 
 
@@ -102,20 +103,19 @@ const Navbar = () => {
             <div ref={servicedropdownRef} className=' flex items-center relative'>
 
 
-              <span activeClassName='your-active-class' onMouseOver={() => setServiceMenuDropDownOpen(true)} className=' cursor-pointer' onClick={handleServices}>Services</span>
-              <span onMouseOver={() => setServiceMenuDropDownOpen(true)} className=' cursor-pointer' onClick={handleServices}>{isServiceMenuDropDownOpen ? <KeyboardArrowUpIcon /> : <KeyboardArrowDown />}</span>
-
+              <span activeClassName='your-active-class' onMouseOver={() => setServiceMenuDropDownOpen(true)} className=' cursor-pointer' onClick={handleServices}>Services {isServiceMenuDropDownOpen ? <KeyboardArrowUpIcon /> : <KeyboardArrowDown />}</span>
               {
                 isServiceMenuDropDownOpen &&
-                <div className="flex  bg-white/80 bg-opacity-10 backdrop-blur-2xl w-[300px] absolute top-[30px] right-0 rounded-lg">
+                <div className="navbarDiv">
                   <div className=' flex flex-col'>
-                    <Link to='/services/ai-ml'><div className='text-black p-4 text-center'>AI-ML</div></Link>
-                    <Link to='/services/cloud-services'><div className='text-black p-4 text-center'>Cloud Services</div></Link>
-                    <Link to='/services/software-testing'><div className='text-black p-4 text-center'>Software Testing</div></Link>
+                   {
+                    servicesNavDataFirst.map(serves=> <Link to={serves.to}><div className='navDataDiv'>{serves.title}</div></Link>)
+                   }
                   </div>
                   <div className=' flex flex-col'>
-                    <Link to='/services/iot'><div className='text-black p-4 text-center'>IOT</div></Link>
-                    <Link to='/services/digital-marketing'><div className='text-black p-4 text-center'>Digital Marketing</div></Link>
+                  {
+                    servicesNavDataSecond.map(serves=> <Link to={serves.to}><div className='navDataDiv'>{serves.title}</div></Link>)
+                   }
                   </div>
                 </div>
               }
@@ -124,21 +124,20 @@ const Navbar = () => {
 
             <div ref={industrydropdownRef} className=' flex items-center relative justify-center'>
 
-              <span onMouseOver={() => setIndustryMenuDropDownOpen(true)} onClick={handleIndustries} className=' cursor-pointer'>Industries</span>
+              <span onMouseOver={() => setIndustryMenuDropDownOpen(true)} onClick={handleIndustries} className=' cursor-pointer'>Industries {isIndustryMenuDropDownOpen ? <KeyboardArrowUpIcon /> : <KeyboardArrowDown />}</span>
 
-              <span onMouseOver={() => setIndustryMenuDropDownOpen(true)} className=' cursor-pointer' onClick={handleIndustries}>{isIndustryMenuDropDownOpen ? <KeyboardArrowUpIcon /> : <KeyboardArrowDown />}</span>
               {
                 isIndustryMenuDropDownOpen &&
-                <div className="flex  justify-center bg-white/80 bg-opacity-10 backdrop-blur-2xl w-[300px] absolute top-[30px] left-0 rounded-lg">
+                <div className="navbarDiv">
                   <div className=' flex flex-col'>
-                    <Link to='/industries/communication'><div className='text-black p-4 text-center'>Communication</div></Link>
-                    <Link to='/industries/logistics'><div className='text-black p-4 text-center'> Logistics</div></Link>
-                    <Link to='/industries/retail'><div className='text-black p-4 text-center'>Retail</div></Link>
+                  {
+                    IndustryNavDataFirst.map(industry=> <Link to={industry.to}><div className='navDataDiv'>{industry.title}</div></Link>)
+                   }
                   </div>
                   <div className=' flex flex-col'>
-                    <Link to='/industries/banking'><div className='text-black p-4 text-center'>Banking and Finances</div></Link>
-                    <Link to='/industries/public-sector'><div className='text-black p-4 text-center'>Public Sector</div></Link>
-
+                  {
+                    IndustryNavDataSecond.map(industry=> <Link to={industry.to}><div className='navDataDiv'>{industry.title}</div></Link>)
+                   }
                   </div>
                 </div>
               }

@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
-import Work from '../../components/industrypage/Work'
 import Partners from '../../components/aboutpage/Partners';
 import Swiperpartners from '../../components/aboutpage/Swiperpartners';
 import Aboutus from '../../components/Aboutus';
 import Footer from '../../components/footer/Footer';
-import Innovation from '../../components/industrypage/Innovation';
+import Innovation from './Innovation';
+import Works from './Works';
 
 const isMobile = () => {
   const match = window.matchMedia("(max-width:912px)");
@@ -38,13 +38,10 @@ const IndustryOthersPage = () => {
   }, [currentSectionIndex]);
   return (
     <div className='h-screen w-full'>
-      <div className='h-full w-full ' ref={scrollRef} style={{ scrollSnapType: 'y mandatory' }}>
-       
+      <div className='h-full w-full ' ref={scrollRef} style={{ scrollSnapType: 'y mandatory' }}>   
           <Innovation />
-       
-
         <section id='section-2' className='snap-start'>
-          <Work />
+          <Works />
         </section>
         <section id='section-3' className='snap-start'>
           <Aboutus />

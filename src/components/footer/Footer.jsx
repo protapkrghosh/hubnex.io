@@ -137,44 +137,36 @@ const Footer = () => {
 
   return (
     //Note: added some pading both phone and computer veiw
-    <div className='flex-cols w-full bg-black lg:pt-14'>
+    <div className='footerFirstDiv'>
 
-      <div className='lg:w-[90%] xl:w-[70%] h-full lg:flex sm:justify-between items-center text-white py-5 lg:py-0'>
+      <div className='footerSecondDiv'>
         {/* bug fix: add  gap-[20px] */}
-        <div className='flex flex-col gap-[20px] lg:gap-10'>
-          <div className='text-4xl lg:text-[60px] md:py-0 font-gilroy-extrabold text-white'>
-            <h1 className='text-center lg:text-start mt-16 lg:mt-8'>let's talk</h1>
-          </div>
-
-          <div className='w-[90%] mx-auto md:mx-0 md:w-[310px] lg:h-[310px] text-1xl lg:text-[40px] font-gilroy-light'>
-            <p className='text-center leading-tight lg:text-start'>have some great idea or brand to develop?</p>
-            <p className='text-center leading-tight lg:text-start'>Let's build it together</p>
-          </div>
-          <div className='text-xs font-gilroy-light md:text-[16px]'>
-            <p className='text-center md:text-start'>our team will reach out to you as soon as possible</p>
-          </div>
+        <div className='footerThirdDiv'>
+            <h1 className='footerH1'>let's talk</h1>
+            <p className='footerFirstP '>have some great idea or brand to develop? <br />Let's build it together </p>     
+           <p className='footerSecondP'>our team will reach out to you as soon as possible</p>
         </div>
         {/* bug fix: add gap-2 lg:gap-4  */}
-        <form className='flex flex-col gap-2 lg:gap-3 m-auto text-[16px] w-[80%] md:w-auto md:m-0 mt-5 lg:mt-10 md:py-1 md:mt-0' onSubmit={handleSubmit}>
-          <label className='text-gray-200' htmlFor='first_name'>FIRST NAME {errFirstname ? <span className='text-red-500 pl-3'>Firstname is mandatory</span> : <span className='text-red-500'>*</span>}</label>
-          <input className='outline-none bg-transparent border-b-[1px] border-b-gray-300 w-full md:w-96' type='text' id='first_name' maxLength={25} name='firstName' value={credentials.firstName} onChange={handleChange}   />
+        <form className='footerForm' onSubmit={handleSubmit}>
+          <label className='text-gray-200' htmlFor='first_name'>FIRST NAME {errFirstname ? <span className='formLabel'>Firstname is mandatory</span> : <span className='text-red-500'>*</span>}</label>
+          <input className='formInput' type='text' id='first_name' maxLength={25} name='firstName' value={credentials.firstName} onChange={handleChange}   />
 
-          <label className='text-gray-200' htmlFor='last_name'>LAST NAME {errLastname ? <span className='text-red-500 pl-3'>Lastname is mandatory</span> : <span className='text-red-500'>*</span>}</label>
-          <input className='outline-none bg-transparent border-b-[1px] border-b-gray-300 w-full md:w-96' type='text' id='last_name' maxLength={25} name='lastName' value={credentials.lastName} onChange={handleChange} />
+          <label className='text-gray-200' htmlFor='last_name'>LAST NAME {errLastname ? <span className='formLabel'>Lastname is mandatory</span> : <span className='text-red-500'>*</span>}</label>
+          <input className='formInput' type='text' id='last_name' maxLength={25} name='lastName' value={credentials.lastName} onChange={handleChange} />
 
-          <label className='text-gray-200' htmlFor='email'>EMAIL {errEmail ? <span className='text-red-500 pl-3'>Email is mandatory</span> : <span className='text-red-500'>*</span>}{validEmail && <span className='text-red-500 pl-3'> Please provide valid email address </span>}</label>
-          <input className='outline-none bg-transparent border-b-[1px] border-b-gray-300 w-full md:w-96' type='email' id='email' name='email' value={credentials.email} onChange={handleChange} />
+          <label className='text-gray-200' htmlFor='email'>EMAIL {errEmail ? <span className='formLabel'>Email is mandatory</span> : <span className='text-red-500'>*</span>}{validEmail && <span className='formLabel'> Please provide valid email address </span>}</label>
+          <input className='formInput' type='email' id='email' name='email' value={credentials.email} onChange={handleChange} />
 
-          <label className='text-gray-200' htmlFor='mobile_no'>PHONE NUMBER {errPhone ? <span className='text-red-500 pl-3'>Phone No is mandatory</span> : <span className='text-red-500'>*</span>}{validPhone && <span className='pl-3 text-red-500'> Please provide valid Phone Number </span>}</label>
+          <label className='text-gray-200' htmlFor='mobile_no'>PHONE NUMBER {errPhone ? <span className='formLabel'>Phone No is mandatory</span> : <span className='text-red-500'>*</span>}{validPhone && <span className='pl-3 text-red-500'> Please provide valid Phone Number </span>}</label>
           
-          <input className='outline-none bg-transparent border-b-[1px] border-b-gray-300 w-full md:w-96' type='tel' id='mobile_no' maxLength={12} name='phoneNo' value={credentials.phoneNo} onChange={handleChange} />
+          <input className='formInput' type='tel' id='mobile_no' maxLength={12} name='phoneNo' value={credentials.phoneNo} onChange={handleChange} />
 
           <label className='text-gray-200' htmlFor='message'>MESSAGE</label>
           {/* bug fix: add pt-2  */}
           <input className='outline-none bg-transparent border-b-[1px] border-b-gray-300 w-full md:w-96' type='text' id='message' name='message' value={credentials.message} onChange={handleChange} />
 
           <button className='btn-submit'>
-            <label htmlFor='submit' className='flex cursor-pointer gap-3 w-full h-full rounded-full font-gilroy-light items-center justify-center text-[18px] absolute -left-[2px] bottom-[2px] border-white border-2'>
+            <label htmlFor='submit' className='footerFormSubmitLabel'>
               <input type='submit' placeholder='SUBMIT' className='cursor-pointer' />
               <img src={arrow} alt="arrow" width={15} height={15} className='object-contain' />
             </label>

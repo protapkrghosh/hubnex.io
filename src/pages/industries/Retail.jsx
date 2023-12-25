@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import IndustryHeros from '../../components/industryHeros/IndustryHeros';
 import IndustryOthersPage from '../../components/industryHeros/IndustryOthersPage';
+import imge from "../../assets/ind3.png"
 const sectionIds = ['section-1', 'section-2'];
 const Retail = () => {
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
@@ -31,7 +32,7 @@ const Retail = () => {
       <section
         id='section-1' className='snap-start'
       >
-       <IndustryHeros title={"Retail and Customer Goods"  } discriptions={"Delivering with Care Sustainable Solutions for a Healthier Planet"} background={"ind3"} button={"Let's talk"}  />
+       <IndustryHeros title={"Retail and Customer Goods"  } discriptions={"Delivering with Care Sustainable Solutions for a Healthier Planet"} background={imge} button={"Let's talk"}  />
       </section>
 
       <section id='section-2' className='snap-start'>
