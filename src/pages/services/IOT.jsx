@@ -1,11 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-
-import Hero from '../../components/serviceUpdated/childrens/IOTHero'
-import Ourservice from '../../components/serviceUpdated/Ourservice'
-import Choose from '../../components/serviceUpdated/Choose'
-import Partners from '../../components/aboutpage/Partners'
-import Footer from '../../components/footer/Footer'
-import Ourself from '../../components/Aboutus'
+import imge from "../../assets/serv4.png"
 import Swiperpartners from '../../components/aboutpage/Swiperpartners'
 import ServisesHero from '../../components/servisesHeros/ServisesHero'
 import ServisesOtherSections from '../../components/servisesHeros/ServisesOtherSections'
@@ -55,7 +49,7 @@ const IOT = () => {
             id='section-1' className='snap-start'
           >
             {/* change industry hero to services hero to make all things align and also add specific componnet degain  */}
-            <ServisesHero h1classNames={"text-[28px] md:text-[50px] lg:text-[70px] xl:text-[60px] 2xl:text-[60px] font-gilroy-bold leading-tight lg:w-[700px]"} divClassName={" w-90 flex flex-col gap-8 xl:gap-14 lg:mb-[180px] xl:mb-48"} title={"Efficient and Effective  Integration Services"  } discriptions={`"Tailored IoT Solutions for Your Business Success"`} background={"serv4"} button={"Get in touch"}/>
+            <ServisesHero isAiml={false} title={"Efficient and Effective  Integration Services"  } discriptions={`"Tailored IoT Solutions for Your Business Success"`} background={imge} button={"Get in touch"}/>
           </section>
 
         <section id="section-2" className="snap-start">

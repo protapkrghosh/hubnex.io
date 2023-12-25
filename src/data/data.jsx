@@ -374,3 +374,49 @@ export const iotDatas = [
   
 ]
 
+export const inovetionData = [
+    {
+        id:1,
+        title:"Emergency services  impacting 850+ million people"
+    },
+    {
+        id:2,
+        title:"Extrema Market Access Program for everyone here"
+    },
+    {
+        id:3,
+        title:"Digital transformation partner for larger hospitals"
+    },
+    {
+        id:4,
+        title:"Bot enabled emergency access for differently abled"
+    },
+    {
+        id:5,
+        title:"Technology led next generation drug development"
+    },
+    {
+        id:6,
+        title:"10000 patient through our Patient Access Program"
+    },
+]
+
+export const whatWeDoData = [
+    {
+        title:"Healthcare Provider",
+        discriptions:"Technology led value-driven solutions for patient care. We offer innovative and end-to-end integrated solutions for healthcare providers. Our solutions enhance the efficiency of physicians, hospitals, ancillary facilities, clinics, governmental health bodies and public health organizations."
+    },
+    {
+        title:"MedTech",
+        discriptions:"Enabling device manufacturers to design and build nexgen healthcare technologies. Our MedTech practice is a partner of choice for global industry majors. We develop next generation products and.technologies through strong domain capabilities in end to end medical product development solutions."
+    },
+    {
+        title:"Pharmaceuticals",
+        discriptions:"Committed to enhance continuum of care for our clients by innovative and disruptive technologies. Our deep pharmaceutical domain expertise, historical R&D experience, outcome-based partnerships with global giants    and diverse geographical outreach have enabled our clients to achieve seamless digital transformation"
+    },
+    {
+        title:"Healthcare Payors",
+        discriptions:"Next-generation solutions empowering Payors to improve care quality and increase member satisfaction. Our Healthcare Payer Practice has been consistently ranked as one of the  most matured practices in the industry, with over 15 years’ experience in serving several US Health Insurers."
+    },
+    
+]

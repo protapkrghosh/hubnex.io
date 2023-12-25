@@ -1,15 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'
-import Work from '../../components/industrypage/Work'
-import Partners from '../../components/aboutpage/Partners';
-import Swiperpartners from '../../components/aboutpage/Swiperpartners';
-import Aboutus from '../../components/Aboutus';
-import Footer from '../../components/footer/Footer';
-import Innovation from '../../components/industrypage/Innovation';
-import Herocomm from '../../components/industrypage/Herocomm';
 import IndustryHeros from '../../components/industryHeros/IndustryHeros';
 import IndustryOthersPage from '../../components/industryHeros/IndustryOthersPage';
 const sectionIds = ['section-1', 'section-2'];
-
+import imge from "../../assets/ind1.png"
 
 const Communication = () => {
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
@@ -48,7 +41,7 @@ const Communication = () => {
         <section
           id='section-1' className='snap-start'
         >
-          <IndustryHeros title={"Revolutionizing the way we connect"} discriptions={"Digitalizing Communication Empowering Businesses to Thrive in the Future"} background={"ind1"} button={"Let's talk"} />
+          <IndustryHeros title={"Revolutionizing the way we connect"} discriptions={"Digitalizing Communication Empowering Businesses to Thrive in the Future"} background={imge} button={"Let's talk"} />
         </section>
 
           <section id='section-2' className='snap-start'>

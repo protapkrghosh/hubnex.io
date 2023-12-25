@@ -17,7 +17,6 @@ const DigitalMarketing = React.lazy(() => import('./pages/services/DigitalMarket
 
 // Industries Dropdown pages
 const Communication = React.lazy(() => import('./pages/industries/Communication'))
-const Hospitality = React.lazy(() => import('./pages/industries/Hospitality'))
 const Logistics = React.lazy(() => import('./pages/industries/Logistics'))
 const PublicSector = React.lazy(() => import('./pages/industries/PublicSector'))
 const Retail = React.lazy(() => import('./pages/industries/Retail'))
@@ -48,6 +47,7 @@ function App() {
     // Note: there have some 404 imge can i remove this one
     const images = [
       '@assets/aboutLander.png',
+      '@assets/ind1.png',
       '@assets/abouts.png',
       '@assets/arrowR.png',
       '@assets/backgroundVector.png',
@@ -158,10 +158,7 @@ function App() {
             path: '/industries/communication',
             element: <Suspense fallback={<Loader />}><Communication /></Suspense>
           },
-          {
-            path: '/industries/logistics',
-            element: <Suspense fallback={<Loader />}><Hospitality /></Suspense>
-          },
+          
           // {
           //   path: '/industries/logistics',
           //   element: <Suspense fallback={<Loader/>}><Logistics/></Suspense>

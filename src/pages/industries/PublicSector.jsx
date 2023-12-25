@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import IndustryHeros from '../../components/industryHeros/IndustryHeros';
 import IndustryOthersPage from '../../components/industryHeros/IndustryOthersPage';
+import imge from "../../assets/ind4.png"
 const sectionIds = ['section-1', 'section-2'];
 const PublicSector = () => {
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
@@ -36,7 +37,7 @@ const PublicSector = () => {
           id='section-1' className='snap-start'
         >
           {/* in this lines ind5 image is not working so i use ind5  */}
-          <IndustryHeros title={"Empowering Your Financial Future"} discriptions={"Banking, Financial Services, and Insurance Solutions for Every Stage of Life"} background={"ind4"} button={"Let's talk"} />
+          <IndustryHeros title={"Empowering Your Financial Future"} discriptions={"Banking, Financial Services, and Insurance Solutions for Every Stage of Life"} background={imge} button={"Let's talk"} />
         </section>
 
         <section id='section-2' className='snap-start'>

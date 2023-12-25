@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import IndustryHeros from '../../components/industryHeros/IndustryHeros';
 import IndustryOthersPage from '../../components/industryHeros/IndustryOthersPage';
 const sectionIds = ['section-1', 'section-2'];
-
+import imge from "../../assets/ind3.png"
 const Logistic = () => {
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
   const scrollRef = useRef(null);
@@ -37,7 +37,7 @@ const Logistic = () => {
       <section
         id='section-1' className='snap-start'
       >
-        <IndustryHeros title={"Efficient Logistics for Your Supply Chain"  } discriptions={"Travel, Transportation, Logistics and Hospitality"} background={"ind2"} button={"Let's talk"} />
+        <IndustryHeros title={"Efficient Logistics for Your Supply Chain"  } discriptions={"Travel, Transportation, Logistics and Hospitality"} background={imge} button={"Let's talk"} />
       </section>
 
       <section id='section-2' className='snap-start'>
@@ -45,10 +45,6 @@ const Logistic = () => {
       </section>
     </div>
   </div>
-    // <div className='overflow-hidden'>
-    //    <IndustryHeros title={"Retail and Customer Goods"  } discriptions={"Delivering with Care Sustainable Solutions for a Healthier Planet"} background={"ind3"}  button={"Let's talk"} />
-    //     <IndustryOthersPage />
-    // </div>
   )
 }
 

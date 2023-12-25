@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import ServisesOtherSections from '../../components/servisesHeros/ServisesOtherSections'
 import ServisesDataMap from '../../components/servisesHeros/ServisesDataMap'
 import { digitalMarketingDatas } from '../../data/data'
-import IndustryHeros from '../../components/industryHeros/IndustryHeros'
+import imge from "../../assets/serv6.png"
 import ServisesHero from '../../components/servisesHeros/ServisesHero'
 const sectionIds = ['section-1', 'section-2', 'section-3'];
 
@@ -37,7 +37,7 @@ const DigitalMarketing = () => {
             id='section-1' className='snap-start'
           >
             {/* change industry hero to services hero to make all things align and also add specific componnet degain  */}
-            <ServisesHero h1classNames={"text-[28px] md:text-[40px] lg:text-[70px] xl:text-[60px] 2xl:text-[60px] font-gilroy-bold leading-tight lg:w-[700px]"} divClassName={" w-90 flex flex-col gap-8 xl:gap-14 lg:mb-[180px] xl:mb-48"} title={"Mastering SEO for Digital Marketing Success"  } discriptions={`"Enhancing Your Site's Performance and User Experience"`} background={"serv6"} button={"Get in touch"}/>
+            <ServisesHero isAiml={false} title={"Mastering SEO for Digital Marketing Success"  } discriptions={`"Enhancing Your Site's Performance and User Experience"`} background={imge} button={"Get in touch"}/>
           </section>
 
           <section id='section-2' className='snap-start'>
