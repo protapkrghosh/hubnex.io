@@ -4,7 +4,6 @@ import imge from "../../assets/serv1.png"
 import ServisesDataMap from '../../components/servisesHeros/ServisesDataMap'
 import { aimldatas } from '../../data/data'
 import ServisesHero from '../../components/servisesHeros/ServisesHero'
-import AiMlHero from '../../components/servisesHeros/AiMlHero'
 const sectionIds = ['section-1', 'section-2', 'section-3'];
 
 const AIML = () => {
