@@ -1,8 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react'
-import IndustryHeros from '../../components/industryHeros/IndustryHeros';
-import IndustryOthersPage from '../../components/industryHeros/IndustryOthersPage';
-import imge from "../../assets/ind3.png"
+import IndustryHeros from '../../components/industrypage/industryHeros/IndustryHeros';
+import IndustryOthersPage from '../../components/industrypage/industryHeros/IndustryOthersPage';
 const sectionIds = ['section-1', 'section-2'];
+import imge from "../../assets/ind3.png"
+
 const Retail = () => {
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
   const scrollRef = useRef(null);

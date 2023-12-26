@@ -1,10 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react'
+import ServisesOtherSections from '../../components/serviceUpdated/servisesHeros/ServisesOtherSections';
+import ServisesDataMap from '../../components/serviceUpdated/servisesHeros/ServisesDataMap';
+import ServisesHero from '../../components/serviceUpdated/servisesHeros/ServisesHero';
+import {  softwarTestingDatas } from '../../data/data';
 import imge from "../../assets/serv3.png"
-import ServisesHero from '../../components/servisesHeros/ServisesHero'
-import ServisesOtherSections from '../../components/servisesHeros/ServisesOtherSections'
-import ServisesDataMap from '../../components/servisesHeros/ServisesDataMap'
-import { softwarTestingDatas } from '../../data/data'
-import IndustryHeros from '../../components/industryHeros/IndustryHeros'
 const sectionIds = ['section-1', 'section-2', 'section-3'];
 
 const SoftwareTesting = () => {

@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react'
-import ServisesOtherSections from '../../components/servisesHeros/ServisesOtherSections'
+import ServisesOtherSections from '../../components/serviceUpdated/servisesHeros/ServisesOtherSections';
+import ServisesDataMap from '../../components/serviceUpdated/servisesHeros/ServisesDataMap';
+import ServisesHero from '../../components/serviceUpdated/servisesHeros/ServisesHero';
+import { aimldatas } from '../../data/data';
 import imge from "../../assets/serv1.png"
-import ServisesDataMap from '../../components/servisesHeros/ServisesDataMap'
-import { aimldatas } from '../../data/data'
-import ServisesHero from '../../components/servisesHeros/ServisesHero'
 const sectionIds = ['section-1', 'section-2', 'section-3'];
 
 const AIML = () => {

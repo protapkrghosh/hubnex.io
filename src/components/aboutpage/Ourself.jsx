@@ -1,5 +1,5 @@
 import React from 'react'
-import Chooses from '../servisesHeros/Chooses'
+import Chooses from '../serviceUpdated/servisesHeros/Chooses'
 
 const Ourself = () => {
   return (

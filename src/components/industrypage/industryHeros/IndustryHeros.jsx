@@ -1,9 +1,9 @@
 import React from 'react'
-import Navbar from '../navbar/Navbar'
 import { Link } from 'react-router-dom'
+import Navbar from '../../navbar/Navbar';
 
 const IndustryHeros = ({title,discriptions,background,button}) => {
-  const imge = "https://images.unsplash.com/photo-1619252584172-a83a949b6efd?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTV8fHxlbnwwfHx8fHw%3D"
+  
 
   const imgeStyle = {
       backgroundImage: `url(${background})`,

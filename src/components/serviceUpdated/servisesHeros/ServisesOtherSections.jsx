@@ -1,10 +1,10 @@
 
-import Partners from '../../components/aboutpage/Partners'
-import Footer from '../../components/footer/Footer'
-import Ourself from '../Aboutus'
-import Swiperpartners from '../../components/aboutpage/Swiperpartners'
 import { useEffect, useRef, useState } from 'react'
 import Chooses from './Chooses'
+import Swiperpartners from '../../aboutpage/Swiperpartners';
+import Partners from '../../aboutpage/Partners';
+import Footer from '../../footer/Footer';
+import Aboutus from './Aboutus';
 const sectionIds = ['section-1', 'section-2', 'section-3'];
 const ServisesOtherSections = () => {
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
@@ -43,7 +43,7 @@ const ServisesOtherSections = () => {
           </section>
 
           <section id='section-2' className='snap-start'>
-          <Ourself/> 
+          <Aboutus/> 
           </section>
 
           <section id='section-3' className='snap-start'>
