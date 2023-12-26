@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import Navbar from '../navbar/Navbar';
+import Navbar from '../../navbar/Navbar';
 const ServisesHero = ({title,discriptions,background,isAiml}) => {
 
   // add this custom styles to handle background

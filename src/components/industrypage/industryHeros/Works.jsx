@@ -1,5 +1,5 @@
 import React from 'react';
-import { whatWeDoData } from '../../data/data';
+import { whatWeDoData } from '../../../data/data';
 
 const Works = () => {
     return (
