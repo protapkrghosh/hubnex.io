@@ -1,10 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
-import Partners from '../../components/aboutpage/Partners';
-import Swiperpartners from '../../components/aboutpage/Swiperpartners';
-import Aboutus from '../../components/Aboutus';
-import Footer from '../../components/footer/Footer';
 import Innovation from './Innovation';
 import Works from './Works';
+import Aboutus from '../../serviceUpdated/servisesHeros/Aboutus';
+import Swiperpartners from '../../aboutpage/Swiperpartners';
+import Partners from '../../aboutpage/Partners';
+import Footer from '../../footer/Footer';
+
 
 const isMobile = () => {
   const match = window.matchMedia("(max-width:912px)");

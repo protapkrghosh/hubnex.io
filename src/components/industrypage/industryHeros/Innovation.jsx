@@ -1,5 +1,5 @@
 import React from 'react'
-import { inovetionData } from '../../data/data'
+import { inovetionData } from '../../../data/data'
 
 const Innovation = () => {
   return (
